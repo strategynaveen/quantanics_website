@@ -1,0 +1,9 @@
+CRITICAL - 2023-03-19 07:18:54 --> Invalid file: "work.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('work.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('work', [], true)
+ 3 APPPATH\Controllers\Home.php(39): view('work')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->load_option('work')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

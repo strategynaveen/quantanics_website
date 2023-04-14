@@ -1,0 +1,192 @@
+CRITICAL - 2023-03-26 06:42:24 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 06:42:50 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 06:43:11 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 06:43:14 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 06:44:50 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 06:47:00 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 06:47:11 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 06:47:41 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 06:47:59 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 06:48:01 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 06:48:19 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 06:48:34 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 06:49:42 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 06:50:55 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 06:55:29 --> Class 'App\Controllers\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:02:12 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:02:13 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:02:23 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:02:48 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:03:56 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:04:25 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:04:56 --> Class 'AppModels\Intern_Model' not found
+in APPPATH\Controllers\Intern_controller.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->normal_data()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:25:55 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:28:34 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:30:41 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:31:35 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:32:40 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:35:30 --> Call to a member function move() on null
+in APPPATH\Controllers\Intern_controller.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:40:23 --> Call to a member function getName() on null
+in APPPATH\Controllers\Intern_controller.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:42:40 --> Call to a member function getName() on null
+in APPPATH\Controllers\Intern_controller.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:48:57 --> Call to a member function move() on null
+in APPPATH\Controllers\Intern_controller.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 07:54:30 --> Call to a member function move() on null
+in APPPATH\Controllers\Intern_controller.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

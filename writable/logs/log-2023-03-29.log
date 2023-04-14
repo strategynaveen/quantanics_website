@@ -1,0 +1,108 @@
+CRITICAL - 2023-03-29 17:20:13 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:31:12 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:34:39 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:35:23 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:35:25 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:36:23 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:36:31 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:36:37 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:36:41 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:37:02 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:37:06 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:37:15 --> Too few arguments to function App\Controllers\Home::load_option(), 0 passed in C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->load_option()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:40:11 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:41:06 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:41:34 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:42:21 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:42:43 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-29 17:42:48 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

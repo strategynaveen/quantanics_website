@@ -1,0 +1,132 @@
+CRITICAL - 2023-03-30 01:34:13 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Intern_controller.php on line 126.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-30 01:35:32 --> finfo_file(C:\xampp\tmp\php4C57.tmp): failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 115.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php4C57.tmp): failed to open stream: No such file or directory', 'SYSTEMPATH\\Files\\File.php', 115, [...])
+ 2 SYSTEMPATH\Files\File.php(115): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php4C57.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(127): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Intern_controller.php(125): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-30 01:36:13 --> finfo_file(C:\xampp\tmp\phpEDCB.tmp): failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 115.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpEDCB.tmp): failed to open stream: No such file or directory', 'SYSTEMPATH\\Files\\File.php', 115, [...])
+ 2 SYSTEMPATH\Files\File.php(115): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpEDCB.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(127): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Intern_controller.php(125): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-30 01:37:06 --> finfo_file(C:\xampp\tmp\phpBBFC.tmp): failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 115.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpBBFC.tmp): failed to open stream: No such file or directory', 'SYSTEMPATH\\Files\\File.php', 115, [...])
+ 2 SYSTEMPATH\Files\File.php(115): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpBBFC.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(127): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Intern_controller.php(125): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-30 01:37:16 --> finfo_file(C:\xampp\tmp\phpE562.tmp): failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 115.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpE562.tmp): failed to open stream: No such file or directory', 'SYSTEMPATH\\Files\\File.php', 115, [...])
+ 2 SYSTEMPATH\Files\File.php(115): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpE562.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(127): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Intern_controller.php(125): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-30 01:38:12 --> finfo_file(C:\xampp\tmp\phpBF5B.tmp): failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 115.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpBF5B.tmp): failed to open stream: No such file or directory', 'SYSTEMPATH\\Files\\File.php', 115, [...])
+ 2 SYSTEMPATH\Files\File.php(115): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpBF5B.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(127): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Intern_controller.php(125): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-30 01:38:42 --> finfo_file(C:\xampp\tmp\php34CD.tmp): failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 115.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php34CD.tmp): failed to open stream: No such file or directory', 'SYSTEMPATH\\Files\\File.php', 115, [...])
+ 2 SYSTEMPATH\Files\File.php(115): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php34CD.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(127): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Intern_controller.php(126): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-30 01:40:34 --> Call to a member function move() on null
+in APPPATH\Controllers\Intern_controller.php on line 126.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-30 01:41:23 --> Call to a member function move() on null
+in APPPATH\Controllers\Intern_controller.php on line 126.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-30 01:49:01 --> finfo_file(C:\xampp\tmp\phpA5CC.tmp): failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 115.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpA5CC.tmp): failed to open stream: No such file or directory', 'SYSTEMPATH\\Files\\File.php', 115, [...])
+ 2 SYSTEMPATH\Files\File.php(115): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpA5CC.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(127): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Intern_controller.php(127): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-30 01:51:45 --> finfo_file(C:\xampp\tmp\php26DD.tmp): failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 115.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php26DD.tmp): failed to open stream: No such file or directory', 'SYSTEMPATH\\Files\\File.php', 115, [...])
+ 2 SYSTEMPATH\Files\File.php(115): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php26DD.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(127): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Intern_controller.php(127): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-30 01:54:38 --> finfo_file(C:\xampp\tmp\phpCA99.tmp): failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 115.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpCA99.tmp): failed to open stream: No such file or directory', 'SYSTEMPATH\\Files\\File.php', 115, [...])
+ 2 SYSTEMPATH\Files\File.php(115): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpCA99.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(127): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Intern_controller.php(126): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-30 02:00:31 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Intern_controller.php on line 128.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

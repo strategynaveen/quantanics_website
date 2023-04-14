@@ -1,0 +1,28 @@
+ERROR - 2023-04-13 11:52:17 --> mysqli_sql_exception: Duplicate entry 'naveenkumar709434@gmail.com' for key 'email_id' in C:\xampp\htdocs\quantanics\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\quantanics\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `in...', 0)
+#1 C:\xampp\htdocs\quantanics\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `in...')
+#2 C:\xampp\htdocs\quantanics\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `in...')
+#3 C:\xampp\htdocs\quantanics\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `in...', Array, false)
+#4 C:\xampp\htdocs\quantanics\app\Models\Intern_Model.php(60): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\quantanics\app\Controllers\Intern_controller.php(103): App\Models\Intern_Model->insert_intern_record(Array)
+#6 C:\xampp\htdocs\quantanics\system\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+#7 C:\xampp\htdocs\quantanics\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#8 C:\xampp\htdocs\quantanics\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\quantanics\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-13 11:52:17 --> Duplicate entry 'naveenkumar709434@gmail.com' for key 'email_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `intern_table` (`intern_id`, `regno`, `sname`, `dept`, `year`, `email_id`, `clg_name`, `mobile`, `resume`, `bonafide`, `id_card`, `profile`, `start_date`, `end_date`, `domain`, `dob`) VALUES (:intern_id:, :regno:, :sname:, :dept:, :year:, :email_id:, :clg_name:, :mobile:, :resume:, :bonafide:, :id_card:, :profile:, :start_date:, :end_date:, :domain:, :dob:)', [...], false)
+ 2 APPPATH\Models\Intern_Model.php(60): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Intern_controller.php(103): App\Models\Intern_Model->insert_intern_record([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-13 12:16:28 --> Call to a member function getSize() on null
+in APPPATH\Controllers\Intern_controller.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,132 @@
+ERROR - 2023-03-31 01:48:38 --> mysqli_sql_exception: Unknown column 'sdate' in 'field list' in C:\xampp\htdocs\quantanics_new\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\quantanics_new\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `in...', 0)
+#1 C:\xampp\htdocs\quantanics_new\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `in...')
+#2 C:\xampp\htdocs\quantanics_new\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `in...')
+#3 C:\xampp\htdocs\quantanics_new\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `in...', Array, false)
+#4 C:\xampp\htdocs\quantanics_new\app\Models\Intern_Model.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\quantanics_new\app\Controllers\Intern_controller.php(161): App\Models\Intern_Model->insert_intern_record(Array)
+#6 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+#7 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#8 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\quantanics_new\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-03-31 01:48:38 --> Unknown column 'sdate' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `intern_table` (`intern_id`, `regno`, `sname`, `dept`, `year`, `email_id`, `clg_name`, `mobile`, `resume`, `bonafide`, `id_card`, `profile`, `sdate`, `edate`, `domain`) VALUES (:intern_id:, :regno:, :sname:, :dept:, :year:, :email_id:, :clg_name:, :mobile:, :resume:, :bonafide:, :id_card:, :profile:, :sdate:, :edate:, :domain:)', [...], false)
+ 2 APPPATH\Models\Intern_Model.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Intern_controller.php(161): App\Models\Intern_Model->insert_intern_record([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-31 01:49:16 --> mysqli_sql_exception: Column 'regno' cannot be null in C:\xampp\htdocs\quantanics_new\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\quantanics_new\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `in...', 0)
+#1 C:\xampp\htdocs\quantanics_new\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `in...')
+#2 C:\xampp\htdocs\quantanics_new\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `in...')
+#3 C:\xampp\htdocs\quantanics_new\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `in...', Array, false)
+#4 C:\xampp\htdocs\quantanics_new\app\Models\Intern_Model.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\quantanics_new\app\Controllers\Intern_controller.php(161): App\Models\Intern_Model->insert_intern_record(Array)
+#6 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+#7 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#8 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\quantanics_new\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-03-31 01:49:16 --> Column 'regno' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `intern_table` (`intern_id`, `regno`, `sname`, `dept`, `year`, `email_id`, `clg_name`, `mobile`, `resume`, `bonafide`, `id_card`, `profile`, `start_date`, `end_date`, `domain`) VALUES (:intern_id:, :regno:, :sname:, :dept:, :year:, :email_id:, :clg_name:, :mobile:, :resume:, :bonafide:, :id_card:, :profile:, :start_date:, :end_date:, :domain:)', [...], false)
+ 2 APPPATH\Models\Intern_Model.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Intern_controller.php(161): App\Models\Intern_Model->insert_intern_record([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-31 01:50:09 --> mysqli_sql_exception: Column 'regno' cannot be null in C:\xampp\htdocs\quantanics_new\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\quantanics_new\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `in...', 0)
+#1 C:\xampp\htdocs\quantanics_new\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `in...')
+#2 C:\xampp\htdocs\quantanics_new\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `in...')
+#3 C:\xampp\htdocs\quantanics_new\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `in...', Array, false)
+#4 C:\xampp\htdocs\quantanics_new\app\Models\Intern_Model.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\quantanics_new\app\Controllers\Intern_controller.php(161): App\Models\Intern_Model->insert_intern_record(Array)
+#6 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+#7 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#8 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\quantanics_new\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-03-31 01:50:09 --> Column 'regno' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `intern_table` (`intern_id`, `regno`, `sname`, `dept`, `year`, `email_id`, `clg_name`, `mobile`, `resume`, `bonafide`, `id_card`, `profile`, `start_date`, `end_date`, `domain`) VALUES (:intern_id:, :regno:, :sname:, :dept:, :year:, :email_id:, :clg_name:, :mobile:, :resume:, :bonafide:, :id_card:, :profile:, :start_date:, :end_date:, :domain:)', [...], false)
+ 2 APPPATH\Models\Intern_Model.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Intern_controller.php(161): App\Models\Intern_Model->insert_intern_record([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-31 01:50:41 --> mysqli_sql_exception: Column 'start_date' cannot be null in C:\xampp\htdocs\quantanics_new\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\quantanics_new\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `in...', 0)
+#1 C:\xampp\htdocs\quantanics_new\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `in...')
+#2 C:\xampp\htdocs\quantanics_new\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `in...')
+#3 C:\xampp\htdocs\quantanics_new\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `in...', Array, false)
+#4 C:\xampp\htdocs\quantanics_new\app\Models\Intern_Model.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\quantanics_new\app\Controllers\Intern_controller.php(161): App\Models\Intern_Model->insert_intern_record(Array)
+#6 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+#7 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#8 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\quantanics_new\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-03-31 01:50:41 --> Column 'start_date' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `intern_table` (`intern_id`, `regno`, `sname`, `dept`, `year`, `email_id`, `clg_name`, `mobile`, `resume`, `bonafide`, `id_card`, `profile`, `start_date`, `end_date`, `domain`) VALUES (:intern_id:, :regno:, :sname:, :dept:, :year:, :email_id:, :clg_name:, :mobile:, :resume:, :bonafide:, :id_card:, :profile:, :start_date:, :end_date:, :domain:)', [...], false)
+ 2 APPPATH\Models\Intern_Model.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Intern_controller.php(161): App\Models\Intern_Model->insert_intern_record([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-31 02:03:09 --> mysqli_sql_exception: Duplicate entry 'QAIN1001' for key 'PRIMARY' in C:\xampp\htdocs\quantanics_new\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\quantanics_new\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `in...', 0)
+#1 C:\xampp\htdocs\quantanics_new\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `in...')
+#2 C:\xampp\htdocs\quantanics_new\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `in...')
+#3 C:\xampp\htdocs\quantanics_new\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `in...', Array, false)
+#4 C:\xampp\htdocs\quantanics_new\app\Models\Intern_Model.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\quantanics_new\app\Controllers\Intern_controller.php(161): App\Models\Intern_Model->insert_intern_record(Array)
+#6 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+#7 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#8 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\quantanics_new\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-03-31 02:03:09 --> Duplicate entry 'QAIN1001' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `intern_table` (`intern_id`, `regno`, `sname`, `dept`, `year`, `email_id`, `clg_name`, `mobile`, `resume`, `bonafide`, `id_card`, `profile`, `start_date`, `end_date`, `domain`) VALUES (:intern_id:, :regno:, :sname:, :dept:, :year:, :email_id:, :clg_name:, :mobile:, :resume:, :bonafide:, :id_card:, :profile:, :start_date:, :end_date:, :domain:)', [...], false)
+ 2 APPPATH\Models\Intern_Model.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Intern_controller.php(161): App\Models\Intern_Model->insert_intern_record([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-31 02:14:28 --> mysqli_sql_exception: Duplicate entry '910018104305' for key 'regno' in C:\xampp\htdocs\quantanics_new\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\quantanics_new\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `in...', 0)
+#1 C:\xampp\htdocs\quantanics_new\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `in...')
+#2 C:\xampp\htdocs\quantanics_new\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `in...')
+#3 C:\xampp\htdocs\quantanics_new\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `in...', Array, false)
+#4 C:\xampp\htdocs\quantanics_new\app\Models\Intern_Model.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\quantanics_new\app\Controllers\Intern_controller.php(161): App\Models\Intern_Model->insert_intern_record(Array)
+#6 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+#7 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#8 C:\xampp\htdocs\quantanics_new\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\quantanics_new\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-03-31 02:14:28 --> Duplicate entry '910018104305' for key 'regno'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `intern_table` (`intern_id`, `regno`, `sname`, `dept`, `year`, `email_id`, `clg_name`, `mobile`, `resume`, `bonafide`, `id_card`, `profile`, `start_date`, `end_date`, `domain`) VALUES (:intern_id:, :regno:, :sname:, :dept:, :year:, :email_id:, :clg_name:, :mobile:, :resume:, :bonafide:, :id_card:, :profile:, :start_date:, :end_date:, :domain:)', [...], false)
+ 2 APPPATH\Models\Intern_Model.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Intern_controller.php(161): App\Models\Intern_Model->insert_intern_record([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

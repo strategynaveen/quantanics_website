@@ -1,0 +1,45 @@
+CRITICAL - 2023-04-11 16:31:55 --> Unmatched '}'
+in APPPATH\Models\Intern_Model.php on line 205.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Intern_Model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Intern_Model')
+ 3 APPPATH\Controllers\Intern_controller.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Intern_Model')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 16:31:57 --> Unmatched '}'
+in APPPATH\Models\Intern_Model.php on line 205.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Intern_Model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Intern_Model')
+ 3 APPPATH\Controllers\Intern_controller.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Intern_Model')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 16:31:58 --> Unmatched '}'
+in APPPATH\Models\Intern_Model.php on line 205.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Intern_Model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Intern_Model')
+ 3 APPPATH\Controllers\Intern_controller.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Intern_Model')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 16:32:20 --> Unmatched '}'
+in APPPATH\Models\Intern_Model.php on line 205.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Intern_Model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Intern_Model')
+ 3 APPPATH\Controllers\Intern_controller.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Intern_Model')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 16:32:25 --> Unmatched '}'
+in APPPATH\Models\Intern_Model.php on line 205.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Intern_Model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Intern_Model')
+ 3 APPPATH\Controllers\Intern_controller.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Intern_Model')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Intern_controller->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
