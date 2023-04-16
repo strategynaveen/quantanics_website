@@ -126,7 +126,7 @@
                                                         <select class="form-select form-select-lg" id="Status"  name="" class=" form-control form-control-lg"  aria-label="Default select example">
                                                             <option selected disabled value="">Choose Task Status</option>
                                                             <option value="in_progress">In Progress</option>
-                                                            <option value="submitted">Submitted Evoluation</option>
+                                                            <option value="submitted">Submitted Evaluation</option>
                                                             <!-- <option value="3">Three</option> -->
                                                         </select>
                                                     <!-- </div> -->
@@ -148,6 +148,16 @@
                                                         </select>
                                                     </div>
                                                 </div>
+                                                <div id="file_link">
+                                                    <div  class="m-3">
+                                                        <div class="form-outline mb-4 input-container">
+                                                            <input type="text" id="file_link_val"  name="file_link_val" class="input" placeholder="" />
+                                                            <label class="placeholder label" style="color:black">File Link                                                            Description</label>
+                                                            <span id="file_link_Error"></span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                               
 
                                                 <div class="row m-3">
                                                     <div class="col-4"></div>
@@ -714,6 +724,13 @@
                 tmp_task_id = "empty";
                 task1 =  $('#task1').val();
             }
+
+            var  file_link = "";
+            if (Status==="submitted") {
+                file_link = $('#file_link_val').val();
+            }else{
+                file_link="empty";
+            }
             console.log(intern_id);
             console.log(check_in);
             console.log(check_out);
@@ -723,6 +740,7 @@
             console.log(tmp_assignee);
             console.log(tmp_task_id);
             console.log(domain);
+            console.log(file_link);
 
             
             $.ajax({
@@ -739,6 +757,7 @@
                     tmp_assignee:tmp_assignee,
                     tmp_task_id:tmp_task_id,
                     domain:domain,
+                    file_link:file_link,
                 },
                 success: function(res) {
                     console.log("intern daily update");
@@ -776,8 +795,24 @@
             $('#Status').val('');
             $('#existing_tasks').val('');
             $('#assignee').val('');
+            $('#file_link_val').val('');
            
         }
+
+        $(document).on('change','#Status',function(event){
+            event.preventDefault();
+            var task_status  = $('#Status').val();
+            // alert(task_status);
+            $('#file_link_val').val('');
+            if (task_status==="submitted") {
+                $('#file_link').css('display','inline');
+            }
+            else if(task_status!="submitted"){
+                $('#file_link').css('display','none');
+
+            }
+            // $('#file_link').css('display','inline');
+        });
     </script>
 </body>
 

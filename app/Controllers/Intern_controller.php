@@ -214,7 +214,18 @@ class Intern_controller extends BaseController
             $task_data['tdate'] = date('Y-m-d');
             $task_data['last_updated_by'] = $this->request->getvar('intern_id');
 
-            $res = $this->datas->insert_task_table($task_data);
+
+            if ($task_data['task_status'] != "submitted") {
+                // $task_link = "empty";
+                $res = $this->datas->insert_task_table($task_data);
+            }else{
+                $task_data['completion_file'] = $this->request->getvar('file_link');
+                $res = $this->datas->insert_task_table($task_data);
+                // $task_link = $this->request->getvar('file_link');
+            }
+
+          
+            // $res = $this->datas->insert_task_table($task_data);
             echo json_encode($res);
         }
     }
