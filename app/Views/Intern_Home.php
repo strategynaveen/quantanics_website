@@ -90,16 +90,16 @@
 
                                                 <div class="m-3">
                                                     <!-- <div class="form-outline mb-4 input-container"> -->
-                                                        <select class="form-select form-select-lg" id="task_type"  name="task_type" class="form-control form-control-lg"  aria-label="Default select example">
-                                                            <option selected disabled value="">Choose Task Type</option>
-                                                            <option value="assigned_task">Assigned Tasks</option>
-                                                            <option value="new_task">Assigned Person</option>
-                                                            <!-- <option value="3">Three</option> -->
-                                                        </select>
+                                                    <select class="form-select form-select-lg" id="task_type" name="task_type" class="form-control form-control-lg" aria-label="Default select example">
+                                                        <option selected disabled value="">Choose Task Type</option>
+                                                        <option value="assigned_task">Assigned Tasks</option>
+                                                        <option value="new_task">Assigned Person</option>
+                                                        <!-- <option value="3">Three</option> -->
+                                                    </select>
                                                     <!-- </div> -->
                                                 </div>
                                                 <div id="task_name_input">
-                                                    <div  class="m-3">
+                                                    <div class="m-3">
                                                         <div class="form-outline mb-4 input-container ">
                                                             <input type="text" id="task1" name="" class="input" placeholder=" " />
                                                             <label class="placeholder label" style="color:black">Task
@@ -108,10 +108,10 @@
                                                         <span id="Task_err"></span>
                                                     </div>
                                                 </div>
-                                               
+
                                                 <div class="m-3">
                                                     <div class="form-outline mb-4 input-container">
-                                                        <input type="text" id="Description"  name="" class="input" placeholder=" " />
+                                                        <input type="text" id="Description" name="" class="input" placeholder=" " />
                                                         <label class="placeholder label" style="color:black">Task
                                                             Description</label>
                                                         <span id="Description_err"></span>
@@ -119,26 +119,26 @@
                                                 </div>
                                                 <div class="m-3">
                                                     <!-- <div class="form-outline mb-4 input-container"> -->
-                                                        <!-- <input type="text" id="Status" onblur="Status()" name="" class="input" placeholder=" " />
+                                                    <!-- <input type="text" id="Status" onblur="Status()" name="" class="input" placeholder=" " />
                                                         <label class="placeholder label" style="color:black">Task
                                                             Status</label>
                                                         <span id="status_err"></span> -->
-                                                        <select class="form-select form-select-lg" id="Status"  name="" class=" form-control form-control-lg"  aria-label="Default select example">
-                                                            <option selected disabled value="">Choose Task Status</option>
-                                                            <option value="in_progress">In Progress</option>
-                                                            <option value="submitted">Submitted Evaluation</option>
-                                                            <!-- <option value="3">Three</option> -->
-                                                        </select>
+                                                    <select class="form-select form-select-lg" id="Status" name="" class=" form-control form-control-lg" aria-label="Default select example">
+                                                        <option selected disabled value="">Choose Task Status</option>
+                                                        <option value="in_progress">In Progress</option>
+                                                        <option value="submitted">Submitted Evaluation</option>
+                                                        <!-- <option value="3">Three</option> -->
+                                                    </select>
                                                     <!-- </div> -->
                                                 </div>
-                                              
+
 
                                                 <div class="m-3">
                                                     <div class="drp_exist mb-3">
-                                                        <select class="form-select form-select-lg" id="existing_tasks"  name="existing_tasks" class="form-control form-control-lg"  aria-label="Default select example">
+                                                        <select class="form-select form-select-lg" id="existing_tasks" name="existing_tasks" class="form-control form-control-lg" aria-label="Default select example">
                                                             <option selected disabled>Choose Task</option>
                                                             <!-- <option value="assigned_task">Assigned Tasks</option> -->
-                                                            <!-- <option value="new_task">Assigned Person</option> --> 
+                                                            <!-- <option value="new_task">Assigned Person</option> -->
                                                             <!-- <option value="3">Three</option> -->
                                                         </select>
                                                     </div>
@@ -149,15 +149,15 @@
                                                     </div>
                                                 </div>
                                                 <div id="file_link">
-                                                    <div  class="m-3">
+                                                    <div class="m-3">
                                                         <div class="form-outline mb-4 input-container">
-                                                            <input type="text" id="file_link_val"  name="file_link_val" class="input" placeholder="" />
-                                                            <label class="placeholder label" style="color:black">File Link                                                            Description</label>
+                                                            <input type="text" id="file_link_val" name="file_link_val" class="input" placeholder="" />
+                                                            <label class="placeholder label" style="color:black">File Link Description</label>
                                                             <span id="file_link_Error"></span>
-                                                        </div> 
+                                                        </div>
                                                     </div>
                                                 </div>
-                                               
+
 
                                                 <div class="row m-3">
                                                     <div class="col-4"></div>
@@ -174,19 +174,19 @@
                                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                     <!-- table -->
                                     <div class="d-flex p-2 flex-row-reverse">
-                                    <select class="custom-select custom-select-lg" style="margin-left:1rem;margin-right:1rem;">
-                                        <option selected>Open this select menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
+                                        <select class="custom-select custom-select-lg" style="margin-left:1rem;margin-right:1rem;">
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
                                         <button type="button" class="btn btn-md border border-success text-success"> Reset</button>
                                     </div>
                                     <div class="table-responsive-xl">
                                         <table class="table" style="font-size:1rem;">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">Check In</th>
+                                                    <th scope="col">Check Inn</th>
                                                     <th scope="col">Check Out</th>
                                                     <th scope="col">Task Date</th>
                                                     <th scope="col">Task</th>
@@ -197,10 +197,16 @@
                                                     <th scope="col">Command</th>
                                                     <th scope="col">Correction Count</th>
                                                     <th scope="col">Completion File</th>
-                                                </tr> 
+                                                </tr>
                                             </thead>
                                             <tbody class="task_data">
-                                            
+                                                <tr>
+                                                <th>hai</th>
+                                                <td>hiiiiii</td>
+                                                <td>hello</td>
+                                                <th scope="col">Completion File</th>
+                                                </tr>
+
                                             </tbody>
                                         </table>
                                     </div>
@@ -286,25 +292,24 @@
         //     $('.messages').animate({ scrollTop: $('.messages ul').height() }, "fast");
         // };
 
-        $('.new_task_assignee').css('display','none');
-        $('.drp_exist').css('display','none');  
+        $('.new_task_assignee').css('display', 'none');
+        $('.drp_exist').css('display', 'none');
         // function onchange value 
-        $(document).on('change','#task_type',function(){
+        $(document).on('change', '#task_type', function() {
             // alert('hi');
             var task_type = $('#task_type').val();
             // alert(task_type);
-            if (task_type==="assigned_task") {
-              $('.new_task_assignee').css('display','none');
-              $('.drp_exist').css('display','inline'); 
-              $('#task_name_input').css('display','none'); 
-              $('#task1').val('');
-              $('#existing_tasks').val('');
-              $('#assignee').val('');
-            }
-            else if(task_type==="new_task"){
-                $('.drp_exist').css('display','none');
-                $('.new_task_assignee').css('display','inline'); 
-                $('#task_name_input').css('display','inline');  
+            if (task_type === "assigned_task") {
+                $('.new_task_assignee').css('display', 'none');
+                $('.drp_exist').css('display', 'inline');
+                $('#task_name_input').css('display', 'none');
+                $('#task1').val('');
+                $('#existing_tasks').val('');
+                $('#assignee').val('');
+            } else if (task_type === "new_task") {
+                $('.drp_exist').css('display', 'none');
+                $('.new_task_assignee').css('display', 'inline');
+                $('#task_name_input').css('display', 'inline');
                 $('#existing_tasks').val('');
                 $('#task1').val('');
                 $('#assignee').val('');
@@ -513,19 +518,19 @@
 
 
                     $('#existing_tasks').append('<option selected disabled value="">Choose Tasks</option>');
-                    res['assigned_task'].forEach(function(item){
+                    res['assigned_task'].forEach(function(item) {
                         var element = $();
 
-                        element = element.add('<option value='+item.id+' data-task="'+item.task+'">'+item.task+'</option>');
+                        element = element.add('<option value=' + item.id + ' data-task="' + item.task + '">' + item.task + '</option>');
 
                         $('#existing_tasks').append(element);
                     });
 
 
                     $('#assignee').append('<option selected disabled value="">Choose Assigned Person</option>');
-                    res['assignee_arr'].forEach(function(item){
+                    res['assignee_arr'].forEach(function(item) {
                         var ele = $();
-                        ele = ele.add('<option value='+item.user_id+'>'+item.emp_name+'</option>');
+                        ele = ele.add('<option value=' + item.user_id + '>' + item.emp_name + '</option>');
                         $('#assignee').append(ele);
                     });
 
@@ -604,9 +609,13 @@
 
 
         // fetch data 
-        fetch_data();
+        // fetch_data_temp();
+        // function fetch_data_temp(){
+        //     alert("hai");
+        // }
 
         function fetch_data() {
+            // alert("fetching");
             var intern_id = "<?php echo $session->get('intern_id'); ?>";
             console.log(intern_id);
             // var intern =document.getElementById("task_table").value;
@@ -621,41 +630,42 @@
                 success: function(res) {
                     console.log(res);
                     console.log("ajax woking");
-                    $('.task_data').empty();
+                    // $('.task_data').empty();
 
                     res.forEach(function(items) {
+                        console.log("entering forEach");
                         var element = $();
                         var remark = " ";
                         var comment_text = "";
-                        var correction_count="";
+                        var correction_count = "";
                         var completion_file = "";
-                        if (items.remark==null) {
+                        if (items.remark == null) {
                             remark = " ";
-                        }else{
+                        } else {
                             remark = items.remark;
                         }
 
-                        if (items.comment==null) {
+                        if (items.comment == null) {
                             comment_text = "";
-                        }else{
+                        } else {
                             comment_text = items.comment;
                         }
 
-                        if (items.correction_count==null) {
+                        if (items.correction_count == null) {
                             correction_count = "";
-                        }else{
+                        } else {
                             correction_count = items.correction_count
                         }
 
-                        if (items.completion_file==null) {
-                            completion_file="";
-                        }else{
+                        if (items.completion_file == null) {
+                            completion_file = "";
+                        } else {
                             completion_file = items.completion_file;
                         }
                         element = element.add('<tr>' +
                             '<th scope="row">' + items.check_in + '</th>' +
                             '<td>' + items.check_out + '</td>' +
-                            '<td>'+items.tdate+'</td>'+
+                            '<td>' + items.tdate + '</td>' +
                             '<td>' + items.task + '</td>' +
                             '<td>' + items.task_desc + '</td>' +
                             '<td>' + items.task_status + '</td>' +
@@ -690,7 +700,7 @@
             //         if (Status() == false) {
             //             alert("Enter Required data");
             //         } else {
-                        display_data();
+            display_data();
             //         }
             //     }
             // // }
@@ -711,25 +721,25 @@
             var domain = $('.submit').attr('get_domain');
             // var task_text = $('#existing_tasks').attr('data-task');
             // console.log(task_text);
-          
+
             var tmp_assignee = "";
             var tmp_task_id = "";
             if (assignee === null) {
                 tmp_assignee = "empty";
                 tmp_task_id = task;
-                task1="empty";
+                task1 = "empty";
 
-            }else{
+            } else {
                 tmp_assignee = assignee;
                 tmp_task_id = "empty";
-                task1 =  $('#task1').val();
+                task1 = $('#task1').val();
             }
 
-            var  file_link = "";
-            if (Status==="submitted") {
+            var file_link = "";
+            if (Status === "submitted") {
                 file_link = $('#file_link_val').val();
-            }else{
-                file_link="empty";
+            } else {
+                file_link = "empty";
             }
             console.log(intern_id);
             console.log(check_in);
@@ -742,7 +752,7 @@
             console.log(domain);
             console.log(file_link);
 
-            
+
             $.ajax({
                 url: "<?php echo base_url('public/index.php/Intern_controller/today_task'); ?>",
                 method: "POST",
@@ -754,15 +764,15 @@
                     task1: task1,
                     Description: Description,
                     Status: Status,
-                    tmp_assignee:tmp_assignee,
-                    tmp_task_id:tmp_task_id,
-                    domain:domain,
-                    file_link:file_link,
+                    tmp_assignee: tmp_assignee,
+                    tmp_task_id: tmp_task_id,
+                    domain: domain,
+                    file_link: file_link,
                 },
                 success: function(res) {
                     console.log("intern daily update");
                     console.log(res);
-                    
+
                     if (res === true) {
                         reset_task_form();
                         fetch_data();
@@ -784,10 +794,10 @@
         }
 
 
-        function reset_task_form(){
-            $('#check_in').attr('type','text');
+        function reset_task_form() {
+            $('#check_in').attr('type', 'text');
             $('#check_in').val('');
-            $('#check_out').attr('type','text');
+            $('#check_out').attr('type', 'text');
             $('#check_out').val('');
             $('#task_type').val('');
             $('#task1').val('');
@@ -796,19 +806,18 @@
             $('#existing_tasks').val('');
             $('#assignee').val('');
             $('#file_link_val').val('');
-           
+
         }
 
-        $(document).on('change','#Status',function(event){
+        $(document).on('change', '#Status', function(event) {
             event.preventDefault();
-            var task_status  = $('#Status').val();
+            var task_status = $('#Status').val();
             // alert(task_status);
             $('#file_link_val').val('');
-            if (task_status==="submitted") {
-                $('#file_link').css('display','inline');
-            }
-            else if(task_status!="submitted"){
-                $('#file_link').css('display','none');
+            if (task_status === "submitted") {
+                $('#file_link').css('display', 'inline');
+            } else if (task_status != "submitted") {
+                $('#file_link').css('display', 'none');
 
             }
             // $('#file_link').css('display','inline');

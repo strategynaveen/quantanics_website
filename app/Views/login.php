@@ -225,7 +225,7 @@
         $('#admin_log_btn').on('click', function() {
             if(Alphanumeric1() && passwordValidate1()){
                 alert("Success");
-                location.replace("<?php echo base_url('/public/index.php/Home/load_option/card_show_more'); ?>");
+                // location.replace("<?php echo base_url('/public/index.php/Home/load_option/admin_dashboard'); ?>");
             }
             else{
                 alert("Fail");
@@ -289,7 +289,7 @@
                         console.log("Admin Login");
                         if (res === "success") {
                             // alert("login success");
-                            location.replace("<?php echo base_url(); ?>public/index.php/Home/load_option/card_show_more");
+                            location.replace("<?php echo base_url(); ?>public/index.php/Home/load_option/admin_dashboard");
                         }
                         else if(res==="new"){
                             alert("Invalid Admin");
