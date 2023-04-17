@@ -48,8 +48,8 @@ class Home extends BaseController
         elseif($name == "intern_after"){
             return view("Intern_Home");
         }
-        elseif($name == "card_show_more"){
-            return view("card_show_more");
+        elseif($name == "admin_dashboard"){
+            return view("admin_dashboard");
         }
   
         // echo "navigation link";

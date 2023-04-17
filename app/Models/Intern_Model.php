@@ -242,10 +242,3 @@ class Intern_Model extends Model
     }
 
 }
-
-
-
-
-
-
-?>
