@@ -62,16 +62,12 @@
             border: 1px solid #ddd;
             border-radius: .25em;
         }
-
-        .profile_permission_card {
-            /* margin-top: 50px; */
-        }
     </style>
 </head>
 
 <body>
     <?php $session = \Config\Services::session(); ?>
-
+    <?php require_once "Header.php"; ?>
     <!-- Page layout -->
     <div class="container-fluid">
         <!-- <div class="d-flex align-items-start"> -->
