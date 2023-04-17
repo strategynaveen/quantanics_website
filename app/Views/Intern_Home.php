@@ -202,11 +202,10 @@
                                             <tbody class="task_data">
                                                 <tr>
                                                 <th>hai</th>
-                                                <td>hiiiiii</td>
+                                                <td>hiiiiii eee</td>
                                                 <td>hello</td>
                                                 <th scope="col">Completion File</th>
                                                 </tr>
-
                                             </tbody>
                                         </table>
                                     </div>
