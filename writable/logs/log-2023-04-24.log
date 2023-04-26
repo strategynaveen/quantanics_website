@@ -1,0 +1,203 @@
+ERROR - 2023-04-24 17:05:43 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\quantanics_website-main\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\XAMPP\htdocs\quantanics_website-main\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'quantanis', 3306, '', 0)
+#1 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\quantanics_website-main\app\Models\Intern_Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(252): App\Models\Intern_Model->admin_data()
+#6 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(934): App\Controllers\Intern_controller->fetch_user_data()
+#7 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#8 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\XAMPP\htdocs\quantanics_website-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\quantanics_website-main\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\XAMPP\htdocs\quantanics_website-main\app\Models\Intern_Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(252): App\Models\Intern_Model->admin_data()
+#5 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(934): App\Controllers\Intern_controller->fetch_user_data()
+#6 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#7 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\quantanics_website-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-24 17:05:43 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `intern_table`
+WHERE `registeration_status` = :registeration_status:', [...], false)
+ 3 APPPATH\Models\Intern_Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Intern_controller.php(252): App\Models\Intern_Model->admin_data()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->fetch_user_data()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-24 18:00:42 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\quantanics_website-main\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\XAMPP\htdocs\quantanics_website-main\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'quantanis', 3306, '', 0)
+#1 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\quantanics_website-main\app\Models\Intern_Model.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(21): App\Models\Intern_Model->get_intern_id()
+#6 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(53): App\Controllers\Intern_controller->generate_intern_id()
+#7 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+#8 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#9 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\quantanics_website-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\quantanics_website-main\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\XAMPP\htdocs\quantanics_website-main\app\Models\Intern_Model.php(25): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(21): App\Models\Intern_Model->get_intern_id()
+#5 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(53): App\Controllers\Intern_controller->generate_intern_id()
+#6 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+#7 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#8 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\XAMPP\htdocs\quantanics_website-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-24 18:00:42 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `intern_table`', [], false)
+ 3 APPPATH\Models\Intern_Model.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Intern_controller.php(21): App\Models\Intern_Model->get_intern_id()
+ 5 APPPATH\Controllers\Intern_controller.php(53): App\Controllers\Intern_controller->generate_intern_id()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-24 18:02:35 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\quantanics_website-main\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\XAMPP\htdocs\quantanics_website-main\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'quantanis', 3306, '', 0)
+#1 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\quantanics_website-main\app\Models\Intern_Model.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(21): App\Models\Intern_Model->get_intern_id()
+#6 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(53): App\Controllers\Intern_controller->generate_intern_id()
+#7 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+#8 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#9 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\quantanics_website-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\quantanics_website-main\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\XAMPP\htdocs\quantanics_website-main\app\Models\Intern_Model.php(25): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(21): App\Models\Intern_Model->get_intern_id()
+#5 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(53): App\Controllers\Intern_controller->generate_intern_id()
+#6 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+#7 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#8 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\XAMPP\htdocs\quantanics_website-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-24 18:02:35 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `intern_table`', [], false)
+ 3 APPPATH\Models\Intern_Model.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Intern_controller.php(21): App\Models\Intern_Model->get_intern_id()
+ 5 APPPATH\Controllers\Intern_controller.php(53): App\Controllers\Intern_controller->generate_intern_id()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-24 18:12:40 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\quantanics_website-main\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\XAMPP\htdocs\quantanics_website-main\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'quantanis', 3306, '', 0)
+#1 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\quantanics_website-main\app\Models\Intern_Model.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(21): App\Models\Intern_Model->get_intern_id()
+#6 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(53): App\Controllers\Intern_controller->generate_intern_id()
+#7 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+#8 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#9 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\quantanics_website-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\quantanics_website-main\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\XAMPP\htdocs\quantanics_website-main\app\Models\Intern_Model.php(25): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(21): App\Models\Intern_Model->get_intern_id()
+#5 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(53): App\Controllers\Intern_controller->generate_intern_id()
+#6 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+#7 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#8 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\XAMPP\htdocs\quantanics_website-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-24 18:12:40 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `intern_table`', [], false)
+ 3 APPPATH\Models\Intern_Model.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Intern_controller.php(21): App\Models\Intern_Model->get_intern_id()
+ 5 APPPATH\Controllers\Intern_controller.php(53): App\Controllers\Intern_controller->generate_intern_id()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-24 18:13:01 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\quantanics_website-main\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\XAMPP\htdocs\quantanics_website-main\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'quantanis', 3306, '', 0)
+#1 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\quantanics_website-main\app\Models\Intern_Model.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(21): App\Models\Intern_Model->get_intern_id()
+#6 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(53): App\Controllers\Intern_controller->generate_intern_id()
+#7 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+#8 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#9 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\quantanics_website-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\quantanics_website-main\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\quantanics_website-main\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\XAMPP\htdocs\quantanics_website-main\app\Models\Intern_Model.php(25): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(21): App\Models\Intern_Model->get_intern_id()
+#5 D:\XAMPP\htdocs\quantanics_website-main\app\Controllers\Intern_controller.php(53): App\Controllers\Intern_controller->generate_intern_id()
+#6 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+#7 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#8 D:\XAMPP\htdocs\quantanics_website-main\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\XAMPP\htdocs\quantanics_website-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-24 18:13:01 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `intern_table`', [], false)
+ 3 APPPATH\Models\Intern_Model.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Intern_controller.php(21): App\Models\Intern_Model->get_intern_id()
+ 5 APPPATH\Controllers\Intern_controller.php(53): App\Controllers\Intern_controller->generate_intern_id()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->demo_reg()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
