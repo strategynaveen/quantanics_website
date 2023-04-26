@@ -437,7 +437,7 @@
 
                                         <div class="col-lg-12 col-md-12 col-sm-12 input-group ">
                                             <textarea class="Text-Box" id="message" type="text"
-                                                placeholder="Write your message..." data-emojiable="true"></textarea>
+                                                placeholder="Write your message..." style="padding-left:1rem;" data-emojiable="true"></textarea>
                                             <button id="send" class="submit msg_send_click"><i class="fa fa-paper-plane"
                                                     aria-hidden="true"></i>
                                             </button>
@@ -555,6 +555,7 @@
             input.type = "text";
         }
 
+        // message sending function 
         $('.submit').click(function () {
             var intern_id = "<?php echo $session->get('intern_id'); ?>";
             var intern_name = $('.intern_name').text();
@@ -580,6 +581,7 @@
                 success: function (res) {
                     console.log("message insertion ");
                     console.log(res);
+                    $('#message').val('');
                     message_retrive();
                 },
                 error: function (er) {
@@ -795,6 +797,7 @@
                 return true;
             }
         }
+
         function validateTaskName() {
             const TaskNameInput = document.getElementById("task").value;
             // console.log(TaskNameInput);

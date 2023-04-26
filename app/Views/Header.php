@@ -3,7 +3,7 @@
           <img src="<?php echo base_url(); ?>/assets/base_img/logo1.png" alt="" style="width:8%;">QUANTANICS TECHSERV PVT LTD
         </span>
 
-        <ul class="nav justify-content-end" style="font-size: 20px;font-weight: 600; font-family: sans-serif; position: relative;">
+        <ul class="nav justify-content-end" style="font-size: 1rem;font-weight: 600; font-family: sans-serif; position: relative;">
 
           <li class="nav-item" >
             <a class="nav-link text-dark" href="<?php echo base_url('/public/index.php/Home/load_option/index'); ?>">Home</a>
