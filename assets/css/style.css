@@ -8,6 +8,18 @@ body{
   min-height: 100vh;
   font-family: -apple-system,BlinkMacSystemFont,Roboto,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
+
+.navbar{
+  padding:2% ;
+  font-weight: bolder;
+}
+
+.navbar-brand{
+  color: #0492c2;
+  opacity:0.8;
+  font-size: 25px;
+  font-weight: bolder;
+}
 .containerh1{
   text-align:center;
   padding: 3%;
@@ -43,13 +55,14 @@ body{
 }
 .mvp{
   position:relative;
-  margin-left:15%;
+  margin-left:35px;
   display: inline-block;
 }
 .awards{
-  position:relative;
-  margin-left:15%;
+  position:absolute;
+  margin-left:30px;
   display: inline-block;
+  margin-top: 56px;
 }
 .products, .mvp, .awards, h4{
   font-weight:700;
@@ -61,17 +74,7 @@ font-weight:900;
 color: #0492c2;
 }
 
-.navbar{
-  padding:2% ;
-  font-weight: bolder;
-}
 
-.navbar-brand{
-  color: #0492c2;
-  opacity:0.8;
-  font-size: 25px;
-  font-weight: bolder;
-}
 .content-top{
   position:absolute;
   margin-top: 5%;
@@ -79,7 +82,7 @@ color: #0492c2;
   color:black;
   font-weight:600;
   font-weight: bolder;
-  font-family: -apple-system,BlinkMacSystemFont,Roboto,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+  font-family: -apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol";
 
 }
 .content-top h1{
@@ -109,7 +112,6 @@ color: #0492c2;
   .navbar{
     padding:2% ;
     font-weight: bolder;
-    font-size:12px;
   }
   .navbar-brand{
     color: #0492c2;
@@ -165,7 +167,7 @@ color: #0492c2;
     color: #fff;
   }
   .approach img{
-    padding-right:6%;
+    padding-right:0%;
   }
 
   .containerh1{
@@ -258,7 +260,7 @@ color: #0492c2;
 }
 
 .domain-container .grid-box .content p{
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bolder;
   line-height: 1.5em;
 }
@@ -266,6 +268,7 @@ color: #0492c2;
 .domain-container .grid-box .content h3{
 margin-top: 10px;
 margin-bottom: 5px;
+font-size: 20px;
 }
 
 
@@ -296,7 +299,7 @@ margin-bottom: 5px;
   color: #fff;
 }
 .approach img{
-  margin-left:9%;
+  margin-left:40px;
   margin-top:0%;
   width:1200px;
 }
@@ -308,9 +311,9 @@ margin-bottom: 5px;
   background-color: #fff;
 }
 #ourpartners p{
-  margin-left: 6%;
+  margin-left: 4%;
   font-weight: bolder;
-  font-size:18px;
+  font-size:19px;
 }
 
 .footer{
@@ -419,3 +422,28 @@ border-radius: 25px;
 font-weight: 900;
 box-shadow: 5px 5px 20px #000;
 }*/
+
+/***************** Our Clients************************/
+
+/* ******** counter********** */
+.num1:after{
+  content: "+";
+  display: inline;
+}
+.statistic{
+  /* width:50%; */
+  font-size:40px;
+  font-weight: bold;
+  margin-left: 10px;
+  /* margin-top: -35px; */
+}
+.para_text{
+  margin-top: 25px;
+}
+.no_count{
+  color: #000000a2;
+}
+.num:after{
+  content: "+";
+  display: inline;
+}
