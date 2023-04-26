@@ -18,10 +18,11 @@
     referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/style.css?version=<?php echo rand()?>">
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 </head>
 
 <body>
-
+  <!-- <nav class="navbar">
   <!--- navigation bar -->
   <!-- <nav class="navbar">
     <span class="navbar-brand mb-0 h1">
@@ -81,17 +82,17 @@
             <br><br><br>
             <div class="products">
               <hr>
-              <h4>100+</h4>
+              <h4 class="num" data-val="250">0</h4>
               <h2>Products</h2>
             </div>
             <div class="mvp">
               <hr>
-              <h4>50+</h4>
+              <h4 class="num" data-val="500">0</h4>
               <h2>MVPs</h2>
             </div>
             <div class="awards">
               <hr>
-              <h4>20+</h4>
+              <h4 class="num" data-val="25">0</h4>
               <h2>Awards</h2>
             </div>
 
@@ -129,8 +130,8 @@
   <div class="domain-section">
     <div class="domain-container">
       <div class="grid-box">
-        <div class="icon" style="--i:#BB8FCE ">
-          <i class="fas fa-brain"></i>
+        <div class="icon" style="background-image:url(<?php echo base_url(); ?>/assets/ourdomains/MLAI.jpg);background-attachment: cover;background-position: center;background-repeat: no-repeat;background-size: cover;">
+          <!-- <i class="fas fa-brain"></i> -->
         </div>
         <div class="content">
           <h3>AI & ML</h3>
@@ -139,9 +140,9 @@
       </div>
 
 
-      <div class="grid-box">
-        <div class="icon" style="--i: #fd6494">
-          <i class="fas fa-robot"></i>
+      <div class="grid-box"style="background-color: rgb(255, 61, 61);">
+        <div class="icon" style="background-image:url(<?php echo base_url(); ?>/assets/ourdomains/robo1.jpg);background-attachment: cover;background-position: center;background-repeat: no-repeat;background-size: cover;">
+          <!-- <i class="fas fa-robot"></i> -->
         </div>
         <div class="content">
           <h3>Robotics & Automation</h3>
@@ -149,9 +150,9 @@
         </div>
       </div>
 
-      <div class="grid-box">
-        <div class="icon" style="--i: #43f390">
-          <i class="fas fa-link"></i>
+      <div class="grid-box"style="background-color: rgb(144, 218, 144);">
+        <div class="icon" style="background-image:url(<?php echo base_url(); ?>/assets/ourdomains/blockchain.jpg);background-attachment: cover;background-position: center;background-repeat: no-repeat;background-size: cover;">
+          <!-- <i class="fas fa-link"></i> -->
         </div>
         <div class="content">
           <h3>Block Chain</h3>
@@ -159,9 +160,9 @@
         </div>
       </div>
 
-      <div class="grid-box">
-        <div class="icon" style="--i: #ffb508">
-          <i class="fas fa-database"></i>
+      <div class="grid-box" style="background-color:rgb(0,135,125);">
+        <div class="icon" style="background-image:url(<?php echo base_url(); ?>/assets/ourdomains/bigdata.jpg);background-attachment: cover;background-position: center;background-repeat: no-repeat;background-size: cover;">
+          <!-- <i class="fas fa-database"></i> -->
         </div>
         <div class="content">
           <h3>Big Data Analytics</h3>
@@ -169,9 +170,9 @@
         </div>
       </div>
 
-      <div class="grid-box">
-        <div class="icon" style="--i: #ff774d">
-          <i class="fas fa-laptop-house"></i>
+      <div class="grid-box" style="background-color: rgb(250, 131, 151);">
+        <div class="icon" style="background-image:url(<?php echo base_url(); ?>/assets/ourdomains/IoT.png);background-attachment: cover;background-position: center;background-repeat: no-repeat;background-size: cover;">
+          <!-- <i class="fas fa-laptop-house"></i> -->
 
         </div>
         <div class="content">
@@ -180,9 +181,9 @@
         </div>
       </div>
 
-      <div class="grid-box">
-        <div class="icon" style="--i: #2C3E50">
-          <i class="fas fa-laptop-code"></i>
+      <div class="grid-box" style="background-color: goldenrod;">
+        <div class="icon" style="background-image:url(<?php echo base_url(); ?>/assets/ourdomains/web.jpg);background-attachment: cover;background-position: center;background-repeat: no-repeat;background-size: cover;">
+          <!-- <i class="fas fa-laptop-code"></i> -->
         </div>
         <div class="content">
           <h3>Website & 3D Designing</h3>
@@ -210,13 +211,352 @@
     <h1 class="containerh1">OUR CLIENTS <br />
       <hr>
     </h1>
+    <!-- <script class="count">
+      new PureCounter();
+    </script> -->
+    <!-- <div class="span" data-aos="fade-up" data-aos-delay="100">
+      <div class="count-box" style="margin-top: 20px;">
+        <h4 style="color: rgba(0, 0, 0, 0.733);">
+          <span data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="3" class="purecounter"
+            style="color: rgba(0, 0, 0, 0.733);"></span>+
+        </h4>
+      </div>
+    </div> -->
+    <div class="statistic">
+                <div class="value num" data-val="300">
+                  0
+                </div>
+    </div>
 
-    <p>Our clients are people and organizations with ambition and imagination to unleash the power of IT for their businesses and ideas.</p>
+    <p class="para_text" >Our clients are people and organizations with ambition and imagination to unleash the power of IT for their businesses and ideas.</p>
 
     <div class="ui divider" style="border:none;"></div>
-    <img class="ui middle aligned massive image" src="<?php echo base_url(); ?>/assets/indexpageimages/img3.jpg">
+    <!-- <img class="ui middle aligned massive image" src="<?php echo base_url(); ?>/assets/indexpageimages/img.jpg"> -->
+    <!-- <section class="card-area">
+    <section class="card-section">
+      <div class="card">
+        <div class="flip-card">
+          <div class="flip-card__container">
+            <div class="card-front">
+              <img src="<?php echo base_url(); ?>/assets/client/img1.png" alt="" style="margin-top: 50px;">
+            </div>
+            <div class="card-back">
+              <img src="<?php echo base_url(); ?>/assets/client/img1.png" alt="" style="margin-top: 50px;">
+            </div>
+          </div>
+        </div>
+        <div class="inside-page">
+          <div class="inside-page__container">
+            <h3 class="inside-page__heading" style="margin-top: 5px;">
+              Nokia Corporation
+            </h3>
+            <p class="inside-page__text">
 
-    </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="card-section">
+      <div class="card">
+        <div class="flip-card">
+          <div class="flip-card__container">
+            <div class="card-front">
+              <img src="<?php echo base_url(); ?>/assets/client/img2.png" alt="" style="margin-top: 0px;">
+            </div>
+            <div class="card-back">
+              <img src="<?php echo base_url(); ?>/assets/client/img2.png" alt="" style="margin-top: 0px;">
+            </div>
+          </div>
+        </div>
+        <div class="inside-page">
+          <div class="inside-page__container">
+            <h3 class="inside-page__heading" style="margin-top: 20px;">
+              Sri Mookambika Info Solutions Pvt Ltd
+            </h3>
+            <p class="inside-page__text">
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="card-section">
+      <div class="card">
+        <div class="flip-card">
+          <div class="flip-card__container">
+            <div class="card-front">
+              <img src="<?php echo base_url(); ?>/assets/client/img3.png" alt="" style="margin-top: 40px;">
+            </div>
+            <div class="card-back">
+              <img src="<?php echo base_url(); ?>/assets/client/img3.png" alt="" style="margin-top: 40px;">
+            </div>
+          </div>
+        </div>
+        <div class="inside-page">
+          <div class="inside-page__container">
+            <h3 class="inside-page__heading" style="margin-top: 15px;">
+              INNOMAINT
+            </h3>
+            <p class="inside-page__text">
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="card-section">
+      <div class="card">
+        <div class="flip-card">
+          <div class="flip-card__container">
+            <div class="card-front">
+              <img src="<?php echo base_url(); ?>/assets/client/img4.png" alt="">
+            </div>
+            <div class="card-back">
+              <img src="<?php echo base_url(); ?>/assets/client/img4.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="inside-page">
+          <div class="inside-page__container">
+            <h3 class="inside-page__heading" style="margin-top: 20px;">
+              TITAN COMPANY LIMITED
+            </h3>
+            <p class="inside-page__text">
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="card-section">
+      <div class="card">
+        <div class="flip-card">
+          <div class="flip-card__container">
+            <div class="card-front">
+              <img src="<?php echo base_url(); ?>/assets/client/new/prime/img2.png" alt="">
+            </div>
+            <div class="card-back">
+              <img src="<?php echo base_url(); ?>/assets/client/new/prime/img2.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="inside-page">
+          <div class="inside-page__container">
+            <h3 class="inside-page__heading " style="margin-top: 20px;">
+              INDIAN OIL CORPORATION LIMITED
+            </h3>
+            <p class="inside-page__text">
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section class="card-area">
+    <section class="card-section">
+      <div class="card">
+        <div class="flip-card">
+          <div class="flip-card__container">
+            <div class="card-front">
+              <img src="<?php echo base_url(); ?>/assets/client/new/prime/img5.jpg" alt="">
+            </div>
+            <div class="card-back">
+              <img src="<?php echo base_url(); ?>/assets/client/new/prime/img5.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="inside-page">
+          <div class="inside-page__container">
+            <h3 class="inside-page__heading" style="margin-top: 15px;">
+              InfyIoT Solutions
+            </h3>
+            <p class="inside-page__text">
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-section">
+      <div class="card">
+        <div class="flip-card">
+          <div class="flip-card__container">
+            <div class="card-front">
+              <img src="<?php echo base_url(); ?>/assets/client/new/prime/img10.png" alt="" style="margin-top: 50px;">
+            </div>
+            <div class="card-back">
+              <img src="<?php echo base_url(); ?>/assets/client/new/prime/img10.png" alt="" style="margin-top: 50px;">
+            </div>
+          </div>
+        </div>
+        <div class="inside-page">
+          <div class="inside-page__container">
+            <h3 class="inside-page__heading" style="margin-top: 20px;">
+              SMARTORIES
+            </h3>
+            <p class="inside-page__text">
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="card-section">
+      <div class="card">
+        <div class="flip-card">
+          <div class="flip-card__container">
+            <div class="card-front">
+              <img src="<?php echo base_url(); ?>/assets/client/img8.jpg" alt="">
+            </div>
+            <div class="card-back">
+              <img src="<?php echo base_url(); ?>/assets/client/img8.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="inside-page">
+          <div class="inside-page__container">
+            <h3 class="inside-page__heading" style="margin-top: 15px;">
+              GEOMEO INFORMATICS
+            </h3>
+            <p class="inside-page__text">
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="card-section">
+      <div class="card">
+        <div class="flip-card">
+          <div class="flip-card__container">
+            <div class="card-front">
+              <img src="<?php echo base_url(); ?>/assets/client/img9.png" alt="" style="margin-top: 30px;">
+            </div>
+            <div class="card-back">
+              <img src="<?php echo base_url(); ?>/assets/client/img9.png" alt="" style="margin-top: 30px;">
+            </div>
+          </div>
+        </div>
+        <div class="inside-page">
+          <div class="inside-page__container">
+            <h3 class="inside-page__heading " style="margin-top: 5px;">
+              GUVI
+            </h3>
+            <p class="inside-page__text">
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="card-section">
+      <div class="card">
+        <div class="flip-card">
+          <div class="flip-card__container">
+            <div class="card-front">
+              <img src="<?php echo base_url(); ?>/assets/client/new/prime/img11.png" alt="" style="margin-top: 20px;">
+            </div>
+            <div class="card-back">
+              <img src="<?php echo base_url(); ?>/assets/client/new/prime/img11.png" alt="" style="margin-top: 20px;">
+            </div>
+          </div>
+        </div>
+        <div class="inside-page">
+          <div class="inside-page__container">
+            <h3 class="inside-page__heading" style="margin-top: 25px;">
+              Pop Farme Tech Pvt Ltd
+            </h3>
+            <p class="inside-page__text">
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section> -->
+
+
+  <!-- </div> -->
+  <!-- <div style="display: flex;justify-content: center;align-items: center;"> -->
+  
+  
+  <!-- <section class="card-area">
+    <section class="card-section">
+      <div class="card">
+        <div class="flip-card">
+          <div class="flip-card__container">
+            <div class="card-front">
+              <img src="<?php echo base_url(); ?>/assets/client/new/prime/img16.png" alt="" style="margin-top: 20px;">
+            </div>
+            <div class="card-back">
+              <img src="<?php echo base_url(); ?>/assets/client/new/prime/img16.png" alt="" style="margin-top: 20px;">
+            </div>
+          </div>
+        </div>
+        <div class="inside-page">
+          <div class="inside-page__container">
+            <h3 class="inside-page__heading " style="margin-top: 20px;">
+              JAYABHARATH HOMES AND DEVELOPERS
+            </h3>
+            <p class="inside-page__text">
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="card-section">
+      <div class="card">
+        <div class="flip-card">
+          <div class="flip-card__container">
+            <div class="card-front">
+              <img src="<?php echo base_url(); ?>/assets/client/img16.png" alt="" style="margin-top: 30px;">
+            </div>
+            <div class="card-back">
+              <img src="<?php echo base_url(); ?>/assets/client/img16.png" alt="" style="margin-top: 30px;">
+            </div>
+          </div>
+        </div>
+        <div class="inside-page">
+          <div class="inside-page__container">
+            <h3 class="inside-page__heading" style="margin-top: 10px;">
+              EDGE MATRIX
+            </h3>
+            <p class="inside-page__text">
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="card-section">
+      <div class="card">
+        <div class="flip-card">
+          <div class="flip-card__container">
+            <div class="card-front">
+              <img src="<?php echo base_url(); ?>/assets/client/img5.jpg" alt="" style="margin-top: 0px;">
+            </div>
+            <div class="card-back">
+              <img src="<?php echo base_url(); ?>/assets/client/img5.jpg" alt="" style="margin-top: 0px;">
+            </div>
+          </div>
+        </div>
+        <div class="inside-page">
+          <div class="inside-page__container">
+            <h3 class="inside-page__heading" style="margin-top: 10px;">
+              GALWIN TECHNOLOGY
+            </h3>
+            <p class="inside-page__text">
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section> -->
+    
+
+   
   </div>
   <!--partners -- >
 
@@ -231,6 +571,41 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <!-- <script>new PureCounter();</script> -->
+  <!-- <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script> -->
+  <script>
+    let valueDisplays = document.querySelectorAll(".num");
+    let interval = 4000;
+    valueDisplays.forEach((valueDisplay) => {
+      let startvalue = 0;
+      let endvalue = parseInt(valueDisplay.getAttribute("data-val"));
+      let duration = Math.floor(interval / endvalue);
+      let counter = setInterval(function () {
+        startvalue += 1;
+        valueDisplay.textContent = startvalue;
+        if (startvalue == endvalue) {
+          clearInterval(counter);
+        }
+      }, duration);
+    });
+  </script>
+
+<script>
+    let valueDisplays = document.querySelectorAll(".num");
+    let interval = 4000;
+    valueDisplays.forEach((valueDisplay) => {
+      let startvalue = 0;
+      let endvalue = parseInt(valueDisplay.getAttribute("data-val"));
+      let duration = Math.floor(interval / endvalue);
+      let counter = setInterval(function () {
+        startvalue += 1;
+        valueDisplay.textContent = startvalue;
+        if (startvalue == endvalue) {
+          clearInterval(counter);
+        }
+      }, duration);
+    });
+  </script>
 
   <script src="<?php echo base_url(); ?>/assets/js/script.js" charset="utf-8"></script>
   </div>

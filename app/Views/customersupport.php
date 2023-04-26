@@ -14,7 +14,7 @@
     referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/customersupport.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/customersupport.css?version="<?php echo rand();  ?>">
 </head>
 
 <body>
@@ -71,37 +71,36 @@
         Machine learning & Artificial intelligence products. </h1>
     </div>
     <div class="ui segment" style="font-size:16px; margin:0;padding-bottom:5%;border:none;">
-      <div class="ui four statistics" style="margin-top:3%;">
+    <div class="ui four statistics" style="margin-top:3%;">
         <div class="statistic">
-          <div class="value">
-            100+
+          <div class="num1" data-val="250">
+            0
           </div>
-          <div class="label">
+          <div class="label1">
             PRODUCTS
           </div>
         </div>
         <div class="statistic">
-          <div class=" value">
-            50+
+          <div class="num1" data-val="500">
+            0
           </div>
-          <div class="label">
+          <div class="label1">
             MVP's
           </div>
         </div>
         <div class="statistic">
-          <div class="value">
-           20+
+          <div class="num1" data-val="25">
+            0
           </div>
-          <div class="label">
+          <div class="label1">
             AWARDS
           </div>
         </div>
         <div class="statistic">
-          <div class="value">
-
-            200+
+          <div class="num1" data-val="30">
+            0
           </div>
-          <div class="label">
+          <div class="label1">
             TEAM MEMBERS
           </div>
         </div>
@@ -127,17 +126,6 @@
     </div>
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
     <!-- Footer -->
     <?php require_once "Footer.php"; ?>
     <!-- Footer -->
@@ -148,7 +136,23 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  
+  <script>
+    let valueDisplays = document.querySelectorAll(".num1");
+    let interval = 4000;
+    valueDisplays.forEach((valueDisplay) => {
+      let startvalue = 0;
+      let endvalue = parseInt(valueDisplay.getAttribute("data-val"));
+      let duration = Math.floor(interval / endvalue);
+      let counter = setInterval(function () {
+        startvalue += 1;
+        valueDisplay.textContent = startvalue+'+';
+        if (startvalue == endvalue) {
+          clearInterval(counter);
+        }
+      }, duration);
+    });
+  </script>
 
 
 
