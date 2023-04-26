@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  
+
 <head>
   <meta charset="utf-8">
   <title>Quantanics Website</title>
@@ -18,7 +18,7 @@
   <!-- google font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A400&display=swap" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous"
     referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/about.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/about.css?version="<?php echo rand();  ?>">
 </head>
 
 <body>
@@ -36,35 +36,34 @@
 
             <div class="ui four statistics" style="margin-top:3%;">
               <div class="statistic">
-                <div class="value">
-                  100+
+                <div class="num2" data-val="250">
+                  0
                 </div>
-                <div class="label">
+                <div class="label2">
                   PRODUCTS
                 </div>
               </div>
               <div class="statistic">
-                <div class=" value">
-                  50+
+                <div class=" num2" data-val="500">
+                  0
                 </div>
-                <div class="label">
+                <div class="label2">
                   MVP's
                 </div>
               </div>
               <div class="statistic">
-                <div class="value">
-                 20+
+                <div class="num2" data-val="25">
+                 0
                 </div>
-                <div class="label">
+                <div class="label2">
                   AWARDS
                 </div>
               </div>
               <div class="statistic">
-                <div class="value">
-
-                  200+
+                <div class="num2" data-val="30">
+                  0
                 </div>
-                <div class="label">
+                <div class="label2">
                   TEAM MEMBERS
                 </div>
               </div>
@@ -115,6 +114,22 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </script>
+  <script>
+    let valueDisplays = document.querySelectorAll(".num2");
+    let interval = 4000;
+    valueDisplays.forEach((valueDisplay) => {
+      let startvalue = 0;
+      let endvalue = parseInt(valueDisplay.getAttribute("data-val"));
+      let duration = Math.floor(interval / endvalue);
+      let counter = setInterval(function () {
+        startvalue += 1;
+        valueDisplay.textContent = startvalue+'+';
+        if (startvalue == endvalue) {
+          clearInterval(counter);
+        }
+      }, duration);
+    });
   </script>
 
 </body>

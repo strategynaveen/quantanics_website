@@ -3,9 +3,9 @@
           <img src="<?php echo base_url(); ?>/assets/base_img/logo1.png" alt="" style="width:8%;">QUANTANICS TECHSERV PVT LTD
         </span>
 
-        <ul class="nav justify-content-end">
+        <ul class="nav justify-content-end" style="font-size: 20px;font-weight: 600; font-family: sans-serif; position: relative;">
 
-          <li class="nav-item">
+          <li class="nav-item" >
             <a class="nav-link text-dark" href="<?php echo base_url('/public/index.php/Home/load_option/index'); ?>">Home</a>
           </li>
           <li class="nav-item">
@@ -15,7 +15,7 @@
             <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Services
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size:15px; font-family:-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol";>
               <li><a class="dropdown-item" href="<?php echo base_url('/public/index.php/Home/load_option/iotservice'); ?>">Iot Services</a></li>
               <li><a class="dropdown-item" href="<?php echo base_url('/public/index.php/Home/load_option/customersupport'); ?>">Customer Services</a></li>
               <li><a class="dropdown-item" href="<?php echo base_url('/public/index.php/Home/load_option/productdev'); ?>">Product Development Serives</a></li>
@@ -39,7 +39,7 @@
                 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Internship
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownstyle=" style="font-size:15px; font-family:-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol";>
                 <li><a class="dropdown-item" href="<?php echo base_url('/public/index.php/Home/load_option/intern_login'); ?>">Login</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url('/public/index.php/Home/load_option/intern_register'); ?>">Registeration</a></li>
                 </ul>
