@@ -7,13 +7,11 @@
 body{
   min-height: 100vh;
   font-family: -apple-system,BlinkMacSystemFont,Roboto,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size:16px;
 }
 
 .navbar{
   padding:2% ;
   font-weight: bolder;
-  /* font-size:16px; */
 }
 .navbar-brand{
   color:  #0492c2;

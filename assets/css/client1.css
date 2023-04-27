@@ -6,13 +6,12 @@
 body{
   min-height: 100vh;
   font-family: -apple-system,BlinkMacSystemFont,Roboto,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size:16px;
 }
 
 .navbar{
   padding:2% ;
   font-weight: bolder;
-  /* font-size:16px; */
+  font-size: 62.5px;
 }
 .navbar-brand{
   color:  #0492c2;
@@ -136,10 +135,6 @@ input {
 
 }
 
-
-
-
-
 .placeholder {
     color: #000000;
     background-color: white;
@@ -196,6 +191,7 @@ input {
 .m-3{
     padding: 4px;
 }
+
 /***********************************************Our Clients***************/
 .box {
     display: flex;
@@ -203,26 +199,22 @@ input {
     margin-left: 20px;
     margin-right: 20px;
 }
-
 #scrollDemo {
     height: 400px;
     width: 100%;
     overflow: hidden;
 }
-
 .content1 {
     /* show the scrollbar */
     height: 500px;
     width: 1100px;
 }
-
 .main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
 }
-
 /* Container to hold all cards in one place */
 .card-area {
     align-items: center;
@@ -231,8 +223,8 @@ input {
     justify-content: flex-start;
     padding: 1rem;
     width:100%;
-}
 
+}
 
 /* Card ============================================*/
 
@@ -247,21 +239,19 @@ input {
     padding: 20px;
     float: left;
     padding: 10px;
+     
 }
-
 
 .card {
     background-color: rgba(0, 0, 0, .05);
     box-shadow: -.1rem .7rem 4rem -3.2rem rgba(0, 0, 0, 0.5);
-
     position: relative;
     transition: all 1s ease;
     width: 15rem;
     height: 15rem;
     border: none;
+
 }
-
-
 /* An outer container to hold the flip card. This excludes the inside page */
 .flip-card {
     height: 15rem;
@@ -273,13 +263,10 @@ input {
     width: 15rem;
     z-index: 100;
 }
-
-/* The outer container's visibility is set to hidden. This is to make everything within the container NOT set to hidden  */
 /* This is done so content in the inside page can be selected */
 .flip-card>* {
     visibility: visible;
 }
-
 /* An inner container to hold the flip card. This excludes the inside page */
 .flip-card__container {
     height: 100%;
@@ -290,7 +277,6 @@ input {
     transition: all 1s ease;
     width: 100%;
 }
-
 .card-front,
 .card-back {
     backface-visibility: hidden;
@@ -300,6 +286,7 @@ input {
     top: 0;
     width: 100%;
 }
+
 
 /* Styling for the front side of the flip card */
 
@@ -321,7 +308,6 @@ input {
     max-width: 100%;
     max-height: 100%;
 }
-
 .containerh1{
     text-align:center;
     padding: 3%;
@@ -383,7 +369,6 @@ input {
     width: 15rem;
     z-index: 1;
 }
-
 .inside-page__container {
     align-items: center;
     display: flex;
@@ -393,7 +378,6 @@ input {
     width: 100%;
     justify-content: center;
 }
-
 #btnScrollLeft {
     padding: 5px;
 }
@@ -401,8 +385,6 @@ input {
 #btnScrollRight {
     padding: 5px;
 }
-
-/* CSS reset */
 *,
 *::after,
 *::before {
@@ -410,27 +392,15 @@ input {
     margin: 0;
     padding: 0;
 }
-
-html {
+html{
     font-size: 62.5%;
 }
 
-body {
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    position: relative;
-}
-
-/*
-  section {
-    display: grid;
-    grid-template-columns: var(--page-margin) [center-start] 1fr [center-end] var(--page-margin);
-  }
-  section > * {
-    grid-column: center;
-  }
-  */
-
+/* .html1{
+    background-color: #0492c2;
+    
+    font-size: 5%;
+} */
 /* This is to keep the card centered (within its container) when opened */
 .card:hover {
     box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0, 0, 0, 0.75);
@@ -525,7 +495,6 @@ body {
     height: 20rem;
     min-width: 13rem;
 }
-
 
 
 
