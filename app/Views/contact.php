@@ -64,52 +64,51 @@
   </nav> -->
   <?php require_once "Header.php"; ?>
 
-<div class="content">
-  <h1>Contact Us</h1>
-    <p>Want to know much about the company and products.
-    Interested in developing a long-term relationship with quantanics,
-    we are there for you. Feel free to contact.</p>
-</div>
+  <div class="content">
+    <h1>Contact Us</h1>
+      <p>Want to know much about the company and products.
+      Interested in developing a long-term relationship with quantanics,
+      we are there for you. Feel free to contact.</p>
+  </div>
 
   <img class="ui middle aligned massive image" src="<?php echo base_url(); ?>/assets/indexpageimages/img5.jfif">
   <div class="divider">
     <div class="ui segment">
       <div class="ui two column very relaxed grid">
-    <div class="column">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.006259403895!2d78.08912692044497!3d9.933436038867058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cfb144432119%3A0x35b104e88a1bce04!2sQuantanics%20Techserv%20Private%20Limited!5e0!3m2!1sen!2sin!4v1634620232131!5m2!1sen!2sin" width="530" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    <div class="column" style="padding:5%;text-align:justify">
-      <h1 style="text-align:center;color:  #0492c2;">Quantanics Techserv Pvt Ltd</h1><br>
-      <h4> <i class="fas fa-home me-3 text-primary"></i> No.206, Vellaikannu Nagar, Theni main road,</h4>
-      <h4 style="padding-left:7%;">Madurai-625016, Tamil Nadu, India.</h4>
-      <h4><i class="fas fa-envelope me-3 text-primary"></i>
-        support@quantanics.com
-      </h4>
-      <h4 ><i class="fas fa-phone me-3 text-primary"></i>+91 8217593617 </h4>
-      <div style="font-size:20px; padding:5% 0;">
-        <a href="https://m.facebook.com/quantanics.in/posts" class="me-4 text-reset" >
-          <i class="fab fa-facebook-f text-primary"></i>
-        </a>
-        <a href="https://twitter.com/quantanics_in" class="me-4 text-reset">
-          <i class="fab fa-twitter text-primary"></i>
-        </a>
-        <a href=" https://www.youtube.com/channel/UCv_iPrXQV1YsT-0BaPCV40w" class="me-4 text-reset">
-          <i class="fab fa-youtube text-primary"></i>
-        </a>
-        <a href="http://quantanics.in" class="me-4 text-reset">
-          <i class="fab fa-google text-primary"></i>
-        </a>
-        <a href=" https://in.linkedin.com/in/quantanics-techserv-pvt-ltd-51a92920b" class="me-4 text-reset">
-          <i class="fab fa-linkedin text-primary"></i>
-        </a>
+        <div class="column">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.006259403895!2d78.08912692044497!3d9.933436038867058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cfb144432119%3A0x35b104e88a1bce04!2sQuantanics%20Techserv%20Private%20Limited!5e0!3m2!1sen!2sin!4v1634620232131!5m2!1sen!2sin" width="530" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="column" style="padding:5%;text-align:justify">
+          <h1 style="text-align:center;color:  #0492c2;">Quantanics Techserv Pvt Ltd</h1><br>
+          <h4> <i class="fas fa-home me-3 text-primary"></i> No.206, Vellaikannu Nagar, Theni main road,</h4>
+          <h4 style="padding-left:7%;">Madurai-625016, Tamil Nadu, India.</h4>
+          <h4><i class="fas fa-envelope me-3 text-primary"></i>
+            support@quantanics.com
+          </h4>
+          <h4 ><i class="fas fa-phone me-3 text-primary"></i>+91 8217593617 </h4>
+          <div style="font-size:20px; padding:5% 0;">
+            <a href="https://m.facebook.com/quantanics.in/posts" class="me-4 text-reset" >
+              <i class="fab fa-facebook-f text-primary"></i>
+            </a>
+            <a href="https://twitter.com/quantanics_in" class="me-4 text-reset">
+              <i class="fab fa-twitter text-primary"></i>
+            </a>
+            <a href=" https://www.youtube.com/channel/UCv_iPrXQV1YsT-0BaPCV40w" class="me-4 text-reset">
+              <i class="fab fa-youtube text-primary"></i>
+            </a>
+            <a href="http://quantanics.in" class="me-4 text-reset">
+              <i class="fab fa-google text-primary"></i>
+            </a>
+            <a href=" https://in.linkedin.com/in/quantanics-techserv-pvt-ltd-51a92920b" class="me-4 text-reset">
+              <i class="fab fa-linkedin text-primary"></i>
+            </a>
+          </div>
+          <p>© 2021 Copyright: Quantanics TechServ Pvt Ltd. All Rights Reserved. </p>
+        </div>
       </div>
-      <p>© 2021 Copyright: Quantanics TechServ Pvt Ltd. All Rights Reserved. </p>
+      <div class="ui vertical divider"></div>
     </div>
   </div>
-  <div class="ui vertical divider">
-  </div>
-
-
 
 
 
