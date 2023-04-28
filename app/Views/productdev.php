@@ -18,7 +18,7 @@
   <!-- google font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A400&display=swap" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous"
     referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/productdev.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/productdev.css?version=<?php echo rand(); ?>">
 </head>
 
 <body>

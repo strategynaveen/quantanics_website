@@ -10,7 +10,7 @@ body{
 }
 
 .navbar{
-  padding:2%  ;
+  /* padding:2%  ; */
   font-weight: bolder;
 }
 .navbar-brand{

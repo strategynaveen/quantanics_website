@@ -16,7 +16,7 @@ body{
 
 }
 .navbar{
-  padding:2% 8% 0 8% ;
+  /* padding:2% 8% 0 8% ; */
   font-weight: bolder;
 }
 .navbar-brand{

@@ -1,0 +1,80 @@
+ERROR - 2023-04-26 10:40:38 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'quantanis' in C:\xampp\htdocs\quantanics\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\quantanics\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'quantanis', 3306, '', 0)
+#1 C:\xampp\htdocs\quantanics\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\quantanics\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\quantanics\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\quantanics\app\Models\Intern_Model.php(81): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\quantanics\app\Controllers\Intern_controller.php(128): App\Models\Intern_Model->login_intern('910018104304', '2000-04-18')
+#6 C:\xampp\htdocs\quantanics\system\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_login()
+#7 C:\xampp\htdocs\quantanics\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#8 C:\xampp\htdocs\quantanics\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\quantanics\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'quantanis' in C:\xampp\htdocs\quantanics\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\quantanics\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\quantanics\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\quantanics\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\quantanics\app\Models\Intern_Model.php(81): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\quantanics\app\Controllers\Intern_controller.php(128): App\Models\Intern_Model->login_intern('910018104304', '2000-04-18')
+#5 C:\xampp\htdocs\quantanics\system\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_login()
+#6 C:\xampp\htdocs\quantanics\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#7 C:\xampp\htdocs\quantanics\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\quantanics\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-26 10:40:38 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'quantanis'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `intern_table`
+WHERE `regno` = :regno:
+AND `dob` = :dob:', [...], false)
+ 3 APPPATH\Models\Intern_Model.php(81): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Intern_controller.php(128): App\Models\Intern_Model->login_intern('910018104304', '2000-04-18')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_login()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-26 10:40:44 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'quantanis' in C:\xampp\htdocs\quantanics\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\quantanics\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'quantanis', 3306, '', 0)
+#1 C:\xampp\htdocs\quantanics\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\quantanics\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\quantanics\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\quantanics\app\Models\Intern_Model.php(81): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\quantanics\app\Controllers\Intern_controller.php(128): App\Models\Intern_Model->login_intern('910018104304', '2000-04-18')
+#6 C:\xampp\htdocs\quantanics\system\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_login()
+#7 C:\xampp\htdocs\quantanics\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#8 C:\xampp\htdocs\quantanics\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\quantanics\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'quantanis' in C:\xampp\htdocs\quantanics\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\quantanics\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\quantanics\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\quantanics\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\quantanics\app\Models\Intern_Model.php(81): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\quantanics\app\Controllers\Intern_controller.php(128): App\Models\Intern_Model->login_intern('910018104304', '2000-04-18')
+#5 C:\xampp\htdocs\quantanics\system\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_login()
+#6 C:\xampp\htdocs\quantanics\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+#7 C:\xampp\htdocs\quantanics\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\quantanics\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-26 10:40:44 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'quantanis'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `intern_table`
+WHERE `regno` = :regno:
+AND `dob` = :dob:', [...], false)
+ 3 APPPATH\Models\Intern_Model.php(81): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Intern_controller.php(128): App\Models\Intern_Model->login_intern('910018104304', '2000-04-18')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Intern_controller->intern_login()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Intern_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

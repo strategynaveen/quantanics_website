@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- stylesheet-->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/client1.css?version="<?php echo rand();  ?>">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/client1.css?version=<?php echo rand(); ?>">
     <!-- google font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A400&display=swap" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,7 +18,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/custom/css/inter_register.css?version="<?php echo rand();  ?>">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/custom/css/inter_register.css?version=<?php echo rand();  ?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
 </head>
@@ -95,7 +95,7 @@
                                 <div class="row mb-3">
                                     <div class="col-4"></div>
                                     <div class="col-4">
-                                        <button type="button" class="btn btn-lg mx-auto border border-2 border-info rounded text-info next_click" style="width:100%" id="reg_first_btn">Next</button>
+                                        <button type="button" class="btn btn-lg mx-auto border border-2 border-info rounded text-info next_click1" style="width:100%" id="reg_first_btn">Next</button>
                                     </div>
                                     <div class="col-4"></div>
                                 </div>
@@ -136,7 +136,7 @@
                                 <div class="row m-3">
 
                                     <div class="form-outline mb-4 input-container">
-                                        <input type="text" name="id_card_file_txt" id="id_card_file_txt" class="input" placeholder=" " readonly onblur="validateid()" >
+                                        <input type="text" name="id_card_file_txt" id="id_card_file_txt" class="input" onblur="validateid()" placeholder=" " readonly  >
                                         <label for="form2Example11" class="placeholder label">Id
                                             Card</label>
                                         <div class="pin" id="pin_id_card"><i class="fa-solid fa-paperclip pin-icon"></i></div>
@@ -149,7 +149,7 @@
 
                                 <div class="m-3">
                                     <div class="form-outline mb-4 input-container">
-                                        <input type="text" name="profile_file_txt" id="profile_file_txt" class="input" placeholder=" " readonly onblur="validateprofile()" >
+                                        <input type="text" name="profile_file_txt" id="profile_file_txt" class="input" onblur="validateprofile()" placeholder=" " readonly  >
                                         <label for="form2Example11" class="placeholder label">Profile</label>
                                         <div class="pin" id="pin_profile"><i class="fa-solid fa-paperclip pin-icon"></i></div>
                                         <input type="file" name="profile_file" id="profile_file" class="hidden form-control form-control-md" onblur="checkFileSize()">
@@ -170,7 +170,7 @@
                                     <div class="col-lg-3 col-md-1 col-sm-1"></div>
                                     <div class="col-lg-6 col-md-10 col-sm-10 button-next-back d-flex">
                                         <button class="btn btn-lg mx-auto border border-2 border-primary rounded text-primary back_btn">Back</button>
-                                        <button class="btn btn-lg mx-auto border border-2 border-info rounded text-info next_click reg_sec_btn" id="reg_sec_btn">Next</button>
+                                        <button class="btn btn-lg mx-auto border border-2 border-info rounded text-info reg_sec_btn" id="reg_sec_btn">Next</button>
                                     </div>
                                     <div class="col-lg-3 col-md-1 col-sm-1"></div>
                                 </div>
@@ -206,22 +206,18 @@
                                         <option value="Web">Web</option>
                                         <option value="App">App</option>
                                         <option value="IOT">IOt</option>
-         
                                     </select>
-                                    <span id="choice_err1"></span>
-                                    
+                                    <span id="choice_err1"></span>                          
                                 </div>
 
                                 <div class="row m-3">
-
                                     <div class="col-lg-3 col-md-3 col-sm-1"></div>
                                     <div class="col-lg-6 col-md-6 col-sm-10 button-next-back d-flex ">
-                                        <button class="btn btn-lg border border-2 border-primary rounded text-primary back_btn">Back</button>
+                                        <button class="btn btn-lg border border-2 border-primary rounded text-primary back_btn" id="thrd_btn">Back</button>
                                         <input type="submit" value="SUBMIT" class="btn btn-lg border border-2 border-info rounded text-info inter_register_btn" id="reg_third_btn">
                                     </div>
                                     <div class="col-lg-3 col-md-3 col-sm-1"></div>
                                 </div>
-
 
                             </div>
                             <br><br><br><br>
@@ -235,7 +231,6 @@
                 </form>
             </div>
             <div class="col-lg-3"></div>
-            <div class="summa">hai</div>
         </div>
     </div>
 
@@ -246,47 +241,39 @@
     <script>
         // next button function
         // $('.carousel').carousel('next');
-        $(document).on('click', '.next_click', function() {
-            // event.preventDefault();
-            // var get_tmp_index = $('.next_click');
-            // var get_index = get_tmp_index.index($(this));
-            // alert(get_index);
-            
-            // $('.carousel').carousel('next');
 
-            // $('.carousel').carousel({
-            //     interval: false
-            // });
-        });
+        // $(document).on('click', '.next_click', function() {
+            
+
+        // });
+
         // $(document).on('click','.summa',function(){
         //     alert("hai");
         //     $('.carousel').carousel('nex');
         // })
 
-        // previous button function
-        $(document).on('click', '.back_btn', function(event) {
-            event.preventDefault();
-            $('.carousel').carousel('prev');
-        })
+        
 
-        $(document).on('click', '.next1_click', function() {
+        // $(document).on('click', '.next1_click', function() {
 
-        });
-        $(document).on('click', '.back1_btn', function(event) {
-            event.preventDefault();
-            $('.carousel').carousel('prev');
-        })
-        $(document).on('click', '.reg_sec_btn', function() {
-            alert(validateresume());
-           if(validateresume()== true){
-            $('.carousel').carousel('next');
-           }
-           else {
-                // alert("Fail");
-                $('.carousel').carousel('pause');
+        // });
+
+        // $(document).on('click', '.back1_btn', function(event) {
+        //     event.preventDefault();
+        //     $('.carousel').carousel('prev');
+        // })
+
+        // $(document).on('click', '.reg_sec_btn', function() {
+        //    if(validateresume() && validatebonafide() && validateid() && validateprofile() && dob_to_txt()){
+        //     alert("Hello");
+        //     $('.carousel').carousel('next');
+        //    }
+        //    else {
+        //         // alert("Fail");
+        //         $('.carousel').carousel('pause');
                 
-            }
-        });
+        //     }
+        // });
 
 
        
@@ -463,9 +450,6 @@
             var date = document.getElementById("edate");
             date.type = "date";
         }
-
-
-
 
         function hideDatePicker1() {
             var date = document.getElementById("edate");
@@ -748,21 +732,29 @@
             }
         }
 
+        function 
 
 
-        $('.next_click').on('click', function() {
+
+        
+        $('.next_click1').on('click', function() {
             
             if (Alphanumeric() && validateUsername() && validateEmail() && validateDepartment() && validateMobile() && validateCollege() && validateYear()) {
-                alert("Success");
+                alert("success");
                 $('.carousel').carousel('next');
                                        
             } else {
-                // alert("Fail");
+                alert("Fail");
                 $('.carousel').carousel('pause');
                 
             }
         });
-        $('.next1_click').on('click', function() {
+
+
+        
+
+
+        $('#reg_sec_btn').on('click', function() {
             if (validateresume() && validatebonafide() && validateid() && validateprofile() && dob_to_txt()) {
                 alert("Success");
                 $('.carousel').carousel('next');
@@ -771,8 +763,15 @@
                 $('.carousel').carousel('pause');
             }
         });
-        $('.next_clic').on('click', function() {
-            if (Alphanumeric() && validateDate()) {
+
+        // previous button function---1st back function
+        $(document).on('click', '.back_btn', function(event) {
+            event.preventDefault();
+            $('.carousel').carousel('prev');
+        })
+
+        $('.inter_register_btn').on('click', function() {
+            if ( && validateDate()) {
                 alert("Success");
                 $('.carousel').carousel('next');
             } else {
@@ -780,6 +779,12 @@
                 $('.carousel').carousel('pause');
             }
         });
+
+        //----2nd back button
+        $(document).on('click', '#thrd_btn', function(event) {
+            event.preventDefault();
+            $('.carousel').carousel('prev');
+        })
 
 
 

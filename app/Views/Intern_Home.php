@@ -60,14 +60,12 @@
                 </div>
             </div>
             <div class="col-lg-10 col-sm-12">
-
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                         aria-labelledby="v-pills-home-tab">
                         <div class="jumbotron border border-1 rounded">
                             <div class="card user-card-full">
                                 <div class="intern_details_content"></div>
-
                             </div>
                         </div>
                     </div>
@@ -88,35 +86,40 @@
                                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                     aria-labelledby="nav-home-tab">
                                     <div class="row mt-4">
-                                        <div class="col-lg-3"></div>
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-lg-8">
                                             <div
                                                 class="jumbotron border border-2 border-info shadow shadow-sm rounded ">
                                                 <br>
                                                 <h2 class="text-center text-success">Today Tasks</h2>
                                                 <br>
-                                                <div class="m-3">
-                                                    <div class="form-outline mb-4 input-container">
-                                                        <input type="text" id="check_in" name="" class="input"
-                                                            placeholder=" " onfocus="check_in()"
-                                                            onblur="check_is_time()" />
-                                                        <label class="placeholder label" style="color:black">Check In
-                                                        </label>
+                                                <div class="row " style="padding:0;margin:0;">
+                                                    <div class="col-lg-6" >
+                                                        <!-- <div class="m-3"> -->
+                                                            <div class="form-outline mb-4 input-container">
+                                                                <input type="text" id="check_in" name="" class="input"
+                                                                    placeholder=" " onfocus="check_in()"
+                                                                    onblur="check_is_time()" />
+                                                                <label class="placeholder label" style="color:black">Check In
+                                                                </label>
+                                                            </div>
+                                                        <!-- </div> -->
+                                                    </div>
+                                                    <div class="col-lg-6" >
+                                                        <!-- <div class="m-3"> -->
+                                                            <div class="form-outline mb-4 input-container">
+                                                                <input type="text" id="check_out" name="" class="input"
+                                                                    placeholder=" " onfocus="check_out()"
+                                                                    onblur="check_is_time_one();validateTime()" />
+                                                                <label class="placeholder label" style="color:black">Check Out
+                                                                </label>
+                                                                <span id="Time_err"></span>
+                                                            </div>
+                                                        <!-- </div> -->
                                                     </div>
                                                 </div>
-
-                                                <div class="m-3">
-                                                    <div class="form-outline mb-4 input-container">
-                                                        <input type="text" id="check_out" name="" class="input"
-                                                            placeholder=" " onfocus="check_out()"
-                                                            onblur="check_is_time_one();validateTime()" />
-                                                        <label class="placeholder label" style="color:black">Check Out
-                                                        </label>
-                                                        <span id="Time_err"></span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="m-3">
+                                                
+                                                <div class="m-2">
                                                     <!-- <div class="form-outline mb-4 input-container"> -->
                                                     <select class="form-select form-select-lg" id="task_type"
                                                         name="task_type" class="form-control form-control-lg"
@@ -219,7 +222,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3"></div>
+                                        <div class="col-lg-2"></div>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="nav-profile" role="tabpanel"
@@ -438,7 +441,7 @@
 
                                         <div class="col-lg-12 col-md-12 col-sm-12 input-group ">
                                             <textarea class="Text-Box" id="message" type="text"
-                                                placeholder="Write your message..." data-emojiable="true"></textarea>
+                                                placeholder="Write your message..." style="padding-left:1rem;" data-emojiable="true"></textarea>
                                             <button id="send" class="submit msg_send_click"><i class="fa fa-paper-plane"
                                                     aria-hidden="true"></i>
                                             </button>
@@ -450,7 +453,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
         <!-- </div> -->
@@ -556,6 +558,7 @@
             input.type = "text";
         }
 
+        // message sending function 
         $('.submit').click(function () {
             var intern_id = "<?php echo $session->get('intern_id'); ?>";
             var intern_name = $('.intern_name').text();
@@ -581,6 +584,7 @@
                 success: function (res) {
                     console.log("message insertion ");
                     console.log(res);
+                    $('#message').val('');
                     message_retrive();
                 },
                 error: function (er) {
@@ -608,8 +612,8 @@
                 dataType: "json",
                 success: function (result) {
 
-                    // console.log("intern message records");
-                    // console.log(result);
+                    console.log("intern message records");
+                    console.log(result);
                     var element = $();
                     result.forEach(function (item) {
                         if (item.intern_id === intern_id) {
@@ -672,7 +676,7 @@
                         $('.submit').attr('profile_data', item.profile);
                         element = element.add('<div class="row ">' +
                             '<div class="col-sm-4 bg-c-lite-green user-profile">' +
-                            '<div class="card-block text-center text-white">' +
+                            '<div class="card-block text-center text-white" style="margin-top:2rem;">' +
                             '<div class="m-b-25">' +
                             '<img src="<?php echo base_url(); ?>public/public/uploads/' + item.intern_id + '/' + item.profile + '" class="img-radius"  alt="User-Profile-Image">' +
                             '</div> <br>' +
@@ -718,17 +722,26 @@
                             '<div class="col-sm-6">' +
                             '<p class="m-b-2 f-w-600">Mobile no.</p>' +
                             '<h6 class="text-muted f-w-400">' + item.mobile + '</h6>' +
-                            '</div>'
-                            // +'<div class="col-sm-6">'
-                            // +'<p class="m-b-2 f-w-600">Email</p>'
-                            // +'<h6 class="text-muted f-w-400">'+item.domain+'</h6>'
-                            // +' </div>'
-                            // +'<div class="col-sm-6">'
-                            // +'<p class="m-b-2 f-w-600">Mobile no.</p>'
-                            // +'<h6 class="text-muted f-w-400">'+item.mobile+'</h6>'
-                            // +'</div>'
-                            +
+                            '</div>'+
                             '</div>' +
+                            '<br>'+
+                            '<div class="row">'+
+                            '<div class="col-md-6">'+
+                            '<p class="m-b-2 f-w-600">Bonafide.</p>' +
+                            '<span class="text-muted f-w-400 font-weight-bold" style="padding:10px;background-color:#B8B8B8;height:max-content;width:max-content;border-radius:10%;"><a href="<?php echo base_url();?>public/public/uploads/'+item.intern_id+'/'+item.profile+'" download>'+item.profile+'</a> <i class="fa fa-download"></i></span>' +
+                            '</div>'+
+                            '<div class="col-md-6">'+
+                            '<p class="m-b-2 f-w-600">ID Card.</p>'+
+                            '<span class="text-muted f-w-400 font-weight-bold" style="padding:10px;background-color:#B8B8B8;height:max-content;width:max-content;border-radius:10%;"><a href="<?php echo base_url();?>public/public/uploads/'+item.id_card+'/'+item.id_card+'" download>'+item.id_card+'</a><i class="fa fa-download"></i> </span>'+
+                            '</div>'+
+                            '</div>'+
+                            '<br>'+
+                            '<div class="row">'+
+                            '<div class="col-md-6">'+
+                            '<p class="m-b-2 f-w-600">Resume.</p>' +
+                            '<span class="text-muted f-w-400 font-weight-bold" style="padding:10px;background-color:#B8B8B8;height:max-content;width:max-content;border-radius:10%;"><a href="<?php echo base_url();?>public/public/uploads/'+item.resume+'/'+item.resume+'" download>'+item.resume+'</a><i class="fa fa-download"></i> </span>' +
+                            '</div>'+
+                            '</div>'+
                             '</div>' +
                             '</div>');
 
@@ -796,6 +809,7 @@
                 return true;
             }
         }
+
         function validateTaskName() {
             const TaskNameInput = document.getElementById("task").value;
             // console.log(TaskNameInput);
