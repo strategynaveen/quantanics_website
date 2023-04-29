@@ -80,10 +80,34 @@
                 </div>
             </div>
         </div>
-  
+    
 
     </div>
 
+
+   <!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#accept_reject_modal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade " id="accept_reject_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Intern Request</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="intern_request_fill_div"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Reject</button>
+        <button type="button" class="btn btn-primary">Accept</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- Footer -->
     <?php require_once "Footer.php"; ?>
@@ -119,7 +143,7 @@
                                     // +'<p>'+item.email_id+'</p>'
                                 +'</div>'
                             +'</div>'
-                            +' <p class="text-center"><a href="">View More Details</a></p>'
+                            +' <p class="text-center"><a href="" class="accept_reject_click" data-id="'+item.intern_id+'">View More Details</a></p>'
                         +'</div>'
                         +'</div>');
                     }else{
@@ -137,7 +161,7 @@
                                     // +'<p>'+item.email_id+'</p>'
                                 +'</div>'
                             +'</div>'
-                            +' <p class="text-center"><a href="">View More Details</a></p>'
+                            +' <p class="text-center"><a href="" class="accept_reject_click" data-id="'+item.intern_id+'">View More Details</a></p>'
                         +'</div>'
                         +'</div>');
                     }
@@ -153,7 +177,53 @@
 
     }
 
-    
+
+// accept reject modal show click function 
+$(document).on('click','.accept_reject_click',function(event){
+    event.preventDefault();
+    var find_class_index = $('.accept_reject_click');
+    var get_index = find_class_index.index($(this));
+    var get_intern_id = $('.accept_reject_click:eq('+get_index+')').attr('data-id');
+    // alert(get_intern_id);
+    $.ajax({
+        url:'<?php echo base_url(); ?>public/index.php/Admin_controller/get_intern_data',
+        method:"POST",
+        data:{
+            intern_id:get_intern_id,
+        },
+        dataType:"json",
+        success:function(res){
+            alert(res);
+            console.log("Admin View Intern Profile");
+            console.log(res);
+            $('#intern_request_fill_div').empty();
+            res.forEach(function(item){
+                var ele = $();
+
+                ele = ele.add('<div class="row">'
+                +'<div class="col-lg-6"><p style="text-align:end;">Intern ID</p></div>'
+                +'<div class="col-lg-6"><p data-id="'+item.intern_id+'">'+item.intern_id+'</p></div>'
+                +'</div>'
+                +'<div class="row">'
+                +'<div class="col-lg-6"><p>Name</p></div>'
+                +'<div class="col-lg-6"><p>'+item.sname+'</p></div>'
+                +'</div>');
+
+                $('#intern_request_fill_div').append(ele);
+            });
+
+            $('#accept_reject_modal').modal('show');
+
+        },
+        error:function(er){
+            console.log('Sorry Try Again...');
+            console.log(er);
+        }
+    });
+});
+
+
+// image checking if exists or not 
 function imgError(file_name){
     var xhr = new XMLHttpRequest();
     xhr.open('HEAD', file_name, false);
