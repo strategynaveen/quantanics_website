@@ -102,8 +102,8 @@
         <div id="intern_request_fill_div"></div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Reject</button>
-        <button type="button" class="btn btn-primary">Accept</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Reject</button>
+        <button type="button" class="btn btn-success">Accept</button>
       </div>
     </div>
   </div>
@@ -193,20 +193,106 @@ $(document).on('click','.accept_reject_click',function(event){
         },
         dataType:"json",
         success:function(res){
-            alert(res);
+            // alert(res);
             console.log("Admin View Intern Profile");
             console.log(res);
             $('#intern_request_fill_div').empty();
             res.forEach(function(item){
                 var ele = $();
 
-                ele = ele.add('<div class="row">'
-                +'<div class="col-lg-6"><p style="text-align:end;">Intern ID</p></div>'
-                +'<div class="col-lg-6"><p data-id="'+item.intern_id+'">'+item.intern_id+'</p></div>'
+                ele = ele.add('<div class="row";>'
+                +'<div class="col-6">'
+                +'<img src="<?php echo base_url();?>public/public/uploads/'+item.intern_id+'/'+item.profile+'" alt="profile_img" style="height:7.5rem;width:7.7rem; display:block; margin-left:160px"><br>'
                 +'</div>'
-                +'<div class="row">'
-                +'<div class="col-lg-6"><p>Name</p></div>'
-                +'<div class="col-lg-6"><p>'+item.sname+'</p></div>'
+
+                +'<div class="col-6"><p style="font-weight: bold;"></p>'
+                +'</div>'
+
+                +'<div class="row"><hr>'
+                +'<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5""><p style="font-weight: bold;">Reg No</p></div>'
+                +'<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><p style="font-weight: bold;">:</p></div>'
+                +'<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6""><p>'+item.regno+'</p></div>'
+                +'</div>'
+                
+                +'<div class="row"><hr>'
+                +'<div class="col-lg-5 col-md-5 col-sm-5"><p style="font-weight: bold;">Name</p></div>'
+                +'<div class="col-lg-1 col-md-1 col-sm-1"><p style="font-weight: bold;">:</p></div>'
+                +'<div class="col-lg-6 col-md-6 col-sm-6""><p>'+item.sname+'</p></div>'
+                +'</div>'
+
+                +'<div class="row"><hr>'
+                +'<div class="col-lg-5 col-md-5 col-sm-5"><p style="font-weight: bold;">Domain</p></div>'
+                +'<div class="col-lg-1 col-md-1 col-sm-1"><p style="font-weight: bold;">:</p></div>'
+                +'<div class="col-lg-6 col-md-6 col-sm-6""><p>'+item.domain+'</p></div>'
+                +'</div>'
+
+                +'<div class="row"><hr>'
+                +'<div class="col-lg-5 col-md-5 col-sm-5"><p style="font-weight: bold;">DOB</p></div>'
+                +'<div class="col-lg-1 col-md-1 col-sm-1"><p style="font-weight: bold;">:</p></div>'
+                +'<div class="col-lg-6 col-md-6 col-sm-6""><p>'+item.dob+'</p></div>'
+                +'</div>'
+
+                +'<div class="row"><hr>'
+                +'<div class="col-lg-5 col-md-5 col-sm-5"><p style="font-weight: bold;">Email ID</p></div>'
+                +'<div class="col-lg-1 col-md-1 col-sm-1"><p style="font-weight: bold;">:</p></div>'
+                +'<div class="col-lg-6 col-md-6 col-sm-6""><p>'+item.email_id+'</p></div>'
+                +'</div>'
+
+                +'<div class="row"><hr>'
+                +'<div class="col-lg-5 col-md-5 col-sm-5"><p style="font-weight: bold;">Department</p></div>'
+                +'<div class="col-lg-1 col-md-1 col-sm-1"><p style="font-weight: bold;">:</p></div>'
+                +'<div class="col-lg-6 col-md-6 col-sm-6"><p>'+item.dept+'</p></div>'
+                +'</div>'
+                
+                +'<div class="row"><hr>'
+                +'<div class="col-lg-5 col-md-5 col-sm-5"><p style="font-weight: bold;">Mobile No</p></div>'
+                +'<div class="col-lg-1 col-md-1 col-sm-1"><p style="font-weight: bold;">:</p></div>'
+                +'<div class="col-lg-6 col-md-6 col-sm-6"><p>'+item.mobile+'</p></div>'
+                +'</div>'
+
+                +'<div class="row"><hr>'
+                +'<div class="col-lg-5 col-md-5 col-sm-5"><p style="font-weight: bold;">Registeration Status</p></div>'
+                +'<div class="col-lg-1 col-md-1 col-sm-1"><p style="font-weight: bold;">:</p></div>'
+                +'<div class="col-lg-6 col-md-6 col-sm-6""><p>'+item.registeration_status+'</p></div>'
+                +'</div>'
+
+                +'<div class="row"><hr>'
+                +'<div class="col-lg-5 col-md-5 col-sm-5"><p style="font-weight: bold;">Start Date</p></div>'
+                +'<div class="col-lg-1 col-md-1 col-sm-1"><p style="font-weight: bold;">:</p></div>'
+                +'<div class="col-lg-6 col-md-6 col-sm-6"><p>'+item.start_date+'</p></div>'
+                +'</div>'
+
+                +'<div class="row"><hr>'
+                +'<div class="col-lg-5 col-md-5 col-sm-5"><p style="font-weight: bold;">End Date</p></div>'
+                +'<div class="col-lg-1 col-md-1 col-sm-1"><p style="font-weight: bold;">:</p></div>'
+                +'<div class="col-lg-6 col-md-6 col-sm-6"><p>'+item.end_date+'</p></div>'
+                +'</div>'
+
+                +'<div class="row"><hr>'
+                +'<div class="col-lg-5 col-md-5 col-sm-5"><p style="font-weight: bold;">Year</p></div>'
+                +'<div class="col-lg-1 col-md-1 col-sm-1"><p style="font-weight: bold;">:</p></div>'
+                +'<div class="col-lg-6 col-md-6 col-sm-6"><p>'+item.year+'</p></div>'
+                +'</div>'
+
+                +'<div class="row"><hr>'
+                +'<div class="col-lg-5 col-md-5 col-sm-5"><p style="font-weight: bold;">Resume</p></div>'
+                +'<div class="col-lg-1 col-md-1 col-sm-1"><p style="font-weight: bold;">:</p></div>'
+                +'<div class="col-lg-6 col-md-6 col-sm-6"><p><a target="<?php echo base_url();?>public/public/uploads/'+item.intern_id+'/'+item.resume+'" href="<?php echo base_url();?>public/public/uploads/'+item.intern_id+'/'+item.resume+'">View</a></p></div>'
+                +'</div>'
+
+                +'<div class="row"><hr>'
+                +'<div class="col-lg-5 col-md-5 col-sm-5"><p style="font-weight: bold;">Bonafide</p></div>'
+                +'<div class="col-lg-1 col-md-1 col-sm-1"><p style="font-weight: bold;">:</p></div>'
+                +'<div class="col-lg-6 col-md-6 col-sm-6"><p><a target="<?php echo base_url();?>public/public/uploads/'+item.intern_id+'/'+item.bonafide+'" href="<?php echo base_url();?>public/public/uploads/'+item.intern_id+'/'+item.bonafide+'">View</a></p></div>'
+                +'</div>'
+
+                +'<div class="row"><hr>'
+                +'<div class="col-lg-5 col-md-5 col-sm-5"><p style="font-weight: bold;">ID Card</p></div>'
+                +'<div class="col-lg-1 col-md-1 col-sm-1"><p style="font-weight: bold;">:</p></div>'
+                +'<div class="col-lg-6 col-md-6 col-sm-6"><p><a target="<?php echo base_url();?>public/public/uploads/'+item.intern_id+'/'+item.id_card+'" href="<?php echo base_url();?>public/public/uploads/'+item.intern_id+'/'+item.id_card+'">View</a></p></div>'
+                +'</div>'
+                // +'<div class="row">'
+                
                 +'</div>');
 
                 $('#intern_request_fill_div').append(ele);
