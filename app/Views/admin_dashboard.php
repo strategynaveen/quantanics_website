@@ -91,7 +91,7 @@
 </button> -->
 
 <!-- Modal -->
-<div class="modal fade " id="accept_reject_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade " id="accept_reject_modal" >
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
@@ -102,12 +102,81 @@
         <div id="intern_request_fill_div"></div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Reject</button>
-        <button type="button" class="btn btn-success">Accept</button>
+        <button type="button" class="btn btn-danger reject_click_show" >Reject</button>
+        <button type="button" class="btn btn-success accept_click_show">Accept</button>
       </div>
     </div>
   </div>
 </div>
+
+<!-- rejection modal -->
+<!-- Modal -->
+<div class="modal fade" id="rejection_modal" tabindex="-1" aria-labelledby="rejection_modal_label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rejection_modal_label">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-lg-5"><p style="font-size:1rem;font-weight:600;">Name</p></div>
+            <div class="col-lg-1" style="font-size:1rem;font-weight:700;">:</div>
+            <div class="col-lg-6"><p id="intern_name" style="text-align:-webkit-match-parent;"></p></div>
+        </div>
+        <hr style="margin:0.5rem;">
+        <textarea name="rejection_reason_val" id="rejection_reason_val" cols="30" rows="10" style="width:100%;height:7rem;padding:0.8rem;border:1px solid #dee2e6; resize: none;border-radius:0.5rem;" Placeholder="Enter Rejection Reason."></textarea>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary rejection_modal_submit">Submit Reason</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- payment modal -->
+<div class="modal fade" id="payment_modal_show" tabindex="-1" aria-labelledby="payment_modal_show_label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="payment_modal_show_label">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row" style="padding:0;margin:0;">
+            <div class="col-lg-5"><p style="font-size:1rem;font-weight:600;">Name</p></div>
+            <div class="col-lg-1" style="font-size:1rem;font-weight:700;">:</div>
+            <div class="col-lg-6"><p id="intern_name_p" style="text-align:-webkit-match-parent;"></p></div>
+        </div>
+        <hr style="margin:0.5rem;">
+        <div class="row" style="padding:0;margin:0;">
+            <select class="form-select payment_drp" aria-label="Default select example">
+                <option selected value="">Select Payment Status</option>
+                <option value="paid">Paid</option>
+                <option value="free">Free</option>
+            </select>
+        </div>
+
+        <div class="paid_val">
+            <div class="row">
+                <input type="text" name="paid_val" class="form-control form-control-md" id="paid_val" value="0" >
+            </div>
+        </div>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary payment_modal_submit">Submit Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Payment modal end -->
+
 
     <!-- Footer -->
     <?php require_once "Footer.php"; ?>
@@ -199,10 +268,18 @@ $(document).on('click','.accept_reject_click',function(event){
             $('#intern_request_fill_div').empty();
             res.forEach(function(item){
                 var ele = $();
-
+                img_url = "<?php echo base_url(); ?>public/public/uploads/"+item.intern_id+"/"+item.profile;
+                img_org_url = "";
+                if (imgError(img_url)==true) {
+                    img_org_url = "<?php echo base_url(); ?>public/public/uploads/"+item.intern_id+"/"+item.profile;
+                }else{
+                    img_org_url = "<?php echo base_url(); ?>public/public/uploads/common_profile.png";
+                }
+                $('.reject_click_show').attr('data-id',item.intern_id);
+                $('.accept_click_show').attr('data-id',item.intern_id);
                 ele = ele.add('<div class="row";>'
                 +'<div class="col-6">'
-                +'<img src="<?php echo base_url();?>public/public/uploads/'+item.intern_id+'/'+item.profile+'" alt="profile_img" style="height:7.5rem;width:7.7rem; display:block; margin-left:160px"><br>'
+                +'<img src="'+img_org_url+'" alt="profile_img" style="height:7.5rem;width:7.7rem; display:block; margin-left:160px"><br>'
                 +'</div>'
 
                 +'<div class="col-6"><p style="font-weight: bold;"></p>'
@@ -217,7 +294,7 @@ $(document).on('click','.accept_reject_click',function(event){
                 +'<div class="row"><hr>'
                 +'<div class="col-lg-5 col-md-5 col-sm-5"><p style="font-weight: bold;">Name</p></div>'
                 +'<div class="col-lg-1 col-md-1 col-sm-1"><p style="font-weight: bold;">:</p></div>'
-                +'<div class="col-lg-6 col-md-6 col-sm-6""><p>'+item.sname+'</p></div>'
+                +'<div class="col-lg-6 col-md-6 col-sm-6""><p id="intern_name_ar">'+item.sname+'</p></div>'
                 +'</div>'
 
                 +'<div class="row"><hr>'
@@ -321,6 +398,60 @@ function imgError(file_name){
         return true;
     }
 }
+
+// accept click
+$(document).on('click','.accept_click_show',function(event){
+    event.preventDefault();
+    // alert('accept click');
+    var intern_id = $('.payment_modal_show').attr('data-id');
+    var intern_name = $('#intern_name_ar').text();
+    $('.intern_name_p').text(intern_name);
+    $('.payment_modal_submit').attr('data-id',intern_id);
+    $('#payment_modal_show').modal('show');
+});
+
+
+// rejection modal show click
+$(document).on('click','.reject_click_show',function(event){
+    event.preventDefault();
+    // alert('Rejection Modal');
+    var intern_id = $('.reject_click_show').attr('data-id');
+    // alert(intern_id);
+    var intern_name = $('#intern_name_ar').text();
+    $('#intern_name').text(intern_name);
+    $('.rejection_modal_submit').attr('data-id',intern_id);
+    // $('#accept_reject_modal').style('display','inline');
+    $('#rejection_modal').modal('show');
+});
+
+// rejection submit function
+$(document).on('click','.rejection_modal_submit',function(event){
+    event.preventDefault();
+    var intern_id = $('.rejection_modal_submit').attr('data-id');
+    var reject_msg = $('#rejection_reason_val').val();
+    $.ajax({
+        url:"<?php echo base_url(); ?>public/index.php/Admin_controller/rejection_con",
+        method:"POST",
+        data:{
+            intern_id:intern_id,
+            reject_msg:reject_msg,
+        },
+        dataType:"json",
+        success:function(res){
+            console.log("Rejection Result");
+            console.log(res);
+            fetch_user_data();
+            $('#rejection_modal').modal('hide');
+            $('#accept_reject_modal').modal('hide');
+
+        },
+        error:function(er){
+            console.log('Sorry Try Again ... Rejection submission  ajax');
+            console.log(er);
+        }
+
+    });
+})
 </script>
 
 

@@ -27,6 +27,22 @@ class Admin_Model extends Model
 
         return $res;
     }
+
+    // rejection modal submission
+    public function getrejection_status($intern_id,$msg){
+        $db = \Config\Database::connect();
+        $builder = $db->table('intern_table');
+        $builder->set('registeration_status',2);
+        $builder->set('reject_reason',$msg);
+        $builder->where('intern_id ',$intern_id);
+        if ($builder->update()==true) {
+            return true;
+        }else{
+            return false;
+        }
+
+        return $intern_id;
+    }
 }
 
 

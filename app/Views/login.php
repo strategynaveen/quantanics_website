@@ -257,7 +257,9 @@
                         }
                         else if(res==="new"){
                             alert("New User");
-
+                        }
+                        else if(res==="rejection"){
+                            alert("You Form is Rejected Kindly Check your Mail ID..");
                         }
                         // alert(res);
                         // console.log(res);

@@ -27,6 +27,16 @@ class Admin_controller extends BaseController
             echo json_encode($res);
         }
     }
+
+    // rejection submission function
+    public function rejection_con(){
+        if($this->request->isAJAX()){
+            $intern_id = $this->request->getvar('intern_id');
+            $rejection_msg = $this->request->getvar('reject_msg');
+            $result = $this->datas->getrejection_status($intern_id,$rejection_msg);
+            echo json_encode($result);
+        }
+    }
 }
 
 
