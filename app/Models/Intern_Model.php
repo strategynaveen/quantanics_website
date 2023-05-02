@@ -85,8 +85,10 @@ class Intern_Model extends Model
                 $this->session->set('intern_id', $res[0]['intern_id']);
                 return "success";
 
-            } else {
+            } else if($res[0]['registeration_status'] == 0) {
                 return "waiting";
+            }else{
+                return "rejection";
             }
         } else {
             return "new";
