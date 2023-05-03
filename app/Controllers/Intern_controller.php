@@ -145,10 +145,16 @@ class Intern_controller extends BaseController
 
             $assigned_tasks = $this->datas->getassigned_tasks($intern_id);
             $assignee_arr = $this->datas->get_assignees();
+            $payment_data = $this->datas->get_payment_data($intern_id);
 
             $final_arr['profile_record'] = $res;
             $final_arr['assigned_task'] = $assigned_tasks;
             $final_arr['assignee_arr'] = $assignee_arr;
+            if ($payment_data['total_payment']==0) {
+                $payment_data['total_payment'] = $res[0]['fees'];
+                $payment_data['remaining_amount'] = $res[0]['fees'];
+            }
+            $final_arr['payment_data'] = $payment_data;
             echo json_encode($final_arr);
         }
     }
@@ -262,6 +268,40 @@ class Intern_controller extends BaseController
         $id = $this->request->getvar('intern_id');
         $res = $this->datas->fetchData($id);
         echo json_encode($res);
+    }
+
+    // 
+    public function payment_submit_fun(){
+        // if ($this->request->isAJAX()) {
+            // echo json_encode('heelo naveen');
+            helper(['filesystem']);
+            $paid_amount = $this->request->getvar('paid_amount');
+            $file = $this->request->getFile('file');
+            $intern_id = $this->request->getvar('intern_id');
+           
+            if ($file->getSize() > 0) {
+               
+                if ($file->isValid()) {
+                    $directory = "./public/uploads/".$intern_id;
+                    if (!is_dir($directory)) {
+                        mkdir($directory, 0777, TRUE);
+                    }
+
+                    $payment_proof_name = $file->getName();
+                    $temp['intern_id'] = $intern_id;
+                    $temp['proof_name'] = $payment_proof_name;
+                    $temp['paid_amount'] = $paid_amount;
+                    $file->move($directory);
+                    $res = $this->datas->insert_payment_record($temp);
+                    // print_r($res);
+                    echo  $res;
+                    
+                    
+                    
+                }
+            }
+
+        // }
     }
 
 }

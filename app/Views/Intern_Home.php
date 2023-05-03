@@ -57,6 +57,12 @@
                     <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
                         aria-selected="false"><i class="fa fa-commenting fa-2x"></i></button>
+                    <!-- <div id="visbility_fees" class="mx-auto" style="width:100%;"> -->
+                        <button class="nav-link d-inline payment_btn" id="v-pills-payment-tab" style="width:100%;" data-bs-toggle="pill" data-bs-target="#v-pills-payment" type="button" role="tab" aria-controls="v-pills-payment" aria-selected="false" >
+                            <i class="fa fa-dollar fa-2x"></i>
+                        </button>
+                    <!-- </div>     -->
+                   
                 </div>
             </div>
             <div class="col-lg-10 col-sm-12">
@@ -418,7 +424,7 @@
                                 <div class="content">
                                     <div class="header">
                                         <i class="fa fa-comments"></i>
-                                        <p>CHATBOX</p>
+                                        <p id="chatbox_title">CHATBOX</p>
                                     </div>
                                     <div class="messages">
                                         <ul class="msg_li">
@@ -451,6 +457,40 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                     <!-- fourth tab -->
+                     <div class="tab-pane fade" id="v-pills-payment" role="tabpanel" aria-labelledby="v-pills-payment-tab">
+                        <!-- <h2 class="text-center text-info">payment</h2> -->
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-6">
+                            <div class="card text-center">
+                                <div class="card-header">
+                                     Payment Registeration
+                                </div>
+                                <div class="card-body">
+                                    <form id="form_payment"  enctype="multipart/form-data" method="post">
+                                        <div class="m-3">
+                                            <input type="text" name="amount" id="amount" class="form-control form-control-md " placeholder="Paid Amount..">
+                                        </div>
+                                        <div class="m-3">
+                                            <input type="file" name="payment_proof" id="payment_proof" class="form-control form-control-md" >
+                                        </div>
+                                        <div class="mx-auto">
+                                            <button type="button" class="btn btn-md border border-2 border-muted text-muted payment_click_submit" >Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    Total Amount <span id="total_payment_id"></span> paid Amount <span id="paid_amount"></span> = Remaining <span id="remaining_amount"></span>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3"></div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -600,8 +640,8 @@
             message_retrive();
         });
 
+        // message displaying fucntion
         message_retrive();
-
         function message_retrive() {
             // alert('ghj');
             $('.msg_li').empty();
@@ -617,9 +657,9 @@
                     var element = $();
                     result.forEach(function (item) {
                         if (item.intern_id === intern_id) {
-                            element = element.add('<li class="send"><img src="<?php echo base_url(); ?>public/public/uploads/' + intern_id + '/' + item.profile_name + '" alert="username"><p>' + item.intern_msg + '</p></li>')
+                            element = element.add('<li class="send"><img src="<?php echo base_url(); ?>public/public/uploads/' + item.intern_id + '/' + item.profile_name + '" alert="username"><p>' + item.intern_msg + '</p></li>')
                         } else {
-                            element = element.add('<li class="replies"><img src="<?php echo base_url(); ?>public/public/uploads/' + intern_id + '/' + item.profile_name + '" alert="username"><p>' + item.intern_msg + '</p></li>')
+                            element = element.add('<li class="replies"><img src="<?php echo base_url(); ?>public/public/uploads/' + item.intern_id + '/' + item.profile_name + '" alert="username"><p>' + item.intern_msg + '</p></li>')
                         }
 
                         $('.msg_li').append(element);
@@ -663,22 +703,46 @@
                     intern_id: intern_id,
                 },
                 success: function (res) {
-                    // console.log("after login intern home page ajax");
-                    // console.log(res)
+                    console.log("after login intern home page ajax");
+                    console.log(res)
                     $('.intern_details_content').empty();
                     $('#existing_tasks').empty();
                     $('#assignee').empty();
 
+                    // payment conditons
+                    if (res['profile_record'][0]['payment_status']==="paid") {
+                        $('.payment_btn').removeClass("d-none");
+                        $('.payment_btn').attr('class','nav-link d-inline');
+                        $('#total_payment_id').text(res['payment_data']['total_payment']);
+                        $('#paid_amount').text(res['payment_data']['paid_amount']);
+                        $('#remaining_amount').text(res['payment_data']['remaining_amount']);
+
+                    }else if(res['profile_record'][0]['payment_status']==="free"){
+                        $('.payment_btn').removeClass("d-inline");
+                        $('.payment_btn').attr('class','nav-link  d-none');
+                    }
+
+                    
 
                     res['profile_record'].forEach(function (item) {
                         var element = $();
                         $('.submit').attr('get_domain', item.domain);
                         $('.submit').attr('profile_data', item.profile);
+
+                        // profile image conditions
+                        var file_name = "<?php echo base_url(); ?>public/public/uploads/"+item.intern_id+"/"+item.profile;
+                        var orignal_file_location = "";
+                        if (imgError(file_name) === true) {
+                            orignal_file_location = file_name;
+                        }else{
+                            orignal_file_location = "<?php echo base_url(); ?>public/public/uploads/common_profile.png";
+                        }
+
                         element = element.add('<div class="row ">' +
                             '<div class="col-sm-4 bg-c-lite-green user-profile">' +
                             '<div class="card-block text-center text-white" style="margin-top:2rem;">' +
                             '<div class="m-b-25">' +
-                            '<img src="<?php echo base_url(); ?>public/public/uploads/' + item.intern_id + '/' + item.profile + '" class="img-radius"  alt="User-Profile-Image">' +
+                            '<img src="'+orignal_file_location+'" class="img-radius"  alt="User-Profile-Image">' +
                             '</div> <br>' +
                             '<h6 class="f-w-600">User Name</h6>' +
                             '<p class="intern_name">' + item.sname + '</p>' +
@@ -1176,6 +1240,55 @@
             }
             // $('#file_link').css('display','inline');
         });
+
+
+        // payment submit function
+        $(document).on('click','.payment_click_submit',function(event){
+            event.preventDefault();
+            var formData = new FormData();
+            var paid_amount = $('#amount').val();
+            // var payment_proof = $('#payment_proof').val();
+            var intern_id = "<?php echo $session->get('intern_id'); ?>";
+            formData.append('paid_amount', paid_amount);
+            formData.append('file', document.getElementById("payment_proof").files[0]);
+            formData.append('intern_id',intern_id);
+            // formData.append('total_amount',)
+            $.ajax({
+                url:"<?php echo base_url(); ?>public/index.php/Intern_controller/payment_submit_fun",
+                method:"POST",
+                //dataType:"json",
+                data: formData,  
+                contentType: false,  
+                cache: false,  
+                processData:false,
+                success:function(res){
+                    console.log("ajax payment form submission..");
+                    console.log(typeof res);
+                    $('#amount').val('');
+                    $('#payment_proof').val('');
+                    if (res === "1") {
+                        retrive_data();
+                    }
+                },
+                error:function(er){
+                    console.log('Sorry TryAgain..');
+                    console.log(er);
+                }
+            });
+        });
+
+    // image checking if exists or not 
+    function imgError(file_name) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('HEAD', file_name, false);
+        xhr.send();
+
+        if (xhr.status === 404) {
+            return false;
+        } else {
+            return true;
+        }
+    }
     </script>
 </body>
 

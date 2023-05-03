@@ -243,4 +243,72 @@ class Intern_Model extends Model
         return $res;
     }
 
+    // payment function
+    public function get_payment_data($intern_id){
+        $this->db = \Config\Database::connect();
+        $build = $this->db->table('payment_table');
+        $build->select('*');
+        $build->where('intern_id',$intern_id);
+        $res = $build->get()->getResultArray();
+
+        $final_arr = [];
+        if (count($res)>0) {
+            $final_arr['total_payment'] = $res[0]['total_payment'];
+            $payment_count = 0;
+            foreach ($res as $key => $value) {
+                $payment_count = $payment_count + $value['paid_amount'];
+
+            }
+            $final_arr['paid_amount'] = $payment_count;
+            $final_arr['remaining_amount'] = $res[0]['total_payment'] - $payment_count; 
+        }else{
+            // $result_arr = $this->getintern_data($intern_id);
+            $final_arr['total_payment'] = 0;
+            $final_arr['remaining_amount'] = 0;
+            $final_arr['paid_amount'] = 0;
+        }
+        return $final_arr;
+    }
+
+
+    // payment insertion 
+    public function insert_payment_record($mydata){
+        $this->db = \Config\Database::connect();
+        $build = $this->db->table('payment_table');
+        $build->select('*');
+        $build->where('intern_id',$mydata['intern_id']);
+        $res = $build->get()->getResultArray();
+        
+        
+        $total_amount = 0;
+        if (count($res)>0) {
+            $total_amount = $res[0]['total_payment'];
+        }else{
+            $query = $this->db->table('intern_table');
+            $query->select('*');
+            $query->where('intern_id',$mydata['intern_id']);
+            $result = $query->get()->getResultArray();
+            $total_amount = $result[0]['fees'];
+        }
+        
+
+        $remaining_amount = $total_amount - $mydata['paid_amount'];
+        // return $remaining_amount;
+        $insert_data = [
+            "intern_id" => $mydata['intern_id'],
+            "paid_amount"   => $mydata['paid_amount'],
+            "remaining_amount" => $remaining_amount,
+            "total_payment" =>  $total_amount,
+            "payment_proof" =>  $mydata['proof_name']
+        ];
+
+        $query = $this->db->table('payment_table');
+        $res = $query->insert($insert_data);
+        if ($res == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
