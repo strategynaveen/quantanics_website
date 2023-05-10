@@ -51,6 +51,16 @@ class Admin_controller extends BaseController
             echo json_encode($result);
         }
     }
+
+
+    // get message domain function
+    public function get_message_data(){
+        if ($this->request->isAJAX()) {
+            $domain = $this->request->getVar('message_domain');
+            $final_res = $this->datas->getmessaging_data_particular_domain($domain);
+            echo json_encode($final_res);
+        }
+    }
 }
 
 

@@ -21,6 +21,75 @@
     <script src="https://code.jquery.com/jquery-3.6.4.js"
         integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <script src="<?php echo base_url(); ?>/assets/custom/js/chat.js?version=<?php echo rand(); ?>"></script>
+      <!-- chat css file -->
+      <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/custom/css/chat.css?version=<?php echo rand(); ?>">
+
+      <style>
+        .custome_select_body{
+            height:max-content;
+            width:13rem;
+            background-color:white;
+            border-radius:0.25rem;
+            position:absolute;
+        }
+        .custome_drp_div{
+            display:flex;
+            flex-direction:row;
+            justify-content:start;
+            padding-left:1rem;
+            font-size:0.8rem;
+        }
+
+        .custome_drp_div:hover{
+            background:#0dcaf0;
+            color:white;
+            cursor:pointer;
+        }
+
+
+        .custome_img_div{
+            width:20%;
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            align-items:center;
+        }
+        .custome_img_style{
+            height:2rem;
+            width:2rem;
+        }
+        .custome_text_div{
+            width:80%;
+            display:flex;
+            flex-direction:row;
+            justify-content:start;
+            align-items:center;
+        }
+
+        .drp_click_div{
+            display:flex;
+            flex-direction:row;
+            justify-content:start;
+            align-items:center;
+            margin-left:1rem;
+            cursor:pointer;
+        }
+        .drp_click_img_div{
+            width:5%;
+        }
+        .drp_click_txt_div{
+            width:80%;
+            display:flex;
+            flex-direction:row;
+            justify-content:start;
+            align-items:center;
+            /* font-weight:bold; */
+            /* font-size:1.3rem; */
+        }
+
+
+      </style>
+
 </head>
 
 <body>
@@ -79,12 +148,78 @@
                 </div>
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                     <h2 class="text-center text-muted font-weight-bold">Payment Details</h2>
-
                     <br>
+                    
                 </div>
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                     <h2 class="text-center text-muted font-weight-bold">Task ASSIGNING</h2>
                     <br>
+                    <div id="framechat" style="margin-bottom:2rem;">
+                        <div class="content">
+                            <div class="header">
+                             
+                                <div class="drp_click_div" style="">
+                                    <div class="drp_click_img_div" >
+                                        <img src="<?php echo base_url(); ?>assets/aboutimages/abt5.png" style="height:2rem;width:2rem;" class="img_add_div" alt="">
+                                    </div>
+                                    <div class="drp_click_txt_div" style="">
+                                        <p id="selected_val_custome_drp_txt" style="font-size:0.9rem;font-weight:bold;">Selected Title</p>
+                                    </div>
+                                </div>
+                                <!-- <p id="chatbox_title">CHATBOX</p> -->
+                            </div>
+                            <div class="custome_select_body" style="">
+                                <div class="custome_drp_div click_get_val" style="">
+                                    <div class="custome_img_div" style="">
+                                        <img src="<?php echo  base_url(); ?>assets/aboutimages/abt5.png" data-img="abt5.png" class="custome_img_style" style="" alt="">
+                                    </div>
+                                    <div class="custome_text_div" style="">
+                                        <p style="margin-block:auto;" class="custome_drp_text_content"  data-txt="web">WEB App Development</p>
+                                    </div>
+                                </div>
+
+                                <div class="custome_drp_div click_get_val" style="">
+                                    <div class="custome_img_div" style="">
+                                        <img src="<?php echo  base_url(); ?>assets/aboutimages/abt5.png" data-img="abt5.png" class="custome_img_style" style="" alt="">
+                                    </div>
+                                    <div class="custome_text_div" style="">
+                                        <p style="margin-block:auto;" class="custome_drp_text_content" data-txt="app">APP Development</p>
+                                    </div>
+                                </div>
+
+                                <div class="custome_drp_div click_get_val" style="">
+                                    <div class="custome_img_div" style="">
+                                        <img src="<?php echo  base_url(); ?>assets/aboutimages/abt5.png" data-img="abt5.png" class="custome_img_style" style="" alt="">
+                                    </div>
+                                    <div class="custome_text_div" style="">
+                                        <p style="margin-block:auto;" class="custome_drp_text_content" data-txt="iot">IOT Development</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="messages">
+                                <ul class="msg_li"></ul>
+                                <!-- <ul>
+                                    <li class="sent">
+                                        <img src="<?php echo base_url("assets/workimages/img4.jpg"); ?>" alt="username" />
+                                        <p>hi</p>
+                                    </li>
+                                    <li class="replies">
+                                        <img src="<?php echo base_url("assets/workimages/img3.jpg"); ?>" alt="username" />
+                                        <p>Hello</p>
+                                    </li>
+                                </ul> -->
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-0 col-md-0 col-sm-0"> </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 input-group ">
+                                        <textarea class="Text-Box" id="message" type="text" placeholder="Write your message..." style="padding-left:1rem;" data-emojiable="true"></textarea>
+                                        <button id="send" class="submit msg_send_click"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                    </div>
+                                    <div class="col-lg-0 col-md-0 col-sm-0"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -214,7 +349,11 @@
 
 </body>
 <script>
+    // $(document).ready(fucntion(){
+    //     $('.custome_select_body').css('display','none');
+    // });
     fetch_user_data();
+    $('.custome_select_body').css('display','none');
     function fetch_user_data() {
         $.ajax({
             url: "<?php echo base_url() ?>public/index.php/Intern_controller/fetch_user_data",
@@ -588,7 +727,65 @@
             
         }
         
-    })
+    });
+
+
+    // custome dropdown value selection function
+    $(document).on('click','.click_get_val',function(event){
+        event.preventDefault();
+        var findex_tmp = $('.click_get_val');
+        var get_findex =findex_tmp.index($(this));
+        var get_text = $('.custome_drp_text_content:eq('+get_findex+')').attr("data-txt");
+        var get_img = $('.custome_img_style:eq('+get_findex+')').attr("data-img");
+        
+        // text getting function
+        var final_text = "";
+        if (get_text==="web") {
+            final_text="Web App Development";
+        }
+        else if(get_text==="app"){
+            final_text="App Development";
+        }
+        else{
+            final_text = "IOT Development";
+        }
+        $('#selected_val_custome_drp_txt').text(final_text);
+        $('#selected_val_custome_drp_txt').attr('data-final-res',get_text);
+        var url_img = "<?php echo base_url(); ?>assets/aboutimages/"+get_img;
+        $('.img_add_div').attr('src',url_img);
+        $('.custome_select_body').css('display','none');
+        get_message_data();
+
+    });
+
+    function get_message_data(){
+        // alert('ji');
+        var message_txt = $('#selected_val_custome_drp_txt').attr('data-final-res');
+        alert(message_txt);
+        $.ajax({
+            url:"<?php echo base_url('public/index.php/Admin_controller/get_message_data'); ?>",
+            method:"POST",
+            dataType:"JSON",
+            data:{
+                message_domain:message_txt,
+            },
+            success:function(res){
+                console.log("after select list using ajax");
+                console.log(res);
+                alert(res);
+            },
+            error:function(er){
+                console.log("Sorry TryAgain get message data");
+                console.log(er);
+            }
+        });
+    }
+
+    // cursor click visible div
+    $(document).on('click','.drp_click_div',function(event){
+        event.preventDefault();
+        $('.custome_select_body').css('display','inline');
+    });
 </script>
 
 

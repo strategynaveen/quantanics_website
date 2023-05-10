@@ -57,6 +57,18 @@ class Admin_Model extends Model
             return false;
         }
     }
+
+
+    // admin messaging data domain based selection records 
+    public function getmessaging_data_particular_domain($domain){
+        $db = \Config\Database::connect();
+        $tb = $db->table('message_table');
+        $tb->select('*');
+        $tb->where('domain_name',$domain);
+        $res = $tb->get()->getResultArray();
+        return $res;
+
+    }
 }
 
 
