@@ -24,7 +24,7 @@ class Intern_controller extends BaseController
     }
    
    
-
+/* temporary hide this registeration
     public function demo_reg(){
         helper(['filesystem']);
 
@@ -116,16 +116,53 @@ class Intern_controller extends BaseController
        
         
     }
+*/
 
+    // intern register new
+    public function domain_load(){
+        if ($this->request->isAJAX()) {
+            $res_drp = $this->datas->getdomain_data();
+            echo json_encode($res_drp);
+        }
+    }
+
+    // intern registeration function
+    public function intern_reg(){
+        if ($this->request->isAJAX()) {
+            $intern_name = $this->request->getvar('intern_name');
+            $email = $this->request->getvar('email');
+            $mobile = $this->request->getvar('mobile');
+            $dept = $this->request->getvar('dept');
+            $clg_name = $this->request->getvar('clg_name');
+            $year = $this->request->getvar('year');
+            $dob = $this->request->getvar('dob');
+            $domain = $this->request->getvar('domain');
+
+            $intern_reg['intern_id'] = $this->generate_intern_id();
+            $intern_reg['in_name'] = $intern_name;
+            $intern_reg['email'] = $email;
+            $intern_reg['mobile'] = $mobile;
+            $intern_reg['dept'] = $dept;
+            $intern_reg['clg_name'] = $clg_name;
+            $intern_reg['year'] = $year;
+            $intern_reg['dob'] = $dob;
+            $intern_reg['domain'] = $domain;
+            $intern_reg['profile'] = "empty";
+            $res = $this->datas->intern_registeration($intern_reg);
+            echo  json_encode($res);
+
+
+        }
+    }
 
     // intern login
     public function intern_login(){
         // ajax request 
         if ($this->request->isAJAX()) {
-            $regno = $this->request->getvar('regno');
+            $email = $this->request->getvar('email');
             $dob = $this->request->getvar('dob');
 
-            $res = $this->datas->login_intern($regno,$dob);
+            $res = $this->datas->login_intern($email,$dob);
             // if ($res == "success") {
             //     $this->session->set('intern')
             // }
@@ -145,10 +182,16 @@ class Intern_controller extends BaseController
 
             $assigned_tasks = $this->datas->getassigned_tasks($intern_id);
             $assignee_arr = $this->datas->get_assignees();
+            $payment_data = $this->datas->get_payment_data($intern_id);
 
             $final_arr['profile_record'] = $res;
             $final_arr['assigned_task'] = $assigned_tasks;
             $final_arr['assignee_arr'] = $assignee_arr;
+            if ($payment_data['total_payment']==0) {
+                $payment_data['total_payment'] = $res[0]['fees'];
+                $payment_data['remaining_amount'] = $res[0]['fees'];
+            }
+            $final_arr['payment_data'] = $payment_data;
             echo json_encode($final_arr);
         }
     }
@@ -245,15 +288,7 @@ class Intern_controller extends BaseController
         }
     }
 
-    // invite cards
-    public function fetch_user_data(){
-        // echo json_encode("hi");
-        if ($this->request->isAJAX()) {
-            $res=$this->datas->admin_data();
-            echo json_encode($res);
-        }
-
-    }
+  
     // fetch data
     public function fetch_data(){
         // if ($this->request->isAJAX()){
@@ -262,6 +297,40 @@ class Intern_controller extends BaseController
         $id = $this->request->getvar('intern_id');
         $res = $this->datas->fetchData($id);
         echo json_encode($res);
+    }
+
+    // 
+    public function payment_submit_fun(){
+        // if ($this->request->isAJAX()) {
+            // echo json_encode('heelo naveen');
+            helper(['filesystem']);
+            $paid_amount = $this->request->getvar('paid_amount');
+            $file = $this->request->getFile('file');
+            $intern_id = $this->request->getvar('intern_id');
+           
+            if ($file->getSize() > 0) {
+               
+                if ($file->isValid()) {
+                    $directory = "./public/uploads/".$intern_id;
+                    if (!is_dir($directory)) {
+                        mkdir($directory, 0777, TRUE);
+                    }
+
+                    $payment_proof_name = $file->getName();
+                    $temp['intern_id'] = $intern_id;
+                    $temp['proof_name'] = $payment_proof_name;
+                    $temp['paid_amount'] = $paid_amount;
+                    $file->move($directory);
+                    $res = $this->datas->insert_payment_record($temp);
+                    // print_r($res);
+                    echo  $res;
+                    
+                    
+                    
+                }
+            }
+
+        // }
     }
 
 }

@@ -49,9 +49,9 @@
                             <br>
                             <div class="m-3">
                                 <div class="form-outline mb-4 input-container">
-                                    <input type="text" name="reg_no" class="input" placeholder=" " id="reg_no" onblur="Alphanumeric()" />
+                                    <input type="email" name="email_id" class="input" placeholder=" " id="email_id" onblur="Alphanumeric()" />
                                   
-                                    <label for="reg_no" class="placeholder label">Register No </label>
+                                    <label for="reg_no" class="placeholder label">Email ID </label>
                                     <span id="studentUid_err"></span>
                                 </div>
 
@@ -236,14 +236,14 @@
         $(document).on('click','#intern_log_btn',function(event){
             event.preventDefault();
             // alert('ahi');
-            var regno = $('#reg_no').val();
+            var email = $('#email_id').val();
             var dob = $('#dob').val();
             $.ajax({
                     url:"<?php echo base_url('public/index.php/Intern_controller/intern_login'); ?>",
                     method:"POST",
                     dataType:"json",
                     data:{
-                        regno:regno,
+                        email:email,
                         dob:dob,
                     },
                     success:function(res){
@@ -257,7 +257,9 @@
                         }
                         else if(res==="new"){
                             alert("New User");
-
+                        }
+                        else if(res==="rejection"){
+                            alert("You Form is Rejected Kindly Check your Mail ID..");
                         }
                         // alert(res);
                         // console.log(res);
