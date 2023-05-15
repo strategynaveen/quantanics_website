@@ -4,9 +4,13 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
+    protected $session;
+    public function __construct(){
+        $this->session = \Config\Services::session();
+    }
     public function index()
     {
-        return view('home');
+        return view('Home');
     }
 
 
@@ -46,7 +50,12 @@ class Home extends BaseController
             // return "hello";
         }
         elseif($name == "intern_after"){
-            return view("Intern_Home");
+            if ($this->session->get('intern_id')) {
+                return view("Intern_Home");
+            }else{
+                return view("login");
+            }
+           
         }
         elseif($name == "admin_dashboard"){
             return view("admin_dashboard");
