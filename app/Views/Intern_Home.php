@@ -25,7 +25,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- profile cards css file -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/custom/css/profile_card.css?version=<?php echo rand(); ?>">
+    <link rel="stylesheet"
+        href="<?php echo base_url(); ?>/assets/custom/css/profile_card.css?version=<?php echo rand(); ?>">
 
     <!-- chat css file -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/custom/css/chat.css?version=<?php echo rand(); ?>">
@@ -46,376 +47,309 @@
     <div class="container-fluid">
         <!-- <div class="d-flex align-items-start"> -->
         <div class="row">
-            <div class="col-lg-2 col-sm-3">
-                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
-                        data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
-                        aria-selected="true"><i class="fa fa-address-card fa-2x"></i></button>
-                    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+            <div class="top_nav">
+                <div class="nav flex-row nav-pills me-" id="v-pills-tab" role="tablist" aria-orientation="vertical"
+                    style="margin-top:5px">
+                    <button class="navbtn" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+                        type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Profile</button>
+                    <button class="navbtn" id="v-pills-profile-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
-                        aria-selected="false"><i class="fa fa-edit fa-2x"></i></button>
-                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                        aria-selected="false">Task</button>
+                    <button class="navbtn" id="v-pills-messages-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
-                        aria-selected="false"><i class="fa fa-commenting fa-2x"></i></button>
-                    <!-- <div id="visbility_fees" class="mx-auto" style="width:100%;"> -->
-                        <button class="nav-link d-inline payment_btn" id="v-pills-payment-tab" style="width:100%;" data-bs-toggle="pill" data-bs-target="#v-pills-payment" type="button" role="tab" aria-controls="v-pills-payment" aria-selected="false" >
-                            <i class="fa fa-dollar fa-2x"></i>
-                        </button>
-                    <!-- </div>     -->
-                   
+                        aria-selected="false">Chat</button>
+                    <button class="navbtn" id="v-pills-payment-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-payment" type="button" role="tab" aria-controls="v-pills-payment"
+                        aria-selected="false">Payment
+                    </button>
                 </div>
             </div>
-            <div class="col-lg-10 col-sm-12">
+
+
+
+            <div class="col-lg-12 col-sm-12"><br>
                 <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                        aria-labelledby="v-pills-home-tab">
+                    <!-- first table -->
+                    <div class="tab-pane fade " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                         <div class="jumbotron border border-1 rounded">
                             <div class="card user-card-full">
                                 <div class="intern_details_content"></div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- second table -->
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                         aria-labelledby="v-pills-profile-tab">
                         <div class="jumbotron border border-2 shadow shadow-sm rounded " style="">
-                            <nav class="mt-4 m-3">
-                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                                        aria-selected="true">Today</button>
-                                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-profile" type="button" role="tab"
-                                        aria-controls="nav-profile" aria-selected="false">Tasks</button>
+                            <div class="d-flex p-2 flex-row">
+                                <p class="sortby" style="margin-top:8px;">Show</p>
+                                <select class="form-select" aria-label="Default select example" style="font-size:15px; width:140px;" >
+                                    <option value="1">All task</option>
+                                    <option value="2">All task</option>
+                                    <option value="3">All task</option>
+                                    <option value="4">All task</option>
+                                </select>
+                                <p class="sortby">Sort by</p>
+                                <select class="form-select" aria-label="Default select example" style="font-size:15px; width:140px;" >
+                                    <option value="1">Auto</option>
+                                    <option value="2">Processing</option>
+                                    <option value="3">Inprocessing</option>
+                                    <option value="4">Completed</option>
+                                </select>
+                                <!-- <nav> -->
+                                <div class="nav nav-tabs">
+                                    <button type="button" class="btn btn-light"><i class="fas fa-undo fa-2x"
+                                            style="color: #0492c2; margin-top:-3px;"></i></button>
+
+                                    <button class="btn btn-light" id="nav-tasklist" data-bs-toggle="tab"
+                                        data-bs-target="#nav-tasklist"><i class="fa fa-list-ul fa-2x" aria-hidden="true"
+                                            style="color: #0492c2; margin-top:-3px;" type="button"></i>
+                                    </button>
+
+                                    <button type="button" class="btn btn-light" id="nav-chart-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-chart" role="tabpanel"><i class="fa fa-line-chart fa-2x" aria-hidden="true"
+                                            style="color: #0492c2; margin-top:-3px;"></i></button>
+
+                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
+                                        data-bs-target="#task_form" type="button" aria-selected="true"><i
+                                            class="fa fa-edit fa-2x"
+                                            style="color: #0492c2; margin-top:-3px;"></i></button>
                                 </div>
-                            </nav>
-                            <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
-                                    aria-labelledby="nav-home-tab">
-                                    <div class="row mt-4">
-                                        <div class="col-lg-2"></div>
-                                        <div class="col-lg-8">
-                                            <div
-                                                class="jumbotron border border-2 border-info shadow shadow-sm rounded ">
-                                                <br>
-                                                <h2 class="text-center text-success">Today Tasks</h2>
-                                                <br>
-                                                <div class="row " style="padding:0;margin:0;">
-                                                    <div class="col-lg-6" >
-                                                        <!-- <div class="m-3"> -->
-                                                            <div class="form-outline mb-4 input-container">
-                                                                <input type="text" id="check_in" name="" class="input"
-                                                                    placeholder=" " onfocus="check_in()"
-                                                                    onblur="check_is_time()" />
-                                                                <label class="placeholder label" style="color:black">Check In
-                                                                </label>
-                                                            </div>
-                                                        <!-- </div> -->
-                                                    </div>
-                                                    <div class="col-lg-6" >
-                                                        <!-- <div class="m-3"> -->
-                                                            <div class="form-outline mb-4 input-container">
-                                                                <input type="text" id="check_out" name="" class="input"
-                                                                    placeholder=" " onfocus="check_out()"
-                                                                    onblur="check_is_time_one();validateTime()" />
-                                                                <label class="placeholder label" style="color:black">Check Out
-                                                                </label>
-                                                                <span id="Time_err"></span>
-                                                            </div>
-                                                        <!-- </div> -->
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="m-2">
-                                                    <!-- <div class="form-outline mb-4 input-container"> -->
-                                                    <select class="form-select form-select-lg" id="task_type"
-                                                        name="task_type" class="form-control form-control-lg"
-                                                        aria-label="Default select example" onblur="ValidateTaskType()">
-                                                        <option selected disabled value="">Choose Task Type</option>
-                                                        <option value="assigned_task">Assigned Tasks</option>
-                                                        <option value="new_task">Assigned Person</option>
-                                                        <!-- <option value="3">Three</option> -->
-                                                    </select>
-                                                    <span id="tasktyp_err"></span>
-                                                    <!-- </div> -->
-                                                </div>
-                                                <div id="task_name_input">
-                                                    <div class="m-3">
-                                                        <div class="form-outline mb-4 input-container ">
-                                                            <input type="text" id="task" name="task" class="input"
-                                                                placeholder=" " onblur="validateTaskName()" />
-                                                            <label class="placeholder label" style="color:black">Task
-                                                            </label>
-                                                        </div>
-                                                        <span id="Task_err"></span>
-                                                    </div>
-                                                </div>
+                            </div>
+                            <div class="table-responsive-xl">
+                                <table class="table" style="font-size:1.2rem;">
+                                    <!-- <thead>/ -->
+                                    <tr class="tabheader">
+                                        <th>Check In</th>
+                                        <th>Check Out</th>
+                                        <th>Task Date</th>
+                                        <th>Task</th>
+                                        <th>Description</th>
+                                        <th>Status</th>
+                                        <th>Assignee</th>
+                                        <th>Remark</th>
+                                        <th>Command</th>
+                                        <th>Correction Count</th>
+                                        <th>Completion File</th>
+                                    </tr>
+                                    <!-- </thead> -->
+                                    <!-- <tbody class="task_data"> -->
+                                    <tr>
+                                        <td>09.30 AM</td>
+                                        <td>07.30 PM</td>
+                                        <td>23/04/2023</td>
+                                        <td>import table</td>
+                                        <td>Import a table in website</td>
+                                        <td>Onprocessing</td>
+                                        <td>Naveen</td>
+                                        <td>Processing</td>
+                                        <td>No comments</td>
+                                        <td>8</td>
+                                        <td>Uploading</td>
+                                    </tr>
+                                    <tr>
+                                        <td>09.30 AM</td>
+                                        <td>07.30 PM</td>
+                                        <td>23/04/2023</td>
+                                        <td>import table</td>
+                                        <td>Import a table in website</td>
+                                        <td>Onprocessing</td>
+                                        <td>Naveen</td>
+                                        <td>Processing</td>
+                                        <td>No comments</td>
+                                        <td>8</td>
+                                        <td>Uploading</td>
+                                    </tr>
+                                    <tr>
+                                        <td>09.30 AM</td>
+                                        <td>07.30 PM</td>
+                                        <td>23/04/2023</td>
+                                        <td>import table</td>
+                                        <td>Import a table in website</td>
+                                        <td>Onprocessing</td>
+                                        <td>Naveen</td>
+                                        <td>Processing</td>
+                                        <td>No comments</td>
+                                        <td>8</td>
+                                        <td>Uploading</td>
+                                    </tr>
+                                    <tr>
+                                        <td>09.30 AM</td>
+                                        <td>07.30 PM</td>
+                                        <td>23/04/2023</td>
+                                        <td>import table</td>
+                                        <td>Import a table in website</td>
+                                        <td>Onprocessing</td>
+                                        <td>Naveen</td>
+                                        <td>Processing</td>
+                                        <td>No comments</td>
+                                        <td>8</td>
+                                        <td>Uploading</td>
+                                    </tr>
+                                    <tr>
+                                        <td>09.30 AM</td>
+                                        <td>07.30 PM</td>
+                                        <td>23/04/2023</td>
+                                        <td>import table</td>
+                                        <td>Import a table in website</td>
+                                        <td>Onprocessing</td>
+                                        <td>Naveen</td>
+                                        <td>Processing</td>
+                                        <td>No comments</td>
+                                        <td>8</td>
+                                        <td>Uploading</td>
+                                    </tr>
 
-                                                <div class="m-3">
-                                                    <div class="form-outline mb-4 input-container">
-                                                        <input type="text" id="Desc" name="Desc" class="input"
-                                                            placeholder=" " onblur="validateDescription()" />
-                                                        <label for="Desc" class="placeholder label"
-                                                            style="color:black">Task
-                                                            Description</label>
-                                                        <span id="Desc_err"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="m-3">
-                                                    <!-- <div class="form-outline mb-4 input-container"> -->
-                                                    <!-- <input type="text" id="Status" onblur="Status()" name="" class="input" placeholder=" " />
-                                                        <label class="placeholder label" style="color:black">Task
-                                                            Status</label>
-                                                        <span id="status_err"></span> -->
-                                                    <select class="form-select form-select-lg" id="Task_Status" name=""
-                                                        class=" form-control form-control-lg"
-                                                        aria-label="Default select example"
-                                                        onblur="validate_Task_status()">
-                                                        <option selected disabled value="">Choose Task Status</option>
-                                                        <option value="in_progress">In Progress</option>
-                                                        <option value="submitted">Submitted Evaluation</option>
-                                                        <!-- <option value="3">Three</option> -->
-                                                    </select>
-                                                    <span id="task_status_err"></span>
+                                    <tbody class="task_data">
 
-                                                    <!-- </div> -->
-                                                </div>
-
-
-                                                <div class="m-3">
-                                                    <div class="drp_exist mb-3">
-                                                        <select class="form-select form-select-lg" id="existing_tasks"
-                                                            name="existing_tasks" class="form-control form-control-lg"
-                                                            aria-label="Default select example"
-                                                            onblur="validate_choose_task()">
-                                                            <option selected disabled>Choose Task</option>
-                                                            <!-- <option value="assigned_task">Assigned Tasks</option> -->
-                                                            <!-- <option value="new_task">Assigned Person</option> -->
-                                                            <!-- <option value="3">Three</option> -->
-                                                        </select>
-                                                        <span id="choose_task_err"></span>
-                                                    </div>
-                                                    <div class="new_task_assignee mb-3">
-                                                        <select name="assignee" id="assignee"
-                                                            class="form-select form-select-lg"
-                                                            onblur="validate_assign_person()">
-                                                            <option value="" selected disabled>Choose Assigned Person
-                                                            </option>
-                                                        </select>
-                                                        <span id="choose_assign_err"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="file_dec"></div>
-                                                <!-- <div id="file_link">
-                                                    <div class="m-3">
-                                                        <div class="form-outline mb-4 input-container">
-                                                            <input type="text" id="file_link_val" name="file_link_val" class="input" placeholder=""  onblur="" />
-                                                            <label class="placeholder label" style="color:black">File Link Description</label>
-                                                            <span id="file_link_Error"></span>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-
-
-                                                <div class="row m-3">
-                                                    <div class="col-4"></div>
-                                                    <div class="col-4">
-                                                        <button type="button"
-                                                            class="btn btn-lg mx-auto border border-2 border-info rounded text-info next_click"
-                                                            style="width:100%" id="today_task"
-                                                            value="Insert">Next</button>
-                                                    </div>
-                                                    <div class="col-4"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2"></div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="nav-profile" role="tabpanel"
-                                    aria-labelledby="nav-profile-tab">
-                                    <!-- table -->
-                                    <div class="d-flex p-2 flex-row-reverse">
-                                        <select class="custom-select custom-select-lg"
-                                            style="margin-left:1rem;margin-right:1rem;">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select>
-                                        <button type="button" class="btn btn-md border border-success text-success">
-                                            Reset</button>
-                                    </div>
-                                    <div class="table-responsive-xl">
-                                        <table class="table" style="font-size:1.2rem;">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">Check Inn</th>
-                                                    <th scope="col">Check Out</th>
-                                                    <th scope="col">Task Date</th>
-                                                    <th scope="col">Task</th>
-                                                    <th scope="col">Description</th>
-                                                    <th scope="col">Status</th>
-                                                    <th scope="col">Assignee</th>
-                                                    <th scope="col">Remark</th>
-                                                    <th scope="col">Command</th>
-                                                    <th scope="col">Correction Count</th>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="task_data">
-                                                <tr>
-                                                    <th>hi</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>hai</th>
-                                                    <td>hiiiiii</td>
-                                                    <td>hello</td>
-                                                    <th scope="col">Completion File</th>
-                                                </tr>
-                                                
-
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
+
+                    <!-- //Chart page -->
+                    <div class="tab-pane fade" id="nav-chart" role="tabpanel" aria-labelledby="nav-chart-tab">
+                    </div>
+                    <div class="tab-pane fade" id="nav-tasklist" role="tabpanel" aria-labelledby="nav-tasklist">
+                    </div>
+
+
+
+                    <div class="modal fade" tabindex="-1" role="dialog" id="task_form">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="container-fluid">
+                                    <div class="modal-header">
+                                        <h2 class="text-center text-success" style="margin-left: 140px;">Today Tasks
+                                        </h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row" style="padding:0;margin:0;">
+                                            <div class="col-lg-6">
+                                                <div class="form-outline mb-4 input-container">
+                                                    <input type="text" id="check_in" name="" class="input"
+                                                        placeholder=" " onfocus="check_in()" onblur="check_is_time()" />
+                                                    <label class="placeholder label" style="color:black">Check
+                                                        In
+                                                    </label>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-outline mb-4 input-container">
+                                                    <input type="text" id="check_out" name="" class="input"
+                                                        placeholder=" " onfocus="check_out()"
+                                                        onblur="check_is_time_one();validateTime()" />
+                                                    <label class="placeholder label" style="color:black">Check
+                                                        Out
+                                                    </label>
+                                                    <span id="Time_err"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <select class="form-select form-select-lg" id="task_type" name="task_type"
+                                                class="form-control form-control-lg" aria-label="Default select example"
+                                                onblur="ValidateTaskType()">
+                                                <option selected disabled value="">Choose Task Type</option>
+                                                <option value="assigned_task" id="assigned_task">Assigned Tasks
+                                                </option>
+                                                <option value="new_task" id="assigned_person">Assigned Person
+                                                </option>
+                                            </select>
+                                            <span id="tasktyp_err"></span>
+
+                                            <div id="task_name_input">
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="col-lg-12">
+                                            <div class="m-3"> <!-- downspace -->
+                                                <div class="form-outline mb-4 input-container ">
+                                                    <input type="text" id="task" name="task" class="input"
+                                                        placeholder=" " onblur="validateTaskName()" />
+                                                    <label class="placeholder label" style="color:black">Task
+                                                    </label>
+                                                </div>
+                                                <span id="Task_err"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <div class="m-3">
+                                                <div class="form-outline mb-4 input-container">
+                                                    <input type="text" id="Desc" name="Desc" class="input"
+                                                        placeholder=" " onblur="validateDescription()" />
+                                                    <label for="Desc" class="placeholder label" style="color:black">Task
+                                                        Description</label>
+                                                    <span id="Desc_err"></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="col-lg-12">
+                                            <select class="form-select form-select-lg" id="Task_Status" name=""
+                                                class=" form-control form-control-lg"
+                                                aria-label="Default select example" onblur="validate_Task_status()">
+                                                <option selected disabled value="">Choose Task Status</option>
+                                                <option value="in_progress">In Progress</option>
+                                                <option value="submitted">Submitted Evaluation</option>
+                                            </select>
+                                            <span id="task_status_err"></span>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="m-3">
+                                                <div class="drp_exist mb-3">
+                                                    <select class="form-select form-select-lg" id="existing_tasks"
+                                                        name="existing_tasks" class="form-control form-control-lg"
+                                                        aria-label="Default select example"
+                                                        onblur="validate_choose_task()">
+                                                        <option selected disabled>Choose Task</option>
+                                                    </select>
+                                                    <span id="choose_task_err"></span>
+                                                </div>
+                                                <div class="new_task_assignee mb-3">
+                                                    <select name="assignee" id="assignee"
+                                                        class="form-select form-select-lg"
+                                                        onblur="validate_assign_person()">
+                                                        <option value="" selected disabled>Choose Assigned Person
+                                                        </option>
+                                                    </select>
+                                                    <span id="choose_assign_err"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="file_dec"></div>
+                                        <div class="row m-3">
+                                            <div class="col-4"></div>
+                                            <div class="col-4">
+                                                <button type="button"
+                                                    class="btn btn-lg mx-auto border border-2 border-info rounded text-info next_click"
+                                                    style="width:100%" id="today_task" value="Insert">Next</button>
+                                            </div>
+                                            <div class="col-4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!-- Thrid table -->
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
                         aria-labelledby="v-pills-messages-tab">
                         <div class="jumbotron border border-2 shadow shadow-md rounded">
@@ -447,7 +381,8 @@
 
                                         <div class="col-lg-12 col-md-12 col-sm-12 input-group ">
                                             <textarea class="Text-Box" id="message" type="text"
-                                                placeholder="Write your message..." style="padding-left:1rem;" data-emojiable="true"></textarea>
+                                                placeholder="Write your message..." style="padding-left:1rem;"
+                                                data-emojiable="true"></textarea>
                                             <button id="send" class="submit msg_send_click"><i class="fa fa-paper-plane"
                                                     aria-hidden="true"></i>
                                             </button>
@@ -459,52 +394,61 @@
                         </div>
                     </div>
 
-                     <!-- fourth tab -->
-                     <div class="tab-pane fade" id="v-pills-payment" role="tabpanel" aria-labelledby="v-pills-payment-tab">
+
+
+
+                    <!-- fourth tab -->
+                    <div class="tab-pane fade" id="v-pills-payment" role="tabpanel"
+                        aria-labelledby="v-pills-payment-tab">
                         <!-- <h2 class="text-center text-info">payment</h2> -->
                         <br>
                         <div class="row">
-                            <div class="col-lg-3"></div>
+                            <div class="col-lg-3">
+                            </div>
                             <div class="col-lg-6">
-                            <div class="card text-center">
-                                <div class="card-header">
-                                     Payment Registeration
-                                </div>
-                                <div class="card-body">
-                                    <form id="form_payment"  enctype="multipart/form-data" method="post">
-                                        <div class="m-3">
-                                            <input type="text" name="amount" id="amount" class="form-control form-control-md " placeholder="Paid Amount..">
-                                        </div>
-                                        <div class="m-3">
-                                            <input type="file" name="payment_proof" id="payment_proof" class="form-control form-control-md" >
-                                        </div>
-                                        <div class="mx-auto">
-                                            <button type="button" class="btn btn-md border border-2 border-muted text-muted payment_click_submit" >Submit</button>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="card-footer text-muted">
-                                    Total Amount <span id="total_payment_id"></span> paid Amount <span id="paid_amount"></span> = Remaining <span id="remaining_amount"></span>
-                                </div>
+                                <div class="card text-center">
+                                    <div class="card-header">
+                                        Payment Registeration
+                                    </div>
+                                    <div class="card-body">
+                                        <form id="form_payment" enctype="multipart/form-data" method="post">
+                                            <div class="m-3">
+                                                <input type="text" name="amount" id="amount"
+                                                    class="form-control form-control-md " placeholder="Paid Amount..">
+                                            </div>
+                                            <div class="m-3">
+                                                <input type="file" name="payment_proof" id="payment_proof"
+                                                    class="form-control form-control-md">
+                                            </div>
+                                            <div class="mx-auto">
+                                                <button type="button"
+                                                    class="btn btn-md border border-2 border-muted text-muted payment_click_submit">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        Total Amount <span id="total_payment_id"></span> paid Amount <span
+                                            id="paid_amount"></span> = Remaining <span id="remaining_amount"></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-3"></div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </div>
-        <!-- </div> -->
-
-
-        <!-- <div class="tab-content" id="v-pills-tabContent">
-    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
-    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
-    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
-  </div> -->
     </div>
+    <!-- </div> -->
+
+
+    <!-- <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+        </div> -->
+
 
     <br>
     <br>
@@ -657,22 +601,22 @@
                     var element = $();
                     result.forEach(function (item) {
                         var image_profile = "";
-                        if (item.messager_status==="intern") {
-                            if (item.mprofile==="empty") {
-                                image_profile="<?php echo base_url(); ?>public/public/uploads/common_profile.png";
-                            }else{
-                                image_profile = "<?php echo base_url(); ?>public/public/uploads/"+item.mid+"/"+item.mprofile;
+                        if (item.messager_status === "intern") {
+                            if (item.mprofile === "empty") {
+                                image_profile = "<?php echo base_url(); ?>public/public/uploads/common_profile.png";
+                            } else {
+                                image_profile = "<?php echo base_url(); ?>public/public/uploads/" + item.mid + "/" + item.mprofile;
                             }
-                        }else{
+                        } else {
                             image_profile = "<?php echo base_url(); ?>public/public/uploads/admin_profile.png";
-                          
+
                         }
                         if (item.mid === intern_id) {
-                            element = element.add('<li class="send"><img src="'+image_profile+'" alert="username"><p>' + item.msg + '</p></li>')
+                            element = element.add('<li class="send"><img src="' + image_profile + '" alert="username"><p>' + item.msg + '</p></li>')
                         } else {
-                            element = element.add('<li class="replies"><img src="'+image_profile+'" alert="username"><p>' + item.msg + '</p></li>')
+                            element = element.add('<li class="replies"><img src="' + image_profile + '" alert="username"><p>' + item.msg + '</p></li>')
                         }
-                       
+
 
                         $('.msg_li').append(element);
                     });
@@ -722,19 +666,19 @@
                     $('#assignee').empty();
 
                     // payment conditons
-                    if (res['profile_record'][0]['payment_status']==="paid") {
+                    if (res['profile_record'][0]['payment_status'] === "paid") {
                         $('.payment_btn').removeClass("d-none");
-                        $('.payment_btn').attr('class','nav-link d-inline');
+                        $('.payment_btn').attr('class', 'nav-link d-inline');
                         $('#total_payment_id').text(res['payment_data']['total_payment']);
                         $('#paid_amount').text(res['payment_data']['paid_amount']);
                         $('#remaining_amount').text(res['payment_data']['remaining_amount']);
 
-                    }else if(res['profile_record'][0]['payment_status']==="free"){
+                    } else if (res['profile_record'][0]['payment_status'] === "free") {
                         $('.payment_btn').removeClass("d-inline");
-                        $('.payment_btn').attr('class','nav-link  d-none');
+                        $('.payment_btn').attr('class', 'nav-link  d-none');
                     }
 
-                    
+
 
                     res['profile_record'].forEach(function (item) {
                         var element = $();
@@ -742,11 +686,11 @@
                         $('.submit').attr('profile_data', item.profile);
 
                         // profile image conditions
-                        var file_name = "<?php echo base_url(); ?>public/public/uploads/"+item.intern_id+"/"+item.profile;
+                        var file_name = "<?php echo base_url(); ?>public/public/uploads/" + item.intern_id + "/" + item.profile;
                         var orignal_file_location = "";
                         if (imgError(file_name) === true) {
                             orignal_file_location = file_name;
-                        }else{
+                        } else {
                             orignal_file_location = "<?php echo base_url(); ?>public/public/uploads/common_profile.png";
                         }
 
@@ -754,7 +698,7 @@
                             '<div class="col-sm-4 bg-c-lite-green user-profile">' +
                             '<div class="card-block text-center text-white" style="margin-top:2rem;">' +
                             '<div class="m-b-25">' +
-                            '<img src="'+orignal_file_location+'" class="img-radius"  alt="User-Profile-Image">' +
+                            '<img src="' + orignal_file_location + '" class="img-radius"  alt="User-Profile-Image">' +
                             '</div> <br>' +
                             '<h6 class="f-w-600">User Name</h6>' +
                             '<p class="intern_name">' + item.sname + '</p>' +
@@ -798,26 +742,26 @@
                             '<div class="col-sm-6">' +
                             '<p class="m-b-2 f-w-600">Mobile no.</p>' +
                             '<h6 class="text-muted f-w-400">' + item.mobile + '</h6>' +
-                            '</div>'+
                             '</div>' +
-                            '<br>'+
-                            '<div class="row">'+
-                            '<div class="col-md-6">'+
+                            '</div>' +
+                            '<br>' +
+                            '<div class="row">' +
+                            '<div class="col-md-6">' +
                             '<p class="m-b-2 f-w-600">Bonafide.</p>' +
-                            '<span class="text-muted f-w-400 font-weight-bold" style="padding:10px;background-color:#B8B8B8;height:max-content;width:max-content;border-radius:10%;"><a href="<?php echo base_url();?>public/public/uploads/'+item.intern_id+'/'+item.profile+'" download>'+item.profile+'</a> <i class="fa fa-download"></i></span>' +
-                            '</div>'+
-                            '<div class="col-md-6">'+
-                            '<p class="m-b-2 f-w-600">ID Card.</p>'+
-                            '<span class="text-muted f-w-400 font-weight-bold" style="padding:10px;background-color:#B8B8B8;height:max-content;width:max-content;border-radius:10%;"><a href="<?php echo base_url();?>public/public/uploads/'+item.id_card+'/'+item.id_card+'" download>'+item.id_card+'</a><i class="fa fa-download"></i> </span>'+
-                            '</div>'+
-                            '</div>'+
-                            '<br>'+
-                            '<div class="row">'+
-                            '<div class="col-md-6">'+
+                            '<span class="text-muted f-w-400 font-weight-bold" style="padding:10px;background-color:#B8B8B8;height:max-content;width:max-content;border-radius:10%;"><a href="<?php echo base_url(); ?>public/public/uploads/' + item.intern_id + '/' + item.profile + '" download>' + item.profile + '</a> <i class="fa fa-download"></i></span>' +
+                            '</div>' +
+                            '<div class="col-md-6">' +
+                            '<p class="m-b-2 f-w-600">ID Card.</p>' +
+                            '<span class="text-muted f-w-400 font-weight-bold" style="padding:10px;background-color:#B8B8B8;height:max-content;width:max-content;border-radius:10%;"><a href="<?php echo base_url(); ?>public/public/uploads/' + item.id_card + '/' + item.id_card + '" download>' + item.id_card + '</a><i class="fa fa-download"></i> </span>' +
+                            '</div>' +
+                            '</div>' +
+                            '<br>' +
+                            '<div class="row">' +
+                            '<div class="col-md-6">' +
                             '<p class="m-b-2 f-w-600">Resume.</p>' +
-                            '<span class="text-muted f-w-400 font-weight-bold" style="padding:10px;background-color:#B8B8B8;height:max-content;width:max-content;border-radius:10%;"><a href="<?php echo base_url();?>public/public/uploads/'+item.resume+'/'+item.resume+'" download>'+item.resume+'</a><i class="fa fa-download"></i> </span>' +
-                            '</div>'+
-                            '</div>'+
+                            '<span class="text-muted f-w-400 font-weight-bold" style="padding:10px;background-color:#B8B8B8;height:max-content;width:max-content;border-radius:10%;"><a href="<?php echo base_url(); ?>public/public/uploads/' + item.resume + '/' + item.resume + '" download>' + item.resume + '</a><i class="fa fa-download"></i> </span>' +
+                            '</div>' +
+                            '</div>' +
                             '</div>' +
                             '</div>');
 
@@ -1255,7 +1199,7 @@
 
 
         // payment submit function
-        $(document).on('click','.payment_click_submit',function(event){
+        $(document).on('click', '.payment_click_submit', function (event) {
             event.preventDefault();
             var formData = new FormData();
             var paid_amount = $('#amount').val();
@@ -1263,17 +1207,17 @@
             var intern_id = "<?php echo $session->get('intern_id'); ?>";
             formData.append('paid_amount', paid_amount);
             formData.append('file', document.getElementById("payment_proof").files[0]);
-            formData.append('intern_id',intern_id);
+            formData.append('intern_id', intern_id);
             // formData.append('total_amount',)
             $.ajax({
-                url:"<?php echo base_url(); ?>public/index.php/Intern_controller/payment_submit_fun",
-                method:"POST",
+                url: "<?php echo base_url(); ?>public/index.php/Intern_controller/payment_submit_fun",
+                method: "POST",
                 //dataType:"json",
-                data: formData,  
-                contentType: false,  
-                cache: false,  
-                processData:false,
-                success:function(res){
+                data: formData,
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function (res) {
                     console.log("ajax payment form submission..");
                     console.log(typeof res);
                     $('#amount').val('');
@@ -1282,25 +1226,25 @@
                         retrive_data();
                     }
                 },
-                error:function(er){
+                error: function (er) {
                     console.log('Sorry TryAgain..');
                     console.log(er);
                 }
             });
         });
 
-    // image checking if exists or not 
-    function imgError(file_name) {
-        var xhr = new XMLHttpRequest();
-        xhr.open('HEAD', file_name, false);
-        xhr.send();
+        // image checking if exists or not 
+        function imgError(file_name) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('HEAD', file_name, false);
+            xhr.send();
 
-        if (xhr.status === 404) {
-            return false;
-        } else {
-            return true;
+            if (xhr.status === 404) {
+                return false;
+            } else {
+                return true;
+            }
         }
-    }
     </script>
 </body>
 

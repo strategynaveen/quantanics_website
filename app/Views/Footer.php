@@ -115,7 +115,7 @@
 
           <!--chatbot--->
 
-          <a class="btn btn-light text-dark chat" style="margin-top: 10px;background-color: white; border: none;margin-right: 90px;" onclick="show()" role="button">Let's Start a convo with us!</a>
+          <a class="btn btn-light text-dark chat" style="margin-top: 15px;background-color: white; border: none; width:auto;" onclick="show()" role="button">Let's Start a convo with us!</a>
 
           <div id="box">
             <div class="top">
