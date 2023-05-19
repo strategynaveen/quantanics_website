@@ -243,7 +243,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="rejection_modal_label">Modal title</h5>
+                    <h5 class="modal-title" id="rejection_modal_label">Intern Reject Modal</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -256,6 +256,16 @@
                             <p id="intern_name" style="text-align:-webkit-match-parent;"></p>
                         </div>
                     </div>
+                    <div class="row" style="padding:0;margin:0;">
+                        <div class="col-lg-5">
+                            <p style="font-size:1rem;font-weight:600;">Email</p>
+                        </div>
+                        <div class="col-lg-1" style="font-size:1rem;font-weight:700;">:</div>
+                        <div class="col-lg-6">
+                            <p id="tmp_email_txt_r" style="text-align:-webkit-match-parent;"></p>
+                        </div>
+                    </div>
+                   
                     <hr style="margin:0.5rem;">
                     <div>
                     <textarea name="rejection_reason_val" id="rejection_reason_val" cols="30" rows="10"
@@ -282,7 +292,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="payment_modal_show_label">Modal title</h5>
+                    <h5 class="modal-title" id="payment_modal_show_label">Intern Accept Modal</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -293,6 +303,15 @@
                         <div class="col-lg-1" style="font-size:1rem;font-weight:700;">:</div>
                         <div class="col-lg-6">
                             <p id="intern_name_p" style="text-align:-webkit-match-parent;"></p>
+                        </div>
+                    </div>
+                    <div class="row" style="padding:0;margin:0;">
+                        <div class="col-lg-5">
+                            <p style="font-size:1rem;font-weight:600;">Email</p>
+                        </div>
+                        <div class="col-lg-1" style="font-size:1rem;font-weight:700;">:</div>
+                        <div class="col-lg-6">
+                            <p id="tmp_email_txt_a" style="text-align:-webkit-match-parent;"></p>
                         </div>
                     </div>
                     <hr style="margin:0.5rem;">
@@ -465,7 +484,7 @@
                         + '<div class="row"><hr>'
                         + '<div class="col-lg-5 col-md-5 col-sm-5"><p style="font-weight: bold;">Email ID</p></div>'
                         + '<div class="col-lg-1 col-md-1 col-sm-1"><p style="font-weight: bold;">:</p></div>'
-                        + '<div class="col-lg-6 col-md-6 col-sm-6""><p>' + item.email_id + '</p></div>'
+                        + '<div class="col-lg-6 col-md-6 col-sm-6""><p id="display_email_tmp">' + item.email_id + '</p></div>'
                         + '</div>'
 
                         + '<div class="row"><hr>'
@@ -626,6 +645,8 @@
         // alert('accept click');
         var intern_id = $('.accept_click_show').attr('data-id');
         var intern_name = $('#intern_name_ar').text();
+        var email = $('#display_email_tmp').text();
+        $('#tmp_email_txt_a').text(email);
         $('#intern_name_p').text(intern_name);
         $('.payment_modal_submit').attr('data-id', intern_id);
         $('#payment_modal_show').modal('show');
@@ -641,7 +662,10 @@
         event.preventDefault();
         var intern_id = $('.reject_click_show').attr('data-id');
         var intern_name = $('#intern_name_ar').text();
+        var email = $('#display_email_tmp').text();
+
         $('#intern_name').text(intern_name);
+        $('#tmp_email_txt_r').text(email);
         $('.rejection_modal_submit').attr('data-id', intern_id);
         $('#rejection_modal').modal('show');
 
@@ -654,9 +678,11 @@
         var intern_id = $('.accept_click_show').attr('data-id');
         var intern_status = $('#paymethod').val();
         var fees = $('#paid_val').val();
+        var email = $('#tmp_email_txt_a').text();
         console.log(intern_id);
         console.log(intern_status);
         console.log(fees);
+        console.log(email);
         if (paymentmethod() == true) {
             $.ajax({
                 url: "<?php echo base_url(); ?>public/index.php/Admin_controller/accept_con",
@@ -665,6 +691,7 @@
                     intern_id: intern_id,
                     intern_status: intern_status,
                     fees: fees,
+                    email:email,
                 },
                 dataType: "JSON",
                 success: function (res) {
@@ -690,30 +717,33 @@
         event.preventDefault();
         var intern_id = $('.rejection_modal_submit').attr('data-id');
         var reject_msg = $('#rejection_reason_val').val();
+        var email = $('#tmp_email_txt_r').text();
         console.log("rejection modal");
         console.log(intern_id);
         console.log(reject_msg);
+        console.log(email);
         // if(reject_validation()==true){
             $.ajax({
-            url: "<?php echo base_url(); ?>public/index.php/Admin_controller/rejection_con",
-            method: "POST",
-            data: {
-                intern_id: intern_id,
-                reject_msg: reject_msg,
-            },
-            dataType: "json",
-            success: function (res) {
-                console.log("Rejection Result");
-                console.log(res);
-                fetch_user_data();
-                $('#rejection_modal').modal('hide');
-                $('#accept_reject_modal').modal('hide');
-            },
-            error: function (er) {
-                console.log('Sorry Try Again ... Rejection submission  ajax');
-                console.log(er);
-            }
-        });
+                url: "<?php echo base_url(); ?>public/index.php/Admin_controller/rejection_con",
+                method: "POST",
+                data: {
+                    intern_id: intern_id,
+                    reject_msg: reject_msg,
+                    email:email,
+                },
+                dataType: "json",
+                success: function (res) {
+                    console.log("Rejection Result");
+                    console.log(res);
+                    fetch_user_data();
+                    $('#rejection_modal').modal('hide');
+                    $('#accept_reject_modal').modal('hide');
+                },
+                error: function (er) {
+                    console.log('Sorry Try Again ... Rejection submission  ajax');
+                    console.log(er);
+                }
+            });
             
         // }
         
