@@ -137,7 +137,6 @@ class Intern_controller extends BaseController
             $year = $this->request->getvar('year');
             $dob = $this->request->getvar('dob');
             $domain = $this->request->getvar('domain');
-
             $intern_reg['intern_id'] = $this->generate_intern_id();
             $intern_reg['in_name'] = $intern_name;
             $intern_reg['email'] = $email;
@@ -174,10 +173,10 @@ class Intern_controller extends BaseController
 
 
     // intern home page ajax
+
     public function getdata(){
         if ($this->request->isAJAX()) {
             $intern_id  = $this->request->getvar('intern_id');
-
             $res = $this->datas->getintern_data($intern_id);
 
             $assigned_tasks = $this->datas->getassigned_tasks($intern_id);
@@ -230,8 +229,9 @@ class Intern_controller extends BaseController
         }
     }
    
-    public function today_task(){
-        // console.log("hai");
+
+    //
+    public function task(){        
         if ($this->request->isAJAX()) {
             $task_data['intern_id']= $this->request->getvar('intern_id');
             $task_data['check_in']= $this->request->getvar('check_in');
@@ -248,11 +248,11 @@ class Intern_controller extends BaseController
 
             }
             elseif ($tmp_assignee!="empty") {
-                $task_text = $this->request->getvar('task1');
+                $task_text = $this->request->getvar('taskname');
                 $task_assignee = $tmp_assignee;
             }
 
-            $task_data['task'] = $task_text;
+            $task_data['taskname'] = $task_text;
             $task_data['assigned_by'] = $task_assignee;
             $task_data['tdate'] = date('Y-m-d');
             $task_data['last_updated_by'] = $this->request->getvar('intern_id');
@@ -260,18 +260,20 @@ class Intern_controller extends BaseController
 
             if ($task_data['task_status'] != "submitted") {
                 // $task_link = "empty";
-                $res = $this->datas->insert_task_table($task_data);
+              //  $res = $this->datas->insert_task_table($task_data);
             }else{
                 $task_data['completion_file'] = $this->request->getvar('file_link');
-                $res = $this->datas->insert_task_table($task_data);
+                //$res = $this->datas->insert_task_table($task_data);
                 // $task_link = $this->request->getvar('file_link');
             }
 
           
-            // $res = $this->datas->insert_task_table($task_data);
-            echo json_encode($res);
-        }
+            //$res = $this->datas->insert_task_table($task_data);
+            echo json_encode($task_data);
+       }
     }
+
+    
     //admin login
     public function admin_login(){
         // ajax request 
@@ -287,6 +289,8 @@ class Intern_controller extends BaseController
             echo json_encode($res);
         }
     }
+
+
 
   
     // fetch data

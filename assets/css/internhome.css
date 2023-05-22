@@ -281,6 +281,13 @@ input {
     border-radius: 7px;
 }
 
+#v-pills-home-tab:visited{
+    font-weight: 450;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    border-radius: 7px;  
+}
+
 
 #nav-tasklist:active {
     background-color: rgb(71, 174, 243);

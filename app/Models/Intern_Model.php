@@ -190,7 +190,7 @@ class Intern_Model extends Model
     public function insert_task_table($task_data)
     {
         $db = \Config\Database::connect();
-        $query = $db->table('task_table');
+        $query = $db->table('daily_table');
         $res = $query->insert($task_data);
         if ($res == true) {
             return true;
@@ -229,7 +229,7 @@ class Intern_Model extends Model
     public function fetchData($id)
     {
         $this->db = \Config\Database::connect();
-        $query = $this->db->table('task_table as t');
+        $query = $this->db->table('daily_table as t');
         $query->select('t.*,s.emp_name');
         $query->join('admin_user as s','s.user_id=t.assigned_by');
         $query->where('t.intern_id', $id);
@@ -242,7 +242,7 @@ class Intern_Model extends Model
     // assigned tasks get function
     public function getassigned_tasks($intern_id){
         $this->db = \Config\Database::connect();
-        $query = $this->db->table('task_table');
+        $query = $this->db->table('daily_table');
         $query->select('id,task,assigned_by');
         $query->where('task_status!=','submitted');
         $query->where('task_status!=','completed');
@@ -265,7 +265,7 @@ class Intern_Model extends Model
     // get assigned task and assigned person id
     public function get_task($tid){
         $this->db = \Config\Database::connect();
-        $build = $this->db->table('task_table');
+        $build = $this->db->table('daily_table');
         $build->select('task,assigned_by');
         $build->where('id',$tid);
         $res = $build->get()->getResultArray();

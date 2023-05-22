@@ -50,8 +50,9 @@
             <div class="top_nav">
                 <div class="nav flex-row nav-pills me-" id="v-pills-tab" role="tablist" aria-orientation="vertical"
                     style="margin-top:5px">
-                    <button class="navbtn" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
-                        type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Profile</button>
+                    <button class="navbtn show active" id="v-pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                        aria-selected="true">Profile</button>
                     <button class="navbtn" id="v-pills-profile-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
                         aria-selected="false">Task</button>
@@ -125,7 +126,7 @@
                                     </li>
 
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                        <button class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill"
                                             data-bs-target="#pills-profile" type="button" role="tab"
                                             aria-controls="pills-profile" aria-selected="ture"
                                             style="margin-left:4px; margin-top:3px;"><i class="fa fa-list-ul fa-1x"
@@ -167,58 +168,6 @@
                                                 <th>Completion File</th>
                                             </tr>
 
-                                            <tr>
-                                                <td>09.30 AM</td>
-                                                <td>07.30 PM</td>
-                                                <td>23/04/2023</td>
-                                                <td>import table</td>
-                                                <td>Import a table in website</td>
-                                                <td>Onprocessing</td>
-                                                <td>Naveen</td>
-                                                <td>Processing</td>
-                                                <td>No comments</td>
-                                                <td>8</td>
-                                                <td>Uploading</td>
-                                            </tr>
-                                            <tr>
-                                                <td>09.30 AM</td>
-                                                <td>07.30 PM</td>
-                                                <td>23/04/2023</td>
-                                                <td>import table</td>
-                                                <td>Import a table in website</td>
-                                                <td>Onprocessing</td>
-                                                <td>Naveen</td>
-                                                <td>Processing</td>
-                                                <td>No comments</td>
-                                                <td>8</td>
-                                                <td>Uploading</td>
-                                            </tr>
-                                            <tr>
-                                                <td>09.30 AM</td>
-                                                <td>07.30 PM</td>
-                                                <td>23/04/2023</td>
-                                                <td>import table</td>
-                                                <td>Import a table in website</td>
-                                                <td>Onprocessing</td>
-                                                <td>Naveen</td>
-                                                <td>Processing</td>
-                                                <td>No comments</td>
-                                                <td>8</td>
-                                                <td>Uploading</td>
-                                            </tr>
-                                            <tr>
-                                                <td>09.30 AM</td>
-                                                <td>07.30 PM</td>
-                                                <td>23/04/2023</td>
-                                                <td>import table</td>
-                                                <td>Import a table in website</td>
-                                                <td>Onprocessing</td>
-                                                <td>Naveen</td>
-                                                <td>Processing</td>
-                                                <td>No comments</td>
-                                                <td>8</td>
-                                                <td>Uploading</td>
-                                            </tr>
                                             <tr>
                                                 <td>09.30 AM</td>
                                                 <td>07.30 PM</td>
@@ -311,16 +260,21 @@
 
                                         <div class="m-3">
                                             <div class="form-outline mb-4 input-container">
-                                                <input type="text" id="Desc" name="Desc" class="input" placeholder=" "
-                                                    onblur="validateDescription()" />
-                                                <label class="placeholder label" style="color:black">Task
-                                                    Description</label>
+                                                <input type="text" id="Description" name="Description" class="input"
+                                                    placeholder=" " onblur="validateDescription()" />
+                                                <label class="placeholder label" style="color:black">Description</label>
                                                 <!-- <span id="Desc_err"></span> -->
                                             </div>
                                         </div>
 
                                         <div class="m-3">
-                                            <select class="form-select form-select-lg" id="Task_Status" name=""
+                                            <!-- <div class="form-outline mb-4 input-container">
+                                                <input type="text" id="Status" onblur="Status()" name="" class="input"
+                                                    placeholder=" " />
+                                                <label class="placeholder label" style="color:black">Task
+                                                    Status</label>
+                                            </div> -->
+                                            <select class="form-select form-select-lg" id="task_status" name=""
                                                 class=" form-control form-control-lg"
                                                 aria-label="Default select example" onblur="validate_Task_status()">
                                                 <option selected disabled value="">Choose Task Status</option>
@@ -328,15 +282,16 @@
                                                 <option value="submitted">Submitted Evaluation</option>
                                             </select>
                                             <!-- <span id="task_status_err"></span> -->
+                                            <!-- </div> -->
                                         </div>
-
 
                                         <div class="m-3">
                                             <div class="drp_exist mb-3">
-                                                <select class="form-select form-select-md" id="existing_tasks"
+                                                <select class="form-select form-select-lg" id="existing_tasks"
                                                     name="existing_tasks" class="form-control form-control-lg"
-                                                    aria-label="Default select example" onblur="validate_choose_task()">
+                                                    aria-label="Default select example">
                                                     <option selected disabled>Choose Task</option>
+                                                    <option value="process">Process</option>
                                                 </select>
                                                 <!-- <span id="choose_task_err"></span> -->
                                             </div>
@@ -345,8 +300,20 @@
                                                     onblur="validate_assign_person()">
                                                     <option value="" selected disabled>Choose Assigned Person
                                                     </option>
+                                                    <option value="assign">Assigned
+                                                    </option>
                                                 </select>
                                                 <!-- <span id="choose_assign_err"></span> -->
+                                            </div>
+
+                                        </div>
+                                        <div class="m-3">
+                                            <div class="target_date">
+                                                <div class="form-outline mb-4 input-container">
+                                                    <input type="text" name="targetdate" class="input" id="targetdate"
+                                                        placeholder=" " onfocus=datefun()  onblur=hideDatePicker() />
+                                                        <label for="targetdate" class="placeholder">Target Date</label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="file_dec"></div>
@@ -357,7 +324,7 @@
                                             <div class="col-4">
                                                 <button type="button"
                                                     class="btn btn-lg mx-auto border border-2 border-info rounded text-info next_click"
-                                                    style="width:100%" id="today_task" value="Insert">Next</button>
+                                                    style="width:100%" id="task" value="Insert">Submit</button>
                                             </div>
                                             <div class="col-4"></div>
                                         </div>
@@ -496,6 +463,8 @@
 
         $('.new_task_assignee').css('display', 'none');
         $('.drp_exist').css('display', 'none');
+        $('.target_date').css('display', 'none');
+
         // function onchange value 
         $(document).on('change', '#task_type', function () {
             // alert('hi');
@@ -503,17 +472,19 @@
             // alert(task_type);
             if (task_type === "assigned_task") {
                 $('.new_task_assignee').css('display', 'none');
+                $('.target_date').css('display', 'none');
                 $('.drp_exist').css('display', 'inline');
                 $('#task_name_input').css('display', 'none');
-                $('#task1').val('');
+                $('#taskname').val('');
                 $('#existing_tasks').val('');
                 $('#assignee').val('');
             } else if (task_type === "new_task") {
                 $('.drp_exist').css('display', 'none');
                 $('.new_task_assignee').css('display', 'inline');
                 $('#task_name_input').css('display', 'inline');
+                $('.target_date').css('display', 'inline');
                 $('#existing_tasks').val('');
-                $('#task1').val('');
+                $('#taskname').val('');
                 $('#assignee').val('');
             }
         });
@@ -526,11 +497,13 @@
             if (get_task_val == "submitted") {
                 $('.file_dec').append('<div id="file_link">' +
                     '<div class="m-3">' +
+                    '<div class="form-outline mb-4 input-container">' +
                     '<input type="text" id="file_link_val" name="file_link_val"' +
                     'class="input" placeholder=""' +
                     'onblur="validateFileLink()" />' +
                     '<label class="placeholder label" style="color:black">File' +
                     ' Link Description</label>' +
+                    '</div>' +
                     // '<span id="file_link_val_err"></span>' +
                     '</div>' +
                     '</div>');
@@ -867,6 +840,7 @@
         //     }
         // }
 
+
         // function validateDescription() {
         //     const DescriptionInput = document.getElementById("Desc");
         //     const Description = DescriptionInput.value;
@@ -883,6 +857,8 @@
         //         return true;
         //     }
         // }
+
+
         // function ValidateTaskType() {
         //     var choice = document.getElementById("task_type");
         //     if (choice.value === "") {
@@ -913,8 +889,8 @@
         //         $('#task_status_err').text("");
         //         return true;
         //     }
-
         // }
+
 
         // function validate_choose_task() {
         //     var choice = document.getElementById("existing_tasks");
@@ -986,6 +962,7 @@
 
 
 
+
         // function Description() {
         //     var Description1 = document.getElementById("Description").value;
         //     if (Description1.trim() === "" || Description1.length < 10) {
@@ -1003,11 +980,12 @@
 
 
 
+
         function fetch_data() {
             // alert("fetching");
             var intern_id = "<?php echo $session->get('intern_id'); ?>";
             console.log(intern_id);
-            // var intern =document.getElementById("task_table").value;
+            var intern = document.getElementById("daily_table").value;
             // console.log(intern);
             $.ajax({
                 url: "<?php echo base_url() ?>public/index.php/Intern_controller/fetch_data",
@@ -1019,7 +997,7 @@
                 success: function (res) {
                     console.log(res);
                     console.log("ajax woking");
-                    // $('.task_data').empty();
+                    $('.task_data').empty();
 
                     res.forEach(function (items) {
                         console.log("entering forEach");
@@ -1075,7 +1053,8 @@
             });
         }
 
-        $(document).on('click', '#today_task', function (event) {
+
+        $(document).on('click', '#task', function (event) {
             // if (validateTime()== false) {
             //     alert("Enter Required data");
             // }
@@ -1089,7 +1068,7 @@
             //         if (Status() == false) {
             //             alert("Enter Required data");
             //         } else {
-            display_data();
+            display_data()
             //         }
             //     }
             // // }
@@ -1101,14 +1080,14 @@
             var intern_id = "<?php echo $session->get('intern_id'); ?>";
             var check_in = $('#check_in').val();
             var check_out = $('#check_out').val();
-            // var task1 = $('#task1').val();
+            var taskname  = $('#taskname').val();
             var Description = $('#Description').val();
             var Status = $('#Status').val();
             var task_type = $('#task_type').val();
             var assignee = $('#assignee').val();
             var task = $('#existing_tasks').val();
             var domain = $('.submit').attr('get_domain');
-            // var task_text = $('#existing_tasks').attr('data-task');
+            var task_text = $('#existing_tasks').attr('data-task');
             // console.log(task_text);
 
             var tmp_assignee = "";
@@ -1116,12 +1095,12 @@
             if (assignee === null) {
                 tmp_assignee = "empty";
                 tmp_task_id = task;
-                task1 = "empty";
+                taskname = "empty";
 
             } else {
                 tmp_assignee = assignee;
                 tmp_task_id = "empty";
-                task1 = $('#task1').val();
+                taskname = $('#taskname').val();
             }
 
             var file_link = "";
@@ -1133,7 +1112,7 @@
             console.log(intern_id);
             console.log(check_in);
             console.log(check_out);
-            console.log(task1);
+            console.log(taskname);
             console.log(Description);
             console.log(Status);
             console.log(tmp_assignee);
@@ -1142,15 +1121,16 @@
             console.log(file_link);
 
 
+
             $.ajax({
-                url: "<?php echo base_url('public/index.php/Intern_controller/today_task'); ?>",
+                url: "<?php echo base_url('public/index.php/Intern_controller/task'); ?>",
                 method: "POST",
                 dataType: "json",
                 data: {
                     intern_id: intern_id,
                     check_in: check_in,
                     check_out: check_out,
-                    task1: task1,
+                    taskname: taskname,
                     Description: Description,
                     Status: Status,
                     tmp_assignee: tmp_assignee,
@@ -1174,6 +1154,7 @@
                     // alert(res);
                     // console.log(res);
 
+
                 },
                 error: function (er) {
                     console.log("Login Error");
@@ -1189,14 +1170,18 @@
             $('#check_out').attr('type', 'text');
             $('#check_out').val('');
             $('#task_type').val('');
-            $('#task1').val('');
+            $('#taskname').val('');
             $('#Description').val('');
             $('#Status').val('');
             $('#existing_tasks').val('');
             $('#assignee').val('');
+            $('#targetdate').attr('type', 'text');
+            $('#targetdate').val('');
             $('#file_link_val').val('');
 
         }
+
+
 
         $(document).on('change', '#Status', function (event) {
             event.preventDefault();
@@ -1211,6 +1196,7 @@
             }
             // $('#file_link').css('display','inline');
         });
+
 
 
         // payment submit function
@@ -1260,6 +1246,20 @@
                 return true;
             }
         }
+
+
+        function datefun() {
+            var date = document.getElementById("targetdate");
+            date.type = "date";
+        }
+
+        function hideDatePicker() {
+            var date = document.getElementById("targetdate");
+            if (date.value === "") {
+                date.type = "text";
+            }
+        }
+
     </script>
 </body>
 
