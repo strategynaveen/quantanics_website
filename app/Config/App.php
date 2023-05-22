@@ -17,7 +17,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public string $baseURL = 'http://localhost/quantanics_website-final_change/';
+    public string $baseURL = 'http://localhost/quantanics_website-final_change1/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

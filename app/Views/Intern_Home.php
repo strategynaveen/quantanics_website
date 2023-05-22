@@ -259,16 +259,16 @@
                                     <div class="modal-body">
                                         <div class="row m-3">
                                             <div class="col-lg-6">
-                                                <!-- <div class="form-outline  input-container"> -->
+                                                <div class="form-outline  input-container">
                                                     <input type="text" id="check_in" name="" class="input"
                                                         placeholder=" " onfocus="check_in()" onblur="check_is_time()" />
                                                     <label class="placeholder label" style="color:black">Check
                                                         In
                                                     </label>
-                                                <!-- </div> -->
+                                                </div>
                                             </div>
                                             <div class="col-lg-6">
-                                                <!-- <div class="form-outline  input-container"> -->
+                                                <div class="form-outline  input-container">
                                                     <input type="text" id="check_out" name="" class="input"
                                                         placeholder=" " onfocus="check_out()"
                                                         onblur="check_is_time_one();validateTime()" />
@@ -276,7 +276,7 @@
                                                         Out
                                                     </label>
                                                     <!-- <span id="Time_err"></span> -->
-                                                <!-- </div> -->
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="m-3">
@@ -296,12 +296,12 @@
 
                                         <div class="m-3">
                                             <div id="task_name_input">
-                                                <!-- <div class="form-outline mb-4 input-container "> -->
-                                                <input type="text" id="task" name="task" class="input" placeholder=" "
-                                                    onblur="validateTaskName()" />
-                                                <label class="placeholder label" style="color:black">Task
-                                                </label>
-                                                <!-- </div> -->
+                                                <div class="form-outline mb-4 input-container ">
+                                                    <input type="text" id="task" name="task" class="input"
+                                                        placeholder=" " onblur="validateTaskName()" />
+                                                    <label class="placeholder label" style="color:black">Task
+                                                    </label>
+                                                </div>
                                                 <!-- <span id="Task_err"></span> -->
                                             </div>
                                         </div>
@@ -310,13 +310,13 @@
 
 
                                         <div class="m-3">
-                                            <!-- <div class="form-outline mb-4 input-container"> -->
-                                            <input type="text" id="Desc" name="Desc" class="input" placeholder=" "
-                                                onblur="validateDescription()" />
-                                            <label class="placeholder label" style="color:black">Task
-                                                Description</label>
-                                            <!-- <span id="Desc_err"></span> -->
-                                            <!-- </div> -->
+                                            <div class="form-outline mb-4 input-container">
+                                                <input type="text" id="Desc" name="Desc" class="input" placeholder=" "
+                                                    onblur="validateDescription()" />
+                                                <label class="placeholder label" style="color:black">Task
+                                                    Description</label>
+                                                <!-- <span id="Desc_err"></span> -->
+                                            </div>
                                         </div>
 
                                         <div class="m-3">
