@@ -70,7 +70,8 @@
             <div class="col-lg-12 col-sm-12"><br>
                 <div class="tab-content" id="v-pills-tabContent">
                     <!-- first table -->
-                    <div class="tab-pane fade " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab" style="width:800px; margin-left: 250px;">
                         <div class="jumbotron border border-1 rounded">
                             <div class="card user-card-full">
                                 <div class="intern_details_content"></div>
@@ -84,137 +85,167 @@
                         <div class="jumbotron border border-2 shadow shadow-sm rounded " style="">
                             <div class="d-flex p-2 flex-row">
                                 <p class="sortby" style="margin-top:8px;">Show</p>
-                                <select class="form-select" aria-label="Default select example" style="font-size:15px; width:140px;" >
+                                <select id="selectoption" class="form-select" aria-label="Default select example"
+                                    style="font-size:15px; width:140px;">
                                     <option value="1">All task</option>
                                     <option value="2">All task</option>
                                     <option value="3">All task</option>
                                     <option value="4">All task</option>
                                 </select>
                                 <p class="sortby">Sort by</p>
-                                <select class="form-select" aria-label="Default select example" style="font-size:15px; width:140px;" >
+                                <select id="selectoption" class="form-select" aria-label="Default select example"
+                                    style="font-size:15px; width:140px;">
                                     <option value="1">Auto</option>
                                     <option value="2">Processing</option>
                                     <option value="3">Inprocessing</option>
                                     <option value="4">Completed</option>
                                 </select>
                                 <!-- <nav> -->
-                                <div class="nav nav-tabs">
-                                    <button type="button" class="btn btn-light"><i class="fas fa-undo fa-2x"
-                                            style="color: #0492c2; margin-top:-3px;"></i></button>
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 
-                                    <button class="btn btn-light" id="nav-tasklist" data-bs-toggle="tab"
-                                        data-bs-target="#nav-tasklist"><i class="fa fa-list-ul fa-2x" aria-hidden="true"
+                                    <!-- <button type="button" class="btn btn-light"><i class="fas fa-undo fa-2x"
+                                            style="color: #0492c2; margin-top:-3px;"></i></button> -->
+
+                                    <!-- <button class="btn btn-light" id="nav-tasktable" data-bs-toggle="tab"
+                                        data-bs-target="#nav-tasktable"><i class="fa fa-list-ul fa-2x" aria-hidden="true"
                                             style="color: #0492c2; margin-top:-3px;" type="button"></i>
                                     </button>
 
-                                    <button type="button" class="btn btn-light" id="nav-chart-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-chart" role="tabpanel"><i class="fa fa-line-chart fa-2x" aria-hidden="true"
-                                            style="color: #0492c2; margin-top:-3px;"></i></button>
+                                    <button type="button" class="btn btn-light" id="pills-navgraph-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-navgraph" role="tab"
+                                        aria-selected="true" aria-controls="pills-navgraph"><i
+                                            class="fa fa-line-chart fa-2x" aria-hidden="true"
+                                            style="color: #0492c2; margin-top:-3px;"></i></button> -->
+                                    <li class="nav-item" role="presentation">
+                                        <button type="button" class="nav-link" id="pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-home" type="button" role="tab"
+                                            aria-controls="pills-home" aria-selected="true"
+                                            style="margin-left:4px; margin-top:3px;"><i
+                                                class="fas fa-undo fa-1x"></i></button>
+                                    </li>
 
-                                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                        data-bs-target="#task_form" type="button" aria-selected="true"><i
-                                            class="fa fa-edit fa-2x"
-                                            style="color: #0492c2; margin-top:-3px;"></i></button>
-                                </div>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-profile" type="button" role="tab"
+                                            aria-controls="pills-profile" aria-selected="ture"
+                                            style="margin-left:4px; margin-top:3px;"><i class="fa fa-list-ul fa-1x"
+                                                type="button"></i>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-contact" type="button" role="tab"
+                                            aria-controls="pills-contact" aria-selected="false"
+                                            style="margin-left:4px; margin-top:3px;"><i class="fa fa-line-chart fa-1x"
+                                                aria-hidden="true"></i></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button type="button" class="nav-link" data-bs-toggle="modal"
+                                            data-bs-target="#task_form" type="button" aria-selected="true"
+                                            style="margin-left:4px; margin-top:3px;"><i
+                                                class="fa fa-edit fa-1x"></i></button>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="table-responsive-xl">
-                                <table class="table" style="font-size:1.2rem;">
-                                    <!-- <thead>/ -->
-                                    <tr class="tabheader">
-                                        <th>Check In</th>
-                                        <th>Check Out</th>
-                                        <th>Task Date</th>
-                                        <th>Task</th>
-                                        <th>Description</th>
-                                        <th>Status</th>
-                                        <th>Assignee</th>
-                                        <th>Remark</th>
-                                        <th>Command</th>
-                                        <th>Correction Count</th>
-                                        <th>Completion File</th>
-                                    </tr>
-                                    <!-- </thead> -->
-                                    <!-- <tbody class="task_data"> -->
-                                    <tr>
-                                        <td>09.30 AM</td>
-                                        <td>07.30 PM</td>
-                                        <td>23/04/2023</td>
-                                        <td>import table</td>
-                                        <td>Import a table in website</td>
-                                        <td>Onprocessing</td>
-                                        <td>Naveen</td>
-                                        <td>Processing</td>
-                                        <td>No comments</td>
-                                        <td>8</td>
-                                        <td>Uploading</td>
-                                    </tr>
-                                    <tr>
-                                        <td>09.30 AM</td>
-                                        <td>07.30 PM</td>
-                                        <td>23/04/2023</td>
-                                        <td>import table</td>
-                                        <td>Import a table in website</td>
-                                        <td>Onprocessing</td>
-                                        <td>Naveen</td>
-                                        <td>Processing</td>
-                                        <td>No comments</td>
-                                        <td>8</td>
-                                        <td>Uploading</td>
-                                    </tr>
-                                    <tr>
-                                        <td>09.30 AM</td>
-                                        <td>07.30 PM</td>
-                                        <td>23/04/2023</td>
-                                        <td>import table</td>
-                                        <td>Import a table in website</td>
-                                        <td>Onprocessing</td>
-                                        <td>Naveen</td>
-                                        <td>Processing</td>
-                                        <td>No comments</td>
-                                        <td>8</td>
-                                        <td>Uploading</td>
-                                    </tr>
-                                    <tr>
-                                        <td>09.30 AM</td>
-                                        <td>07.30 PM</td>
-                                        <td>23/04/2023</td>
-                                        <td>import table</td>
-                                        <td>Import a table in website</td>
-                                        <td>Onprocessing</td>
-                                        <td>Naveen</td>
-                                        <td>Processing</td>
-                                        <td>No comments</td>
-                                        <td>8</td>
-                                        <td>Uploading</td>
-                                    </tr>
-                                    <tr>
-                                        <td>09.30 AM</td>
-                                        <td>07.30 PM</td>
-                                        <td>23/04/2023</td>
-                                        <td>import table</td>
-                                        <td>Import a table in website</td>
-                                        <td>Onprocessing</td>
-                                        <td>Naveen</td>
-                                        <td>Processing</td>
-                                        <td>No comments</td>
-                                        <td>8</td>
-                                        <td>Uploading</td>
-                                    </tr>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-profile" role="tabpanel"
+                                    aria-labelledby="pills-profile-tab">
 
-                                    <tbody class="task_data">
+                                    <div class="table-responsive-xl">
+                                        <table class="table" style="font-size:1.2rem;">
+                                            <tr class="tabheader">
+                                                <th>Check In</th>
+                                                <th>Check Out</th>
+                                                <th>Task Date</th>
+                                                <th>Task</th>
+                                                <th>Description</th>
+                                                <th>Status</th>
+                                                <th>Assignee</th>
+                                                <th>Remark</th>
+                                                <th>Command</th>
+                                                <th>Correction Count</th>
+                                                <th>Completion File</th>
+                                            </tr>
 
-                                    </tbody>
-                                </table>
+                                            <tr>
+                                                <td>09.30 AM</td>
+                                                <td>07.30 PM</td>
+                                                <td>23/04/2023</td>
+                                                <td>import table</td>
+                                                <td>Import a table in website</td>
+                                                <td>Onprocessing</td>
+                                                <td>Naveen</td>
+                                                <td>Processing</td>
+                                                <td>No comments</td>
+                                                <td>8</td>
+                                                <td>Uploading</td>
+                                            </tr>
+                                            <tr>
+                                                <td>09.30 AM</td>
+                                                <td>07.30 PM</td>
+                                                <td>23/04/2023</td>
+                                                <td>import table</td>
+                                                <td>Import a table in website</td>
+                                                <td>Onprocessing</td>
+                                                <td>Naveen</td>
+                                                <td>Processing</td>
+                                                <td>No comments</td>
+                                                <td>8</td>
+                                                <td>Uploading</td>
+                                            </tr>
+                                            <tr>
+                                                <td>09.30 AM</td>
+                                                <td>07.30 PM</td>
+                                                <td>23/04/2023</td>
+                                                <td>import table</td>
+                                                <td>Import a table in website</td>
+                                                <td>Onprocessing</td>
+                                                <td>Naveen</td>
+                                                <td>Processing</td>
+                                                <td>No comments</td>
+                                                <td>8</td>
+                                                <td>Uploading</td>
+                                            </tr>
+                                            <tr>
+                                                <td>09.30 AM</td>
+                                                <td>07.30 PM</td>
+                                                <td>23/04/2023</td>
+                                                <td>import table</td>
+                                                <td>Import a table in website</td>
+                                                <td>Onprocessing</td>
+                                                <td>Naveen</td>
+                                                <td>Processing</td>
+                                                <td>No comments</td>
+                                                <td>8</td>
+                                                <td>Uploading</td>
+                                            </tr>
+                                            <tr>
+                                                <td>09.30 AM</td>
+                                                <td>07.30 PM</td>
+                                                <td>23/04/2023</td>
+                                                <td>import table</td>
+                                                <td>Import a table in website</td>
+                                                <td>Onprocessing</td>
+                                                <td>Naveen</td>
+                                                <td>Processing</td>
+                                                <td>No comments</td>
+                                                <td>8</td>
+                                                <td>Uploading</td>
+                                            </tr>
+
+                                            <tbody class="task_data">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade  " id="pills-contact" role="tabpanel"
+                                    aria-labelledby="pills-contact-tab">
+                                    <h2>charts</h2>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- //Chart page -->
-                    <div class="tab-pane fade" id="nav-chart" role="tabpanel" aria-labelledby="nav-chart-tab">
-                    </div>
-                    <div class="tab-pane fade" id="nav-tasklist" role="tabpanel" aria-labelledby="nav-tasklist">
-                    </div>
-
 
 
                     <div class="modal fade" tabindex="-1" role="dialog" id="task_form">
@@ -226,31 +257,29 @@
                                         </h2>
                                     </div>
                                     <div class="modal-body">
-                                        <div class="row" style="padding:0;margin:0;">
+                                        <div class="row m-3">
                                             <div class="col-lg-6">
-                                                <div class="form-outline mb-4 input-container">
+                                                <!-- <div class="form-outline  input-container"> -->
                                                     <input type="text" id="check_in" name="" class="input"
                                                         placeholder=" " onfocus="check_in()" onblur="check_is_time()" />
                                                     <label class="placeholder label" style="color:black">Check
                                                         In
                                                     </label>
-
-                                                </div>
+                                                <!-- </div> -->
                                             </div>
                                             <div class="col-lg-6">
-                                                <div class="form-outline mb-4 input-container">
+                                                <!-- <div class="form-outline  input-container"> -->
                                                     <input type="text" id="check_out" name="" class="input"
                                                         placeholder=" " onfocus="check_out()"
                                                         onblur="check_is_time_one();validateTime()" />
                                                     <label class="placeholder label" style="color:black">Check
                                                         Out
                                                     </label>
-                                                    <span id="Time_err"></span>
-                                                </div>
+                                                    <!-- <span id="Time_err"></span> -->
+                                                <!-- </div> -->
                                             </div>
                                         </div>
-
-                                        <div class="row">
+                                        <div class="m-3">
                                             <select class="form-select form-select-lg" id="task_type" name="task_type"
                                                 class="form-control form-control-lg" aria-label="Default select example"
                                                 onblur="ValidateTaskType()">
@@ -260,41 +289,37 @@
                                                 <option value="new_task" id="assigned_person">Assigned Person
                                                 </option>
                                             </select>
-                                            <span id="tasktyp_err"></span>
+                                            <!-- <span id="tasktyp_err"></span> -->
+                                        </div>
 
+
+
+                                        <div class="m-3">
                                             <div id="task_name_input">
+                                                <!-- <div class="form-outline mb-4 input-container "> -->
+                                                <input type="text" id="task" name="task" class="input" placeholder=" "
+                                                    onblur="validateTaskName()" />
+                                                <label class="placeholder label" style="color:black">Task
+                                                </label>
+                                                <!-- </div> -->
+                                                <!-- <span id="Task_err"></span> -->
                                             </div>
                                         </div>
 
 
 
-                                        <div class="col-lg-12">
-                                            <div class="m-3"> <!-- downspace -->
-                                                <div class="form-outline mb-4 input-container ">
-                                                    <input type="text" id="task" name="task" class="input"
-                                                        placeholder=" " onblur="validateTaskName()" />
-                                                    <label class="placeholder label" style="color:black">Task
-                                                    </label>
-                                                </div>
-                                                <span id="Task_err"></span>
-                                            </div>
+
+                                        <div class="m-3">
+                                            <!-- <div class="form-outline mb-4 input-container"> -->
+                                            <input type="text" id="Desc" name="Desc" class="input" placeholder=" "
+                                                onblur="validateDescription()" />
+                                            <label class="placeholder label" style="color:black">Task
+                                                Description</label>
+                                            <!-- <span id="Desc_err"></span> -->
+                                            <!-- </div> -->
                                         </div>
 
-                                        <div class="col-lg-12">
-                                            <div class="m-3">
-                                                <div class="form-outline mb-4 input-container">
-                                                    <input type="text" id="Desc" name="Desc" class="input"
-                                                        placeholder=" " onblur="validateDescription()" />
-                                                    <label for="Desc" class="placeholder label" style="color:black">Task
-                                                        Description</label>
-                                                    <span id="Desc_err"></span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-
-                                        <div class="col-lg-12">
+                                        <div class="m-3">
                                             <select class="form-select form-select-lg" id="Task_Status" name=""
                                                 class=" form-control form-control-lg"
                                                 aria-label="Default select example" onblur="validate_Task_status()">
@@ -302,33 +327,31 @@
                                                 <option value="in_progress">In Progress</option>
                                                 <option value="submitted">Submitted Evaluation</option>
                                             </select>
-                                            <span id="task_status_err"></span>
+                                            <!-- <span id="task_status_err"></span> -->
                                         </div>
 
 
-                                        <div class="row">
-                                            <div class="m-3">
-                                                <div class="drp_exist mb-3">
-                                                    <select class="form-select form-select-lg" id="existing_tasks"
-                                                        name="existing_tasks" class="form-control form-control-lg"
-                                                        aria-label="Default select example"
-                                                        onblur="validate_choose_task()">
-                                                        <option selected disabled>Choose Task</option>
-                                                    </select>
-                                                    <span id="choose_task_err"></span>
-                                                </div>
-                                                <div class="new_task_assignee mb-3">
-                                                    <select name="assignee" id="assignee"
-                                                        class="form-select form-select-lg"
-                                                        onblur="validate_assign_person()">
-                                                        <option value="" selected disabled>Choose Assigned Person
-                                                        </option>
-                                                    </select>
-                                                    <span id="choose_assign_err"></span>
-                                                </div>
+                                        <div class="m-3">
+                                            <div class="drp_exist mb-3">
+                                                <select class="form-select form-select-md" id="existing_tasks"
+                                                    name="existing_tasks" class="form-control form-control-lg"
+                                                    aria-label="Default select example" onblur="validate_choose_task()">
+                                                    <option selected disabled>Choose Task</option>
+                                                </select>
+                                                <!-- <span id="choose_task_err"></span> -->
+                                            </div>
+                                            <div class="new_task_assignee mb-3">
+                                                <select name="assignee" id="assignee" class="form-select form-select-lg"
+                                                    onblur="validate_assign_person()">
+                                                    <option value="" selected disabled>Choose Assigned Person
+                                                    </option>
+                                                </select>
+                                                <!-- <span id="choose_assign_err"></span> -->
                                             </div>
                                         </div>
                                         <div class="file_dec"></div>
+
+
                                         <div class="row m-3">
                                             <div class="col-4"></div>
                                             <div class="col-4">
@@ -340,7 +363,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -352,18 +374,18 @@
                     <!-- Thrid table -->
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
                         aria-labelledby="v-pills-messages-tab">
-                        <div class="jumbotron border border-2 shadow shadow-md rounded">
-                            <!-- <h2 class="text-center text-info">Chat</h2> -->
-                            <div id="framechat">
-                                <div class="content">
-                                    <div class="header">
-                                        <i class="fa fa-comments"></i>
-                                        <p id="chatbox_title">CHATBOX</p>
-                                    </div>
-                                    <div class="messages">
-                                        <ul class="msg_li">
-                                        </ul>
-                                        <!-- <ul>
+                        <!-- <div class="jumbotron border border-2 shadow shadow-md rounded"> -->
+                        <!-- <h2 class="text-center text-info">Chat</h2> -->
+                        <div id="framechat">
+                            <div class="content">
+                                <div class="header">
+                                    <i class="fa fa-comments"></i>
+                                    <p id="chatbox_title">CHATBOX</p>
+                                </div>
+                                <div class="messages">
+                                    <ul class="msg_li">
+                                    </ul>
+                                    <!-- <ul>
                                             <li class="sent">
                                                 <img src="<?php echo base_url("assets/workimages/img4.jpg"); ?>" alt="username" />
                                                 <p>hi</p>
@@ -373,22 +395,21 @@
                                                 <p>Hello</p>
                                             </li>
                                         </ul> -->
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-lg-0 col-md-0 col-sm-0"> </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 input-group ">
+                                        <textarea class="Text-Box" id="message" type="text"
+                                            placeholder="Write your message..." style="padding-left:1rem;"
+                                            data-emojiable="true"></textarea>
+                                        <button id="send" class="submit msg_send_click"><i class="fa fa-paper-plane"
+                                                aria-hidden="true"></i>
+                                        </button>
                                     </div>
-
-                                    <div class="row">
-
-                                        <div class="col-lg-0 col-md-0 col-sm-0"> </div>
-
-                                        <div class="col-lg-12 col-md-12 col-sm-12 input-group ">
-                                            <textarea class="Text-Box" id="message" type="text"
-                                                placeholder="Write your message..." style="padding-left:1rem;"
-                                                data-emojiable="true"></textarea>
-                                            <button id="send" class="submit msg_send_click"><i class="fa fa-paper-plane"
-                                                    aria-hidden="true"></i>
-                                            </button>
-                                        </div>
-                                        <div class="col-lg-0 col-md-0 col-sm-0"></div>
-                                    </div>
+                                    <div class="col-lg-0 col-md-0 col-sm-0"></div>
                                 </div>
                             </div>
                         </div>
@@ -396,11 +417,9 @@
 
 
 
-
                     <!-- fourth tab -->
                     <div class="tab-pane fade" id="v-pills-payment" role="tabpanel"
                         aria-labelledby="v-pills-payment-tab">
-                        <!-- <h2 class="text-center text-info">payment</h2> -->
                         <br>
                         <div class="row">
                             <div class="col-lg-3">
@@ -438,6 +457,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- </div> -->
 
@@ -506,14 +526,12 @@
             if (get_task_val == "submitted") {
                 $('.file_dec').append('<div id="file_link">' +
                     '<div class="m-3">' +
-                    ' <div class="form-outline mb-4 input-container">' +
                     '<input type="text" id="file_link_val" name="file_link_val"' +
                     'class="input" placeholder=""' +
                     'onblur="validateFileLink()" />' +
                     '<label class="placeholder label" style="color:black">File' +
                     ' Link Description</label>' +
-                    '<span id="file_link_val_err"></span>' +
-                    '</div>' +
+                    // '<span id="file_link_val_err"></span>' +
                     '</div>' +
                     '</div>');
             }
@@ -694,8 +712,8 @@
                             orignal_file_location = "<?php echo base_url(); ?>public/public/uploads/common_profile.png";
                         }
 
-                        element = element.add('<div class="row ">' +
-                            '<div class="col-sm-4 bg-c-lite-green user-profile">' +
+                        element = element.add('<div class="row" >' +
+                            '<div class="col-sm-3 bg-c-lite-green user-profile">' +
                             '<div class="card-block text-center text-white" style="margin-top:2rem;">' +
                             '<div class="m-b-25">' +
                             '<img src="' + orignal_file_location + '" class="img-radius"  alt="User-Profile-Image">' +
@@ -720,7 +738,7 @@
                             '<p class="m-b-2 f-w-600">Year</p>' +
                             '<h6 class="text-muted f-w-400">' + item.year + '</h6>' +
                             '</div>' +
-                            '<div class="col-sm-6">' +
+                            '<div class="col-sm-4">' +
                             '<p class="m-b-2 f-w-600">College name</p>' +
                             '<h6 class="text-muted f-w-400">' + item.clg_name + '</h6>' +
                             '</div>' +
@@ -731,7 +749,7 @@
                             '<p class="m-b-2 f-w-600">Start date</p>' +
                             '<h6 class="text-muted f-w-400">' + item.end_date + '</h6>' +
                             ' </div>' +
-                            '<div class="col-sm-6">' +
+                            '<div class="col-sm-4">' +
                             '<p class="m-b-2 f-w-600">End date</p>' +
                             '<h6 class="text-muted f-w-400">' + item.end_date + '</h6>' +
                             '</div>' +
@@ -739,7 +757,7 @@
                             '<p class="m-b-2 f-w-600">Email</p>' +
                             '<h6 class="text-muted f-w-400">' + item.email_id + '</h6>' +
                             ' </div>' +
-                            '<div class="col-sm-6">' +
+                            '<div class="col-sm-4">' +
                             '<p class="m-b-2 f-w-600">Mobile no.</p>' +
                             '<h6 class="text-muted f-w-400">' + item.mobile + '</h6>' +
                             '</div>' +
@@ -797,157 +815,157 @@
         }
 
         // validate time
-        function validateTime() {
-            var checkinTime = document.getElementById("check_in").value;
-            var checkoutTime = document.getElementById("check_out").value;
-            if (checkinTime >= checkoutTime) {
-                // alert("Check-out time must be after check-in time!");
-                $('#Time_err').text("Check-out time must be after check-in time!");
-                $("#Time_err").css({
-                    "color": "red",
-                    "font-size": "10px"
-                });
-                return false;
-            } else {
-                $('#Time_err').text("");
-                return true;
-            }
-        }
+
+        // function validateTime() {
+        //     var checkinTime = document.getElementById("check_in").value;
+        //     var checkoutTime = document.getElementById("check_out").value;
+        //     if (checkinTime >= checkoutTime) {
+        //         // alert("Check-out time must be after check-in time!");
+        //         $('#Time_err').text("Check-out time must be after check-in time!");
+        //         $("#Time_err").css({
+        //             "color": "red",
+        //             "font-size": "10px"
+        //         });
+        //         return false;
+        //     } else {
+        //         $('#Time_err').text("");
+        //         return true;
+        //     }
+        // }
 
 
-        function Status() {
-            var Status1 = document.getElementById("Status").value;
-            if (Status1.trim() === "" || Status1.length < 10) {
-                $('#status_err').text("Spaces and <10 character lengths not allowed.");
-                $("#status_err").css({
-                    "color": "red",
-                    "font-size": "10px"
-                });
-                return false;
-            } else {
-                $('#status_err').text("");
-                return true;
-            }
-        }
+        // function Status() {
+        //     var Status1 = document.getElementById("Status").value;
+        //     if (Status1.trim() === "" || Status1.length < 10) {
+        //         $('#status_err').text("Spaces and <10 character lengths not allowed.");
+        //         $("#status_err").css({
+        //             "color": "red",
+        //             "font-size": "10px"
+        //         });
+        //         return false;
+        //     } else {
+        //         $('#status_err').text("");
+        //         return true;
+        //     }
+        // }
 
-        function validateTaskName() {
-            const TaskNameInput = document.getElementById("task").value;
-            // console.log(TaskNameInput);
-            // const TaskName = TaskNameInput.value;
-            const regex = /^[a-zA-Z]+$/;
-            if (!regex.test(TaskNameInput)) {
-                // alert("mm");
-                $('#Task_err').text("Enter a Task Name.");
-                $("#Task_err").css({
-                    "color": "red",
-                    "font-size": "10px"
-                });
-                return false;
-            } else {
-                // alert("true");
-                $('#Task_err').text("");
-                return true;
-            }
-        }
 
-        function validateDescription() {
-            const DescriptionInput = document.getElementById("Desc");
-            const Description = DescriptionInput.value;
-            const regex = /^[a-zA-Z]+$/;
-            if (!regex.test(Description)) {
-                $('#Desc_err').text("Enter a Valid Description");
-                $("#Desc_err").css({
-                    "color": "red",
-                    "font-size": "10px"
-                });
-                return false;
-            } else {
-                $('#Desc_err').text("");
-                return true;
-            }
-        }
-        function ValidateTaskType() {
-            var choice = document.getElementById("task_type");
-            if (choice.value === "") {
-                $('#tasktyp_err').text("Select a Task Type");
-                $("#tasktyp_err").css({
-                    "color": "red",
-                    "font-size": "10px"
-                });
-                return false;
-            }
-            else {
-                $('#tasktyp_err').text("");
-                return true;
-            }
-        }
 
-        function validate_Task_status() {
-            var choice = document.getElementById("Status");
-            if (choice.value === "") {
-                $('#task_status_err').text("Select a Task Status");
-                $("#task_status_err").css({
-                    "color": "red",
-                    "font-size": "10px"
-                });
-                return false;
-            }
-            else {
-                $('#task_status_err').text("");
-                return true;
-            }
+        // function validateTaskName() {
+        //     const TaskNameInput = document.getElementById("task").value;
+        //     const regex = /^[a-zA-Z]+$/;
+        //     if (!regex.test(TaskNameInput)) {
+        //         $('#Task_err').text("Enter a Task Name.");
+        //         $("#Task_err").css({
+        //             "color": "red",
+        //             "font-size": "10px"
+        //         });
+        //         return false;
+        //     } else {
+        //         $('#Task_err').text("");
+        //         return true;
+        //     }
+        // }
 
-        }
+        // function validateDescription() {
+        //     const DescriptionInput = document.getElementById("Desc");
+        //     const Description = DescriptionInput.value;
+        //     const regex = /^[a-zA-Z]+$/;
+        //     if (!regex.test(Description)) {
+        //         $('#Desc_err').text("Enter a Valid Description");
+        //         $("#Desc_err").css({
+        //             "color": "red",
+        //             "font-size": "10px"
+        //         });
+        //         return false;
+        //     } else {
+        //         $('#Desc_err').text("");
+        //         return true;
+        //     }
+        // }
+        // function ValidateTaskType() {
+        //     var choice = document.getElementById("task_type");
+        //     if (choice.value === "") {
+        //         $('#tasktyp_err').text("Select a Task Type");
+        //         $("#tasktyp_err").css({
+        //             "color": "red",
+        //             "font-size": "10px"
+        //         });
+        //         return false;
+        //     }
+        //     else {
+        //         $('#tasktyp_err').text("");
+        //         return true;
+        //     }
+        // }
 
-        function validate_choose_task() {
-            var choice = document.getElementById("existing_tasks");
-            if (choice.value === "") {
-                $('#choose_task_err').text("Select a Task Status");
-                $("#choose_task_err").css({
-                    "color": "red",
-                    "font-size": "10px"
-                });
-                return false;
-            }
-            else {
-                $('#choose_task_err').text("");
-                return true;
-            }
-        }
+        // function validate_Task_status() {
+        //     var choice = document.getElementById("Status");
+        //     if (choice.value === "") {
+        //         $('#task_status_err').text("Select a Task Status");
+        //         $("#task_status_err").css({
+        //             "color": "red",
+        //             "font-size": "10px"
+        //         });
+        //         return false;
+        //     }
+        //     else {
+        //         $('#task_status_err').text("");
+        //         return true;
+        //     }
 
-        function validate_assign_person() {
-            var choice = document.getElementById("assignee");
-            if (choice.value === "") {
-                $('#choose_assign_err').text("Select a Task Status");
-                $("#choose_assign_err").css({
-                    "color": "red",
-                    "font-size": "10px"
-                });
-                return false;
-            }
-            else {
-                $('#choose_assign_err').text("");
-                return true;
-            }
+        // }
 
-        }
+        // function validate_choose_task() {
+        //     var choice = document.getElementById("existing_tasks");
+        //     if (choice.value === "") {
+        //         $('#choose_task_err').text("Select a Task Status");
+        //         $("#choose_task_err").css({
+        //             "color": "red",
+        //             "font-size": "10px"
+        //         });
+        //         return false;
+        //     }
+        //     else {
+        //         $('#choose_task_err').text("");
+        //         return true;
+        //     }
+        // }
 
-        function validateFileLink() {
-            const FileLinkInput = document.getElementById("file_link_val");
-            const FileLink = FileLinkInput.value;
-            const regex = /^[a-zA-Z]+$/;
-            if (!regex.test(FileLink)) {
-                $('#file_link_val_err').text("Enter a Description");
-                $('#file_link_val_err').css({
-                    "color": "red",
-                    "font-size": "10px"
-                });
-                return false;
-            } else {
-                $('#file_link_val_err').text("");
-                return true;
-            }
-        }
+        // function validate_assign_person() {
+        //     var choice = document.getElementById("assignee");
+        //     if (choice.value === "") {
+        //         $('#choose_assign_err').text("Select a Task Status");
+        //         $("#choose_assign_err").css({
+        //             "color": "red",
+        //             "font-size": "10px"
+        //         });
+        //         return false;
+        //     }
+        //     else {
+        //         $('#choose_assign_err').text("");
+        //         return true;
+        //     }
+
+        // }
+
+        // function validateFileLink() {
+        //     const FileLinkInput = document.getElementById("file_link_val");
+        //     const FileLink = FileLinkInput.value;
+        //     const regex = /^[a-zA-Z]+$/;
+        //     if (!regex.test(FileLink)) {
+        //         $('#file_link_val_err').text("Enter a Description");
+        //         $('#file_link_val_err').css({
+        //             "color": "red",
+        //             "font-size": "10px"
+        //         });
+        //         return false;
+        //     } else {
+        //         $('#file_link_val_err').text("");
+        //         return true;
+        //     }
+        // }
+
 
 
 
@@ -966,27 +984,24 @@
         //     }
         // }
 
-        function Description() {
-            var Description1 = document.getElementById("Description").value;
-            if (Description1.trim() === "" || Description1.length < 10) {
-                $('#Description_err').text("Spaces and <10 character lengths not allowed.");
-                $("#Description_err").css({
-                    "color": "red",
-                    "font-size": "10px"
-                });
-                return false;
-            } else {
-                $('#Description_err').text("");
-                return true;
-            }
-        }
 
 
-        // fetch data 
-        // fetch_data_temp();
-        // function fetch_data_temp(){
-        //     alert("hai");
+        // function Description() {
+        //     var Description1 = document.getElementById("Description").value;
+        //     if (Description1.trim() === "" || Description1.length < 10) {
+        //         $('#Description_err').text("Spaces and <10 character lengths not allowed.");
+        //         $("#Description_err").css({
+        //             "color": "red",
+        //             "font-size": "10px"
+        //         });
+        //         return false;
+        //     } else {
+        //         $('#Description_err').text("");
+        //         return true;
+        //     }
         // }
+
+
 
         function fetch_data() {
             // alert("fetching");

@@ -166,3 +166,8 @@
 .submit:focus{
     border: 2px solid;
 }
+
+.Text-Box:active{
+    border: none;
+    border-color: none;
+}

@@ -111,7 +111,7 @@
 
 
     <div class="ui segment" style="background-color:#38acec;font-size:16px;padding:2% 0 10% 0;border:none;">
-      <img class="ui large left floated image" src="<?php echo  base_url(); ?>/assets/aboutimages/abt2.png">
+      <img class="ui large left floated image" src="<?php echo  base_url(); ?>/assets/aboutimages/abt2 copy.png">
       <p style="margin-top:5%;"><span style="font-size:30px;">Quantanics</span> was founded in 2018 by a group of young and rejuvenated engineers who wanted to prove their stand in Industry 4.0 by making this world a better place to live. Today, Quantanics has established a
         distinguished reputation by successfully developing intelligent devices and products for several industrial giants and MNCs. We find ourselves in a dominating position among our competitors, majorly because of the medley in our team with
         strengths in different domains such as Block
