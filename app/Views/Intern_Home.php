@@ -49,7 +49,7 @@
         <div class="row">
             <div class="top_nav">
                 <div class="nav flex-row nav-pills me-" id="v-pills-tab" role="tablist" aria-orientation="vertical"
-                    style="margin-top:5px">
+                    style="margin-top:5px;font-size: 1rem;">
                     <button class="navbtn show active" id="v-pills-home-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
                         aria-selected="true">Profile</button>

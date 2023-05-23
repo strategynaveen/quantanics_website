@@ -162,7 +162,7 @@ input {
     line-height: 14px;
     pointer-events: none;
     position: absolute;
-    transform-origin: 0 50%;
+    transform-origin: 0 180%;
     opacity: 100%;
     transition: transform 200ms, color 200ms;
     top: 20px;
@@ -275,6 +275,7 @@ input {
 }
 
 .navbtn.active {
+    font-size: 1rem;
     font-weight: 450;
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;

@@ -86,6 +86,16 @@
             /* font-weight:bold; */
             /* font-size:1.3rem; */
         }
+
+        /* .hover_menu_btn:hover{
+            background:red;
+            color:white;
+        } */
+
+        .hover_menu_btn{
+           
+            margin:0.6rem;
+        }
       </style>
 
 </head>
@@ -94,30 +104,35 @@
     <?php $session = \Config\Services::session(); ?>
     <?php require_once "Header.php"; ?>
 
-    <div class="container-fluid">
-        <div class="row " style="justify-content:center;align-items:center;">
+    <div class="container-fluid" style="display:flex;padding:0.5rem;flex-direction:row;">
+        <div class="" style="justify-content:center;align-items:center;display:flex;flex-direction:row;width:7%;height:max-content;">
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="width:max-content;margin-block:revert;">
-                <li class="nav-item" role="presentation">
+                <li class="nav-item hover_menu_btn" role="presentation">
                     <button class="nav-link active" id="pills-request-tab" data-bs-toggle="pill"
                         data-bs-target="#pills-request" type="button" role="tab" aria-controls="pills-request"
-                        aria-selected="true"><i class="fa fa-address-card fa-2x"></i></button>
+                        aria-selected="true"><i class="fa fa-bell fa-2x"></i></button>  
                 </li>
-                <li class="nav-item" role="presentation">
+                <li class="nav-item hover_menu_btn" role="presentation">
                     <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
                         data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
-                        aria-selected="false"><i class="fa fa-edit fa-2x"></i></button>
+                        aria-selected="false"><i class="fa fa-credit-card-alt fa-2x"></i></button>
                 </li>
-                <li class="nav-item" role="presentation">
+                <li class="nav-item hover_menu_btn" role="presentation">
                     <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
                         data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
                         aria-selected="false"><i class="fa fa-commenting fa-2x"></i></button>
                 </li>
+
+                <li class="nav-item hover_menu_btn" role="presentation">
+                    <button class="nav-link" id="pills-taskassignee-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-taskassignee" type="button" role="tab" aria-controls="pills-taskassignee"
+                        aria-selected="false"><i class="fa fa-save fa-2x"></i></button>
+                </li>
             </ul>
         </div>
-        <div class="row">
+        <div class="row" style="width:92%;">
             <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-request" role="tabpanel"
-                    aria-labelledby="pills-request-tab">
+                <div class="tab-pane fade show active" id="pills-request" role="tabpanel" aria-labelledby="pills-request-tab">
                     <h2 class="text-center text-muted font-weight-bold">Internship Request</h2>
                     <br>
                     <div class="row intern_request_cards_div">
@@ -146,16 +161,14 @@
                 </div>
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                     <h2 class="text-center text-muted font-weight-bold">Payment Details</h2>
-                    <br>
-                    
+                    <br>   
                 </div>
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                     <h2 class="text-center text-muted font-weight-bold">Task ASSIGNING</h2>
                     <br>
                     <div id="framechat" style="margin-bottom:2rem;">
                         <div class="content">
-                            <div class="header">
-                             
+                            <div class="header">         
                                 <div class="drp_click_div" style="">
                                     <div class="drp_click_img_div" >
                                         <img src="<?php echo base_url(); ?>assets/aboutimages/abt5.png" style="height:2rem;width:2rem;" class="img_add_div" alt="">
@@ -166,44 +179,30 @@
                                 </div>
                                 <!-- <p id="chatbox_title">CHATBOX</p> -->
                             </div>
-                            <div class="custome_select_body" id="load_chart_domains" style="">
-                                <!-- <div class="custome_drp_div click_get_val" style="">
-                                    <div class="custome_img_div" style="">
-                                        <img src="<?php echo  base_url(); ?>assets/aboutimages/abt5.png" data-img="abt5.png" class="custome_img_style" style="" alt="">
-                                    </div>
-                                    <div class="custome_text_div" style="">
-                                        <p style="margin-block:auto;" class="custome_drp_text_content"  data-txt="web">WEB App Development</p>
-                                    </div>
-                                </div> -->
-
-                               
-                            </div>
+                            <div class="custome_select_body" id="load_chart_domains" style=""> </div>
                             <div class="messages">
                                 <ul class="msg_li"></ul>
-                                <!-- <ul>
-                                    <li class="sent">
-                                        <img src="<?php echo base_url("assets/workimages/img4.jpg"); ?>" alt="username" />
-                                        <p>hi</p>
-                                    </li>
-                                    <li class="replies">
-                                        <img src="<?php echo base_url("assets/workimages/img3.jpg"); ?>" alt="username" />
-                                        <p>Hello</p>
-                                    </li>
-                                </ul> -->
                             </div>
                             <div class="row">
                                 <div class="col-lg-0 col-md-0 col-sm-0"> </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 input-group ">
-                                        <textarea class="Text-Box" id="message" type="text" placeholder="Write your message..." style="padding-left:1rem;" data-emojiable="true"></textarea>
-                                        <button id="send" class="submit msg_send_click"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                                    </div>
-                                    <div class="col-lg-0 col-md-0 col-sm-0"></div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 input-group ">
+                                    <textarea class="Text-Box" id="message" type="text" placeholder="Write your message..." style="padding-left:1rem;" data-emojiable="true"></textarea>
+                                    <button id="send" class="submit msg_send_click"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                                 </div>
+                                <div class="col-lg-0 col-md-0 col-sm-0"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                <div class="tab-pane fade" id="pills-taskassignee" role="tabpanel" aria-labelledby="pills-taskassignee-tab">
+                    <h2 class="text-center text-muted font-weight-bold">Table List</h2>
+                    <br>        
+                </div>
             </div>
+
+              
+            <!-- </div> -->
         </div>
 
 

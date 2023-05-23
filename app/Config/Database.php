@@ -29,7 +29,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'quantanics',
+        'database' => 'quantanics_new',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
